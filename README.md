@@ -1,15 +1,11 @@
 # Notes for couse.fast.ai MOOC (Part 1)
 
 ## AWS Guide
-1. Currently using spot instances - see [medium post](https://blog.slavv.com/learning-machine-learning-on-the-cheap-persistent-aws-spot-instances-668e7294b6d8) and [forums](http://forums.fast.ai/t/persistent-aws-spot-instances-how-to/1497/65).
-  - Max bid price is 50 cents, zone is us-east-1e. If someone outbids that instance is terminated automatically.
-  - Prices are cheapest outside of business hours and on weekends, generally.
-  - File system changes should persist despite termination as `start_spot.sh` swaps root volume with seperate persistent one automatically.
-2. Use `sh ec2-spotter/fast_ai/start_spot.sh` to start spot instance - take note of instance id and ip.
-3. Use `ssh -i /Users/alexanderzhang/.ssh/aws-key-fast-ai.pem ubuntu@$instance-ip` (substitute $instance-ip according to previous step) to connect.
-  - Use tmux to persist long-running sessions, with `tmux attach` reconnect to jobs running before ssh disconnect
-4. Run `jupyter notebook` and point browser to `$instance-ip:8888` to connect.
-5. Disconnect jupyter with `C-c` and ssh with `exit` as usual.
+1. Use  `setup-p2.sh` from setup folder to create a new p2 instance. Beforehand, ensure AWS limit allows at least one p2 instance, following setup video. Follow setup video for AMI and needed software installations as well. Only do this step once.
+2. Run `source aws-alias.sh`, then `aws-start` to start up p2 instance
+3. Run `aws-get-p2` and `aws-ip` to store instance id and ip.
+4. Connect to instance via ssh with `aws-ssh`, and start jupyter notebook with `jupyter notebook`
+5. Point web browser to notebook ip with `aws-nb`. To return to local terminal session, use `C-a d` in remote tmux session and `exit` ssh.
 6. Terminate spot session (to save money) with `aws ec2 terminate-instances --instance-ids $instance-id` (substitude $instance-id according to step 2)
 
 ## Lesson 1

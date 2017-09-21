@@ -41,3 +41,57 @@
   - Pretrained model has already learned many useful low-level filters like circles, lines, curves, from a large data set. These filters will be useful for many tasks, especially those without as much data, so we reuse lower layers and finetune higher layers according to specific task.
   - To finetune, instead of using last layer output as input to linear model we can use second to last layer, so neural network uses learned features to calculate cats vs dogs rather than learn cats vs dogs from imagenet categories (which limits information).
 
+## Lesson 3
+1. Use [Deep Visualization Toolbox](https://github.com/yosinski/deep-visualization-toolbox) to see live updates of the convolutional filters developed by a CNN
+    - Higher layers detect more narrowly defined but more complex things, cover a larger area
+    - One does not need to determine what filters to develop manually, the CNN starts with random filters and gradually optimizes (using SGD) for the best set of filters to differentiate between the provided categories, with the provided data.
+2. Lesson 0 video and notebook cover convolutions
+    - Convolution is a filter, a matrix that when multiplied by a subsection of an image matrix, generates higher values when matching an interesting feature.
+    - A convolution is a subset of a linear layer (that is all convolutions are linear layers) so every few layers in a neural network one can substitute a linear model for a convolution
+3. Use model.summary() to view all layers of any keras model
+    - Max polling simplifies images by replacing each nxn block in an image with the maximum pixel value in that block.
+        - Enables filters built on filters - like top left and right of face filter match filter for eyes
+    - Hard to fintune Imagenet models for cartoon images because Imagenet filters find photographic features with much higher frequency detail and texture, even in early filters.
+    - correlate() = convolve() with 90 degree rotated filters (swap row-col)
+4. Another useful activation function besides relu is softmax
+![softmax formula](https://cloud.githubusercontent.com/assets/14886380/22743247/9eb7c856-ee54-11e6-98ca-a7e03120b1f8.png) 
+    - Used for last layer in network, matches well to 1-hot encoded output - squashes numbers to between 0 and 1, and ensure all numbers add up to 1, so output is like a probability distribution
+    - Any architecture large enough can do any task, but different architectures are faster at certain tasks.
+        - Softmax is easy to convert to 1-hot and so faster to train
+    - Dealing with large images is as yet unsolved - 3x3 filters with more and more layers are considered optimal for detecting features in general
+        - Attentional models help, something that simulates foveation (fast eye movements) in an architecture might be long term solution
+        - When not detecting something as similar to training data as cats v. dogs (like distracted drivers), remove more layers to get simpler and simpler filters that are more and more generally useful, then train your own specific layers from that point
+            - Retraining convolution layers is not usually necessary for photo classification, as all useful spatial patterns are probably recognized by some set of Imagenet filters
+5. Avoiding overfitting and underfitting
+    - Underfitting: model has too few parameters/too little training data/is too simple to model function
+        - Training set accuracy is lower than validation set accuracy
+    - Overfitting: Model has fit the specific training set too well, rather than the general pattern
+        - Training set accuracy is much higher than validation set accuracy
+    - Several methods to deal with overfitting. In order:
+        1. Add more data
+            - Usually not an option with kaggle, try first when creating own data set
+        2. Use data augmentation
+            - Turns one data point into many data points through random transformations
+                - Only augment and shuffle training set, validation set should not be modified
+                - Augmented images should still look like a reasonable photo (don't stretch a photo of a cat so far that it doesn't look like a cat to a normal person)
+                - Always augment data, question is just what kind of augmentation and how much
+                    - Keras has built in functions for randomly rotating, flipping, stretching, zooming, changing white balance, etc. of training images
+        3. Use more generalizable architectures
+        4. Regularization
+            - Usually means using dropout
+                - Dropout sets half of activations to 0 at random (throws away a certain percentage of that layer) so overfitting is harder
+                - Reduce dropout to fix underfitting, increase to avoid overfitting to training data
+                - Common approach is to set low dropouts (maybe 0.1) in early layers and higher (~0.5) dropouts in higher layers, with gradual increase in between. Dropout in earlier layers affects later layers.
+                - Dropout is like random forest but for neural nets rather than decision trees - effectively constructions an ensemble of smaller neural nets at random
+        5. Reduce architecture complexity (remove filters)
+            - Last resort, try other options first and they will usually fix problem
+    - Batch normalization is used in almost all modern deep learning - almost always a good idea
+        - Converts data into z-scores
+        - Allows weights to affect outcome more evenly on different scale (order of magnitude) data
+        - Keras model preprocess subtracts mean from data to get closer to normalized values
+        - 10x faster than not using it and reduces overfitting without throwing away data
+        - Allows SGD to change scale of all weights, rather than sometimes only changing magnitude of 1 and making model fragile
+    - Ensembling
+        - Usually a surefire way to improve model accuracy a bit, but time consuming
+        - Train a set (maybe ~6) of the same or similar models, will have different errors due to starting from different intial random parameters
+        - Take average of set predictions for each validation set image

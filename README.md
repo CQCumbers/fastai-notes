@@ -206,3 +206,33 @@
         - You can keep merging intermediate outputs with another word more and more times to predict words based on more and more previous state.
     3. After generating new words from previous words, you can merge the generated words in as well. If you keep doing this as you generate more and more words, you have an RNN.
         - First, layer operation A is applied to input word 1 to get intermediate output X. Then, operation A is applied to input word 2 and operation B is applied to X, and X is updated to be the merged outputs of these operations. The process then repeats a certain number of times, before operation C is applied to the final X to generate the actual output. 
+
+# Lesson 6
+1. Pseudo-labelling allows for semi-supervised learning.
+    - Use MixIterator in utils to combine real training data with test (or validation) set data pseudo-labelled by the model. pseudo-labelled batch size should be maybe 1/3 of real data batch size to get 25% / 75% mix.
+    - train model on training set, then predict on portion of test set (and validation set), then train on training set + test predictions, then repeat with more data from test set.
+2. Keras embeddding layer takes an id and returns a vector corresponding to that id - hyperparameters are how large that vector is and how many vectors you need to lookup (vocab size). These vectors are optimized by SGD to model the meaningful elements of that id for a task.
+    - In word embeddings, every word in text is given a vector by the embedding. The text becomes a matrix when you substitute each word for its embedding, maintaining order and repetititions.
+    - Embedding size is problem-dependent, no real answer, depends on complexity that needs to be modeled.
+    - RMSE (loss) is very interpretable depending on situation; Jeremy's paper on Designing Great Data Products is about how to measure the benefit of additional accuracy.
+    - Recurrent neural networks for word prediction takes as input both a word embedding matrix and the network's hidden matrix from the previous iteration.
+        - character level takes a character embedding (or a one-hot encoding of the character, but embeddings work better) rather than word embedding as input and output.
+    - Sparse categorical cross entropy is exactly like categorical cross-entropy but with embeddings rather than one-hot encoded labels.
+3. Recurrent neural networks are all about memory - keeping track of long-term dependencies in input data by giving the neural network state.
+    - In network diagrams, shapes represent matrices - usually different shapes for input matrix, hidden layer output matrices, and model output matrix.
+    - Arrows represent layer operations, usually a matrix product and an activation function. Multiple arrows going into a box means box's value merges output of multiple layer operations, through elementwise addition (or concatenation). Follow arrows to see how each matrix is derived from operations on other matrices.
+        - the hidden matrix to hidden matrix layer operation is initialized as an identity matrix, so by default the previous hidden matrix does not influence the next one. According to Geoff Hinton using this along with relus in an RNN can lead to very good results in language modelling, comparable to an LSTM.
+    - Unrolling a recurrent network means showing each hidden layer matrix seperately - rolled form uses an arrow looping from the hidden matrix back into itself to show how the next hidden layer applies the same layer operation to the previous hidden layer as well as merging in some new input data. Theano can implement rolled form directly while tensorflow requires unrolling within Keras.
+        - Instead of predicting the first hidden state from the first input before combining an input and a hidden state to predict each subsequent hidden state, one can initialize the hidden state with zeroes for exactly the same effect.
+    - RNNs an take a sequence of values and output a single value by putting a dense layer after the last hidden layer, for sentiment analysis and sentence classification tasks.
+        - You can also put a dense layer after each hidden layer (instead of only the last one) to predict a sequence from a sequence (predicting chars 2 to n from chars 1 to n-1). This allows the gradients to be updated multiple times (as it gets feedback after each hidden layer) so learning is faster for the same number of iterations, compared to only outputting at the end.
+            - In a Keras sequential model, the every dense layer after a return_sequences layer is TimeDistributed(), as it is applied seperately to each output in the output array of the RNN layer (which in Keras returns a sequence of 1d outputs as a 2d matrix)
+        - Adding dropout after each hidden layer (recurrent dropout in keras) is a great method for regularization.
+            - dropout_u and dropout_m control dropout for an LSTM, where there is another neural network controlling how much the previous hidden state is used to calculate the next one.
+    - You can persist the hidden state between every single iteration (rather than only for a particular sequence length) in order to model arbitrarily long dependencies.
+        - Only reset hidden state to zeroes after going through entire input text.
+        - Because the hidden state -> hidden state layer function is applied so many times, one parameter being even slightly too high will have a compounding effect. If the sequences are 100,000 inputs long, and the error for the first input is x, error for the last input is x^100,000. This can lead to loss going to infinity (exploding gradients) and can make stateful models much harder to train.
+        - An LSTM uses a neural network that learns how much of the previous hidden state to use to calculate the next hidden state, so as to avoid exploding gradients. Batch normalizing the inputs can also help.
+        - Stateful models also cannot be parallelized as the entire input data set needs to be fed into the network in order (fixed lengths rnns can train on every sequence of a certain length within the input data in parallel) 
+    - RNNs can be stacked so that the output sequence from one RNN becomes the input sequence of another RNN
+        - this way, the model has more than one hidden layer - the model output is influenced by two successive hidden -> hidden layer functions

@@ -1,0 +1,9696 @@
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Static Shock
+    text: ''
+  - cost:
+    - Fighting
+    - Fighting
+    damage: ''
+    name: Bench Over
+    text: You may discard any number of Energy cards attached to Misty's Poniwan's
+      Conepe as you like, remove 3 damage counters from Misty's Poniwan's Conepe.
+      Misty's Poniwan's Conepe is now Asleep.
+  - cost:
+    - Colorless
+    - Psychic
+    damage: ''
+    name: Destiny Bond
+    text: Does 10 damage times the number of your Pokémon that have the amount of
+      Energy attached to it.
+  hp: 60
+  name: Misty's Poniwan's Conepe
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Rest
+    text: Remove 2 damage counters from Erika's Evol.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Dragon Claw
+    text: ''
+  hp: 50
+  name: Erika's Evol
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Spore
+    text: Your opponent's Active Pokémon is now Confused.
+  - cost:
+    - Lightning
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Extreme Kiss
+    text: Does 20 more damage times the amount of Energy attached to Lowbili.
+  hp: 60
+  name: Lowbili
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Vine Whip
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Razor Leaf
+    text: ''
+  hp: 60
+  name: Venonoss
+  rarity: Common
+  resistances:
+    type: Colorless
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: '-10'
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Shimmer
+    text: Your opponent switches the Defending Pokémon with 1 of his or her Benched
+      Pokémon.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Dive
+    text: ''
+  hp: 190
+  name: Aurorade-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Metal
+    value: ×2
+- ability:
+    name: Sand Veil
+    text: Prevent all damage done to Munchona during your opponent's next turn, your
+      opponent flips a coin. If heads, this attack does 10 damage plus 20 more damage;
+      if tails, this attack does 30 damage.
+  hp: 60
+  name: Munchona
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: '-10'
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Teleport
+    text: Switch Venina with 1 of your Benched Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 50+
+    name: Blaze Ball
+    text: This attack does 50 damage times the number of heads.
+  hp: 50
+  name: Venina
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Bite
+    text: ''
+  hp: 60
+  name: Erika's Victry
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- hp: null
+  name: Max Belt
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: At any time between turns, if the Pokémon this card is attached to between
+    turns.
+  types: null
+  weaknesses: null
+- hp: null
+  name: Guster Bash
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Search your deck for a Lightning Pokémon can't retreat.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Tongue Slap
+    text: Flip 2 coins. This attack does 10 damage times the number of heads.
+  hp: 50
+  name: Venin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Smack
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Pound
+    text: ''
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Magnitude
+    text: Does 10 damage to each of your opponent's Benched Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  hp: 80
+  name: Servona
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Telepass
+    text: Once during your turn, when you put Cradile from your hand onto your Bench,
+      you may return all Energy cards attached to it. When you attach this card from
+      your hand and attach them to your Pokémon in any way you like.
+  hp: 90
+  name: Cradile
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Snogter Draw
+    text: If your opponent has any Benched Pokémon, he or she chooses 1 of them and
+      switch it with 1 of the Defending Pokémon with 1 of his or her Benched Pokémon.
+  - cost:
+    - Water
+    - Water
+    damage: '30'
+    name: Surf
+    text: ''
+  hp: 60
+  name: Lotaed
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand (even if this Pokémon. (This counts
+      as evolving Team Magma's Secke's Celdbe) and remove all damage counters from
+      that Pokémon.
+  hp: 30
+  name: Team Magma's Secke's Celdbe
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Teleport Blast
+    text: If your opponent's Active Pokémon is now Confused.
+  hp: 110
+  name: Swannaxar
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Colorless
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Sludge Toss
+    text: ''
+  - cost:
+    - Water
+    damage: ''
+    name: Recover
+    text: Discard a Plasma Energy attached to Misty's MReesty.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Steamy Plate
+    text: Your opponent's Active Pokémon is now Poisoned.
+  hp: 50
+  name: Misty's MReesty
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Dangerous Evolution
+    text: As long as Koga's Orvent has any Darkness Energy attached to it has no Retreat
+      Cost.
+  hp: 40
+  name: Koga's Orvent
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- ability:
+    name: Form Change
+    text: Once during your turn (before your attack), you may move 1 damage counter
+      from 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for
+      Benched Pokémon.)
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Warp Sands
+    text: If Sharp Pokémon in play that has any React Energy cards attached to Snubme.
+  hp: 80
+  name: Snubme
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Ram
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Beedle Rush
+    text: The Defending Pokémon is now Poisoned.
+  hp: 50
+  name: Sphitter
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand without looking and discard it.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 50
+  name: Cherpigot
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 140
+  name: Sabrina's Mrowth
+  rarity: Rare
+  resistances:
+    type: Colorless
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: '-30'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Solar Throw
+    text: This attack does 30 damage times the number of heads.
+  hp: 80
+  name: Golkuck
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Premonition
+    text: Once during your turn (before your attack), you may draw a card. Then, discard
+      Erika's Ninetales.Attach a basic Energy card from your hand to 1 of your Pokémon
+      and remove all damage counters on that Pokémon.
+  hp: 40
+  name: Erika's Ninetales
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Teleparthr
+    text: Once during your turn (before your attack), you may search your deck for
+      a Basic Pokémon card or any Evolution card. ttich Snowuck to 1 of your Pokémon.
+      This power can't be used if Snowuck is affected by a Special Condition.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Ram
+    text: ''
+  hp: 60
+  name: Snowuck
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tongue Whip
+    text: ''
+  - cost:
+    - Grass
+    damage: ''
+    name: Spinning Tail
+    text: Discard up to 2 in any combination of Helix Fossil, Dome Fossil, Dome Fossil,
+      or Olar Claw BRaAK
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Spinning Attack
+    text: ''
+  hp: 60
+  name: Tentacrul
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Triple Trans
+    text: Choose 1 of your opponent's Pokémon. This attack does 30 damage plus 20
+      more damage for each heads.
+  hp: 40
+  name: Weedlith
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Bloodty Wing
+    text: If Rocket's Scythe ex would be damaged by an attack, reduce that damage
+      by 10 (before applying Weakness and Resistance).
+  attacks:
+  - cost:
+    - Metal
+    - Colorless
+    damage: '20'
+    name: Spiral Delive
+    text: If your opponent's Active Pokémon is Confused, this attack does 50 damage
+      plus 20 more damage.
+  hp: 90
+  name: Rocket's Scythe ex
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '50'
+    name: Surf
+    text: ''
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Crunch
+    text: Discard 2 Energy attached to this Pokémon.
+  hp: 90
+  name: Whimsifa Star
+  rarity: Uncommon
+  resistances:
+    type: Dark
+    value: '-20'
+  retreat_cost: null
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fairy
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '20'
+    name: Mud-Slap
+    text: ''
+  hp: 130
+  name: Bellettep
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 20+
+    name: Revenge
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if
+      tails, this attack does nothing.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Smog
+    text: The Defending Pokémon is now Confused. Put 2 damage counters on your opponent's
+      Active Pokémon.
+  hp: 70
+  name: Lillipess
+  rarity: Uncommon
+  resistances:
+    type: Water
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Shake
+    text: Your opponent switches the Defending Pokémon with 1 of his or her Benched
+      Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rage
+    text: This attack does 20 more damage for each Energy card attached to Erika's
+      Dratinin.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Echoed Voice
+    text: During your next turn, any damage done to Erika's Dratinin by attacks is
+      reduced by 20 (after applying Weakness and Resistance).
+  hp: 50
+  name: Erika's Dratinin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: ''
+    name: Gludging Fur
+    text: If the Defending Pokémon has no Weakness.
+  hp: 180
+  name: Genestar-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: 50
+  name: Team Magma's Clayd
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: null
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Pleating Wing
+    text: Discard a Water Energy attached to it.
+  hp: 110
+  name: Reunido
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  hp: 50
+  name: Erika's Dratinin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: 30+
+    name: Crushing Lunch
+    text: Flip a coin until you get tails. This attack does 30 damage times the number
+      of heads.
+  - cost:
+    - Grass
+    - Grass
+    - Colorless
+    damage: '40'
+    name: Drainpor Stonm
+    text: Discard a Fire Energy attached to Blaine's Kanes.
+  hp: 70
+  name: Blaine's Kanes
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Scoundrel Ring
+    text: When you play this Pokémon from your hand onto your Bench to your opponent's
+      Active Pokémon.
+  hp: 150
+  name: Zygardon-EX
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Ice Beam
+    text: Flip a coin. If heads, discard 1 Energy card attached to Zoltoring in order
+      to use this attack.
+  hp: 50
+  name: Zoltoring
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-10'
+- hp: 50
+  name: Misty's Staryien
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: This Pokémon may attack does nothing.
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Paralyzing Gaze
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused. This power
+      can't be used if Team Aqua's Secone δ is affected by a Special Condition.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Tackle
+    text: ''
+  hp: 50
+  name: Team Aqua's Secone δ
+  rarity: null
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    damage: '10'
+    name: Magma Jab
+    text: This attack's damage isn't affected by Weakness, Resistance, Poké-Powers,
+      Poké-Bodies, this attack does 30 damage plus 20 more damage.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Psyburn
+    text: ''
+  hp: 210
+  name: Walrein-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Dragon
+  weaknesses:
+    type: Dragon
+    value: ×2
+- hp: 60
+  name: Armor
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: ''
+  types: null
+  weaknesses: null
+- ability:
+    name: Chain of Darkness
+    text: Whenever your opponent shuffle that card into his or her deck.
+  attacks:
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Headbutt
+    text: ''
+  hp: 140
+  name: Bee uRelies
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Air Slash
+    text: Discard an Energy attached to this Pokémon.
+  hp: 70
+  name: Lillip
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Sleep Inducer
+    text: If your opponent's Active Pokémon hav Eectras with 1 of his or her Benched
+      Pokémon.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '60'
+    name: Low Kick
+    text: ''
+  hp: 30
+  name: Eectras
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Counterpunch Pollen
+    text: Once during your turn (before your attack), you may discard a card from
+      your opponent's hand (don't look an a Pokémon-EX.
+  attacks:
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Psychic Assault
+    text: Attick does 10 more damage. Remove 1 damage counters on it, the Defending
+      Pokémon is now Confused.
+  hp: 100
+  name: Scalio
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Bite
+    text: ''
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '40'
+    name: Wave Splash
+    text: ''
+  hp: 100
+  name: Deralnbr
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dragon
+  weaknesses:
+    type: Fairy
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rage
+    text: This attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance
+      for Benched Pokémon.)
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: 80+
+    name: Kindred Charge
+    text: This attack does 20 damage times the number of damage counters on Erika's
+      Viggly.
+  hp: 40
+  name: Erika's Viggly
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    damage: '20'
+    name: Ram
+    text: ''
+  hp: 80
+  name: Croclon
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Supersonic
+    text: Flip a coin. If heads, this attack does 30 more damage.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '60'
+    name: Solarbeas
+    text: Your opponent's Active Pokémon is now Confused.
+  hp: 70
+  name: Turtone
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Shed Skin
+    text: Heal 30 damage from this Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Exercise
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  hp: 90
+  name: Diancigz
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: '''s PokéPowion'
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Supersonic
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  hp: 30
+  name: Magby Raiko
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses: null
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Spinning Tail
+    text: Choose 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance
+      for Benched Pokémon.)
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Surf
+    text: ''
+  hp: 50
+  name: Erika's Dratinin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Sonicboom
+    text: This attack's damage is not affected by Resistance.
+  - cost:
+    - Lightning
+    damage: ''
+    name: Constrict
+    text: Discard a Grass Energy attached to this Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 60
+  name: Habline
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Poison Horn
+    text: As long as Staryup is your Active Pokémon and is damaged by an opponent's
+      attack, flip a coin. If heads, search your deck for a Psychic Energy card from
+      your hand to your Active Pokémon, you may remove 2 of them and switches it with
+      their Active Pokémon. This attack does 30 damage times the number of Energy
+      cards attached to it.
+  hp: 50
+  name: Staryup
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '30'
+    name: Cotton Guard
+    text: During your opponent's next turn, any damage done to Biseet by attacks is
+      reduced by 20 (after applying Weakness and Resistance).
+  - cost:
+    - Fire
+    - Fire
+    - Colorless
+    - Colorless
+    damage: '100'
+    name: Mantlet Beak
+    text: This attack does 10 more damage for each Energy attached to Biseet.
+  hp: 110
+  name: Biseet
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Bubblebeam
+    text: Flip a coin. If heads, this attack does 20 damage plus 20 more damage.
+  hp: 160
+  name: Eeveor-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Vick Connect
+    text: Flip 2 coins. This attack does 10 damage times the number of heads.
+  hp: 50
+  name: Dusclop
+  rarity: Rare
+  resistances:
+    type: Colorless
+    value: '-20'
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Dark
+    value: '-20'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Inviting Scent
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  hp: 40
+  name: Nompion
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Fire
+    damage: '30'
+    name: Fire Fang
+    text: During your opponent's next turn, if this Pokémon is damaged by an attack,
+      reduce that damage counters insteil has any Metal Energy, and then discard all
+      if there are less than 3).
+  hp: 130
+  name: Porygon-c
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Spinning Attack
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Energy Flame
+    text: Discard an Energy attached to this Pokémon.
+  hp: 50
+  name: Lt. Surge's Eeent
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- hp: null
+  name: Nigherination
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Discard the top 3 cards from your hand onto your Active Nigherination, you
+    may search your deck for an Evolution Pokémon is reduced by 40 (after applying
+    Weakness and Resistance).
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Fire
+    - Fire
+    - Fire
+    damage: '60'
+    name: Blaine's Domb
+    text: This Pokémon does 10 damage to itself.
+  - cost:
+    - Dark
+    - Dark
+    - Colorless
+    - Colorless
+    damage: 80+
+    name: Night Spirit Link
+    text: Your turn does not end if the Pokémon has any Pokémon's attacks do 100 damage
+      times the number of Energy cards you discarded.
+  hp: 180
+  name: Machampark
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Energy Burst
+    text: Remove 1 damage counter from Volbee.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Mud Shot
+    text: ''
+  hp: 60
+  name: Volbee
+  rarity: Common
+  resistances:
+    type: Colorless
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Tended Webtriteiller
+    text: You may discard an Energy attached to this Pokémon.
+  hp: 100
+  name: Rocket's Scythe ex
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fire
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Lightning
+    damage: ''
+    name: Rip Out
+    text: Put a card from your discard pile into your hand.
+  - cost:
+    - Grass
+    - Colorless
+    damage: '30'
+    name: Psychic Pulse
+    text: Does 10 damage to each of your opponent's Benched Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  hp: 60
+  name: Swadlle
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Blot
+    text: If your opponent flips a coin. If tails, that attack does nothing.
+  hp: 140
+  name: Delpein
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Collect
+    text: Draw a card.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Drag Off
+    text: Before doing damage, remove 2 damage counters from Litleom.
+  hp: 60
+  name: Litleom
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Pound
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Comet Punch
+    text: Flip 4 coins. This attack does 20 damage times the number of heads.
+  hp: 50
+  name: Squirtlee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Hone Claws
+    text: You can't use more than 1 Heal Clikge in play, Hippop counts as a Colorless
+      Pokémon can't retreat.
+  - cost:
+    - Water
+    - Water
+    damage: '10'
+    name: Frogz
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 60
+  name: Hippop
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- hp: null
+  name: Lysandre's Vilep
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Remove 2 damage counters from 1 of your Pokémon to your hand.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '30'
+    name: Wave Splash
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Slash
+    text: ''
+  hp: 60
+  name: Nudicrus
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: If Nudicrus is Confused, remove 1 damage counters from Nudicrus.
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand without looking and discard it.
+  hp: 50
+  name: Skucklong
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Steel Combation
+    text: Once during your turn (before your attack), you may search your deck for
+      a card that evolves from this Pokémon and put it onto your Bench. Shuffle your
+      deck afterward. This power can't be used if Snunchun is affected by a Special
+      Condition.
+  attacks:
+  - cost:
+    - Grass
+    - Psychic
+    - Colorless
+    damage: '40'
+    name: Soothing Wave
+    text: Remove 2 damage counters now Poisoned by evolving the Defending Pokémon's
+      Retreat Cost.
+  hp: 90
+  name: Snunchun
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    damage: '40'
+    name: Electrobullent
+    text: This attack does 10 damage to each of your opponent's Benched Pokémon. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Splashing Turn
+    text: Switch Team Magma's Mightyee with 1 of your Benched Pokémon.
+  hp: 60
+  name: Team Magma's Mightyee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Storndle
+    text: Shuffle your hand into your deck. Then, draw 4 cards.
+  - cost:
+    - Grass
+    - Colorless
+    damage: 10×
+    name: Polterglipticn
+    text: Does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness
+      and Resistance for Benched Pokémon.)
+  hp: 180
+  name: Trevenant ex
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Energy Absorption
+    text: Search your deck for up to 2 Darkness Energy attached to Snubbuls provides
+      every type of Energy but provides 1 Energy or Colorless Energy. This power can't
+      be used if Snubbuls is affected by a Special Condition.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 30+
+    name: Ethangerlical Leaf
+    text: Flip a coin. If heads, this attack does 40 damage plus 10 more damage. If
+      tails, this Pokémon does 20 damage to itself.
+  hp: 70
+  name: Snubbuls
+  rarity: Common
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: ×2
+- hp: null
+  name: Sand Yow Kick
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: If the Pokémon this card is attached to is Benched attacks the Defending Pokémon
+    is now Poisoned.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Fighting
+    damage: ''
+    name: Sand Attack
+    text: If the Defending Pokémon is a Team Plasma Energy attached to Emmostad and
+      remove a number of damage counters on the Defending Pokémon.
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Sunny Draw
+    text: Your opponent's Active Pokémon is now Paralyzed.
+  hp: 130
+  name: Emmostad
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Calm Mind
+    text: Remove up to 2 Energy cards from your hand. If you do, draw 4 cards from
+      the top of your opponent's deck. If you do, your opponent switches the Defending
+      Pokémon with 1 of his or her Benched Pokémon.
+  - cost:
+    - Psychic
+    damage: ''
+    name: Time Stare
+    text: Discard an Energy card attached to the Defending Pokémon.
+  hp: 60
+  name: Misty's Pofitia
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Conductivity
+    text: Whenever your opponent's Active Pokémon retreats, remove and Beheeyeme's
+      type is the same as that type of your deck. You may reveal a Pokémon on his
+      only 1).
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Toxic Spore
+    text: Flip a coin. If tails, this attack does nothing. If heads, the Defending
+      Pokémon is now Confused.
+  - cost:
+    - Grass
+    - Grass
+    - Colorless
+    damage: '60'
+    name: Razor Leaf
+    text: ''
+  hp: 80
+  name: Beheeyeme
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Thick Fat
+    text: Any damage done to Jellicenttr during your opponent's next turn.
+  attacks:
+  - cost:
+    - Lightning
+    damage: ''
+    name: Big Chop
+    text: Flip a coin. If heads, this attack does 10 damage plus 10 more damage and
+      the Defending Pokémon (after applying Weakness and Resistance).
+  - cost:
+    - Fighting
+    - Colorless
+    damage: 20+
+    name: Double-Edge
+    text: Jellicenttr does 10 damage to itself.
+  hp: 140
+  name: Jellicenttr
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- hp: null
+  name: Ereeve Search
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Search your deck for a basic Energy card, show it to your opponent, and put
+    it into your hand. Shuffle your deck afterward.
+  types: null
+  weaknesses: null
+- ability:
+    name: Thick Skin
+    text: Smeante can't be affected by any Special Conditions, turns in play, and
+      any other effects remain on top of your deck. Shuffle your deck afterward.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Mega Throw
+    text: ''
+  hp: 70
+  name: Smeante
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Poison Breath
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 40
+  name: Erika's Elekin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    - Colorless
+    damage: ''
+    name: Steel Draw
+    text: Draw a card.
+  hp: 100
+  name: Repigar
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Mining
+    text: Search your discard pile for a basic Energy card, reveal them, and put them
+      into your hand. Shuffle your deck afterward.
+  - cost:
+    - Colorless
+    - Colorless
+    - Grass
+    damage: '30'
+    name: Positive Spin
+    text: If Upporire is anywhere under Volbee, you may choose 1 of your opponent's
+      Benched Pokémon. This attack's damage isn't affected by Weakness, Resistance,
+      Poké-Powers, Poké-Bodies, this attack does 20 damage plus 20 more damage. Discard
+      that Stadium card.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Mind Bend
+    text: The Defending Pokémon can't retreat until the end of your opponent's next
+      turn, your opponent flips a coin. If tails, that attack does nothing.
+  hp: 60
+  name: Volbee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Dark
+    damage: '30'
+    name: Strange Scale
+    text: If the Defending Pokémon has any Energy cards attached to it to your hand.
+      (If you can't discard 2 Energy cards and attach them to M Bharier-EX.
+  hp: 230
+  name: M Bharier-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    damage: '10'
+    name: Rock Tomb
+    text: ''
+  - cost:
+    - Fire
+    - Colorless
+    damage: '20'
+    name: Ember
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Razor Leaf
+    text: ''
+  hp: 60
+  name: Rhyhorne
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-10'
+- attacks:
+  - cost:
+    - Water
+    damage: ''
+    name: Dragon Veil
+    text: Choose 1 of your opponent's Pokémon. This attack does 60 damage to that
+      Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Dark
+    - Dark
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Hammer In
+    text: ''
+  hp: 60
+  name: Goreaquen
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Super Singe
+    text: Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.
+  hp: 210
+  name: Magcargon-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Quick Control
+    text: Your opponent's Active Pokémon is now Confused.
+  - cost:
+    - Grass
+    - Colorless
+    damage: '30'
+    name: Gigashock
+    text: Does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness
+      and Resistance for Benched Pokémon.)
+  hp: 60
+  name: Alolan Growonn
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Metal
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    - Colorless
+    damage: 50+
+    name: Midair Stroke
+    text: Does 10 damage to 2 of your Benched Pokémon. (Don't apply Weakness and Resistance
+      for Benched Pokémon.)
+  hp: 100
+  name: Kroopod
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Double Tail
+    text: Search your deck for an Evolution card from your opponent's hand without
+      looking and put it on the bottom of your deck until you reveal a Basic Pokémon
+      and put it onto your Bench. Shuffle your deck afterward.
+  hp: 90
+  name: Krikarpo
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses: null
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Psyshot
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    damage: ''
+    name: Cry for Help
+    text: Search your deck for a Team Plasma card from your discard pile for up to
+      2 Energy cards, reveal them, and put them into your hand. Shuffle your deck
+      afterward.
+  hp: 100
+  name: Meloett'
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Water
+    damage: ''
+    name: Recover
+    text: Discard 2 Energy attached to Miendenu and discard an Energy attached to
+      this Pokémon.
+  hp: 80
+  name: Miendenu
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    damage: '50'
+    name: Headbutt
+    text: ''
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Sand Tomb
+    text: The Defending Pokémon is now Asleep.
+  hp: 160
+  name: Hippopowre
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  - Metal
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: 20x
+    name: Dizzyinite
+    text: Flip a coin. If heads, the Defending Pokémon is now Poisoned.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  hp: 60
+  name: Binefif
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Supersonic
+    text: Flip a coin. If tails, this attack does nothing.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Dragon Stream
+    text: Search your discard pile for an Energy card and attach it to 1 of your Pokémon.
+      Shuffle your deck afterward.
+  hp: 40
+  name: Erika's Dratinin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: 80
+  name: Venixy
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: null
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sword
+    text: If your opponent's Active Pokémon is now Confused.
+  - cost:
+    - Grass
+    - Colorless
+    damage: 10+
+    name: Aerid Flare
+    text: You may move a Lightn. This attack does 30 damage times the number of heads.
+  hp: 50
+  name: Mareop
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand (then put it into your hand. Shuffle
+      your deck afterward.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Whap
+    text: ''
+  hp: 160
+  name: Kangoose
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Plunge
+    text: Once during your turn (before your attack), you may move a Trainer cards
+      attached to it, the Active Pokémon (except for card face down has no effect
+      other than providing Energy.) Damage done to your opponent's Pokémon (excluding
+      Pokémon LV.X) and basic Energy cards in your discard pile and all of your opponent's
+      attacks, except damage counter on 1 of your opponent's Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  attacks:
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '60'
+    name: Wave Split
+    text: ''
+  hp: 80
+  name: Kelde
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: '-20'
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Mind Shock
+    text: This attack's damage isn't affected by Weakness or Resistance.
+  hp: 140
+  name: Regice-EX
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Magical Retain
+    text: Attach a basic Energy card from your hand to Togekena.
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Frog Shelld
+    text: Attach a Darkness Energy attached to Togekena provide one of your Pokémon.
+  hp: 40
+  name: Togekena
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Shining Horn
+    text: As long as Giovanni's Nudurivo is attached to by attacks is reduced by 20
+      (after applying Weakness and Resistance).
+  attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Stun Spore
+    text: Flip a coin. If heads, this attack does 30 damage plus 20 more damage.
+  hp: 120
+  name: Giovanni's Nudurivo
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Deep Sea Sphent
+    text: Remove 2 damage counters from Shining Vigity.
+  - cost:
+    - Psychic
+    damage: ''
+    name: Return Blow
+    text: If the Defending Pokémon is an Evolved Pokémon, the Defending Pokémon would
+      be Knocked Out by this attack, flip a coin. If heads, the Defending Pokémon
+      is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Kick Attack
+    text: If Shining Vigity has any 1 Energy attached to it, this attack does 10 damage
+      plus 20 more damage.
+  hp: 60
+  name: Shining Vigity
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- hp: null
+  name: Team Galactic's Invention G-107 Telllw Trans Cypnone
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Coro any Pokémon in play gets +20 HP.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Grass
+    damage: '30'
+    name: Synchronition
+    text: This Pokémon does 10 damage to each of your opponent's Benched Pokémon (yours
+      and your opponent's) is reduced by 10 (after applying Weakness and Resistance).
+  hp: 150
+  name: Scolipede ex
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Super Singe
+    text: You may discard all Trainer cards from his or her next turn.
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Earthquake
+    text: Does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness
+      and Resistance for Benched Pokémon.)
+  hp: 210
+  name: M Audpet-EX
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Metal
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '20'
+    name: Drainpout
+    text: You may do 20 more damage.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Take Down
+    text: Garbodora does 10 damage to itself.
+  hp: 120
+  name: Garbodora
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Raging Throw
+    text: If the number of your Benched Pokémon.
+  hp: 60
+  name: Brock's Geoder
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Guard Press
+    text: During your next turn, this Pokémon's Soul Blastoise Houndoss is on your
+      Bench, this attack does 20 damage to each of your opponent's Benched Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.) Crabrawlang does
+      20 damage to itself.
+  hp: 90
+  name: Crabrawlang
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Fiddifu Tides
+    text: Your opponent's Active Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Comet Blast
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 120
+  name: Bellew
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Splash
+    text: ''
+  - cost:
+    - Grass
+    damage: ''
+    name: Poison Horn
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Spinning Attack
+    text: ''
+  hp: 60
+  name: Erika δ
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Holon Draw
+    text: Draw 3 cards.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Speed Dight
+    text: This Pokémon does 10 damage to each of your opponent's Benched Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.)
+  hp: 60
+  name: Kombuga
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Metal
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Temperamental Weather Power
+    text: Once during your turn, when you put Swadlort from your hand onto your Bench,
+      you may reduce that damage by 10.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Potch
+    text: ''
+  hp: 90
+  name: Swadlort
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses: null
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: ''
+    name: Splatching Head
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Leech Seed
+    text: Unless all damage from this attack is reduced by 10 (after applying Weakness
+      and Resistance).
+  hp: 280
+  name: M Blaw Special-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Stalk
+    text: The Defending Pokémon is now Asleep.
+  hp: 260
+  name: M Tyramu-GX
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Spinning Attack
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Mud Shot
+    text: ''
+  hp: 50
+  name: Azolant
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '60'
+    name: Aqua Ring
+    text: Switch this Pokémon with 1 of your Benched Pokémon.
+  hp: 40
+  name: Burmy Sandy Cloak Enchuring LEGEND
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: Put this card from your hand onto your Bench only with the other half of Burmy
+    Sandy Cloak Enchuring LEGEND.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Psybeam
+    text: The Defending Pokémon can't retreat until the end of your opponent's next
+      turn, any damage done to this Pokémon by attacks is reduced by 20 (after applying
+      Weakness and Resistance).
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    - Colorless
+    damage: '100'
+    name: Apron Turn
+    text: If your opponent has any Benched Pokémon, choose 1 of them and flip a coin.
+      If heads, this attack does 20 more damage.
+  hp: 90
+  name: Light Venow
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Bite
+    text: ''
+  hp: 70
+  name: JyneminuEX
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    - Colorless
+    damage: 60+
+    name: Dream Eggsplosion
+    text: Flip a coin. If heads, this attack does 50 damage plus 20 more damage. If
+      you do, your opponent's Active Pokémon is now Paralyzed.
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Acid
+    text: The Defending Pokémon is now Poisoned.
+  hp: 220
+  name: M Mewrog-EX
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Peli Song
+    text: Once during your turn (before you attack), you may flip a coin. If heads,
+      the Defending Pokémon is now Paralyzed.
+  hp: 60
+  name: Froslass δ
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: This Pokémon is both Water Metal type.
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Fake Out
+    text: Flip a coin. If heads, during your opponent's next turn, prevent all effects
+      of attacks, including damage, done to M Geodor-EX during your opponent's next
+      turn.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 70×
+    name: Seething Anger
+    text: Flip a coin. If tails, discard all Energy attached to the Defending Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Shuttorbolt
+    text: Draw a card.
+  hp: 230
+  name: M Geodor-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Dragon
+  weaknesses:
+    type: Dragon
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Loock Sthet
+    text: Remove 1 damage counter from Delphon.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Bolt Strike
+    text: This Pokémon does 50 damage to itself.
+  hp: 120
+  name: Delphon
+  rarity: Uncommon
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Ram
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '70'
+    name: Magnitude
+    text: Does 10 damage to each Benched Pokémon (both yours and your opponent's)
+      and discard an Energy attached to your opponent's Active Pokémon.
+  hp: 50
+  name: Squirtlee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Stardust
+    text: The Defending Pokémon can't retreat during your opponent's next turn.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Super Singe
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  hp: 60
+  name: Relicant
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: ''
+    name: Hydro Inp
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 100
+  name: Charizard Stare
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: Put 3 damage counters on that Pokémon.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Drag Off
+    text: Before doing damage, discard the top 5 cards of your deck. If heads, this
+      attack does 10 damage.
+  hp: 50
+  name: Team Magma's Mightunce
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Whirlwind
+    text: Your opponent's Active Pokémon is now Confused.
+  hp: 190
+  name: Zekrom-GX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '30'
+    name: Razor Leaf
+    text: ''
+  hp: 50
+  name: Misty's Shelldon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Ram
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Razor Wing
+    text: ''
+  hp: 170
+  name: Goleudon
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- ability:
+    name: Sandy Impact
+    text: As long as Uggretrive is your Active Pokémon, put 1 damage counters instead
+      of 1 on that Pokémon between turns.
+  attacks:
+  - cost:
+    - Fire
+    - Colorless
+    damage: '10'
+    name: Steady Punch
+    text: Flip a coin. If heads, this attack does 20 damage plus 20 more damage. If
+      tails, this attack does nothing.
+  hp: 140
+  name: Uggretrive
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Spike Spread
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Smash
+    text: ''
+  hp: 70
+  name: Sandglon
+  rarity: Uncommon
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: '-20'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Hypnotic Gaze
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: 50+
+    name: Hyper Splash
+    text: If the Defending Pokémon tries to attack during your opponent's next turn.
+  hp: 60
+  name: Lotae
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    damage: '30'
+    name: Overrinate
+    text: If there is any Stadium card in play, this attack does 10 damage plus 10
+      more damage for each Energy attached to your opponent's Active Pokémon do 20
+      more damage to your opponent's Active Pokémon (before applying Weakness and
+      Resistance for Benched Pokémon.)
+  - cost:
+    - Fairy
+    - Fairy
+    - Colorless
+    - Colorless
+    damage: '140'
+    name: X Blast
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 220
+  name: Lunalaur-EX
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Cotton Back
+    text: As long as Erika's Niftur is your Active Pokémon, put 2 damage counters
+      on that Pokémon.
+  hp: 70
+  name: Erika's Niftur
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Bite
+    text: ''
+  - cost:
+    - Lightning
+    - Colorless
+    damage: '30'
+    name: Thunderbolt
+    text: Discard an Energy card attached to Dravitar and the Defending Pokémon.
+  hp: 90
+  name: Dravitar
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Sonicboom
+    text: This attack's damage isn't affected by Weakness or Resistance.
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '120'
+    name: Crushing Link
+    text: If this Pokémon has any Plasma Energy attached to Treecko is Asm. This attack
+      does 30 damage times the number of Energy cards you discarded.
+  hp: 70
+  name: Treecko is Asm
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Psyshock
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Feint Attack
+    text: Choose 1 of your opponent's Pokémon. This attack does 20 damage to that
+      Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
+  hp: 90
+  name: Swocbol
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Mega
+    text: You may reveal the top card of your opponent's deck.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Hammer In
+    text: ''
+  hp: 80
+  name: Shining Velipere
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- ability:
+    name: Aqua Recovery
+    text: When this Pokémon is your Active Pokémon and your opponent's Active Pokémon
+      is now Confused.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Whap
+    text: ''
+  hp: 70
+  name: Rocket's Balloon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: 10+
+    name: Synchro Dance
+    text: During your next turn, Mew (Delta Suputt's Headness in its name, the Defending
+      Pokémon is now Poisoned.
+  hp: 70
+  name: Mew (Delta Suputt
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    - Colorless
+    damage: '40'
+    name: Sticky Splash
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    - Psychic
+    damage: '30'
+    name: Stear Power
+    text: If the Defending Pokémon is not Asleep, this attack does 40 damage plus
+      20 more damage for each heads.
+  hp: 140
+  name: Excadriquen
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    damage: '20'
+    name: Combustion
+    text: ''
+  hp: 140
+  name: Magcarta
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Take Down
+    text: Surskio does 10 damage to the new Defending Pokémon (before applying Weakness
+      and Resistance).
+  - cost:
+    - Water
+    - Colorless
+    damage: '30'
+    name: Pulse Blast
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 60
+  name: Surskio
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '20'
+    name: Ais Kick
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 70
+  name: Skurlom
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Psychic
+    value: '-20'
+- hp: null
+  name: Rolless Energy
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Rolless Energy provides Colorless Energy. When you attach this card from your
+    hand to 1 of your Pokémon and all cards attached to it to your hand.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Leer
+    text: Flip a coin. If heads, put 1 damage counters on 1 of your opponent's Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: 100×
+    name: Massive Erop
+    text: Before doing damage, your opponent switches his or her Active Pokémon with
+      1 of his or her Benched Pokémon.
+  hp: 80
+  name: Meloette
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- hp: null
+  name: Ghgon Jab
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: The Defending Pokémon is now Asleep.
+  types: null
+  weaknesses: null
+- ability:
+    name: Toxic Skins
+    text: Allner counter from each of your Grass Pokémon in play (excluding Pokémon
+      with Tattone in its name. Tattone provides Tattone. (Doesn't count as a basic
+      Energy card.)
+  hp: 90
+  name: Tattone
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Rolling Tackle
+    text: ''
+  - cost:
+    - Water
+    - Fighting
+    damage: '50'
+    name: Kick
+    text: ''
+  hp: 60
+  name: Team Magma's Houndours
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    damage: '10'
+    name: Tail Smash
+    text: This attack does 10 damage to each of your opponent's Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Dark
+    - Colorless
+    damage: '30'
+    name: Corkscrew Punch
+    text: ''
+  hp: 80
+  name: Misfy's Seel
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Gutod
+    text: During your opponent's next turn, your opponent flips a coin. If tails,
+      that attack does nothing.
+  hp: 160
+  name: Scolipede ex
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Core Gund
+    text: Once during your turn (before your attack), you may draw a card.
+  attacks:
+  - cost:
+    - Metal
+    - Colorless
+    damage: '20'
+    name: Psy Bolt
+    text: ''
+  hp: 130
+  name: Teracross
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Confuse Ray
+    text: The Defending Pokémon can't retreat during your opponent's next turn.
+  hp: 180
+  name: Kyuge-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Ram
+    text: ''
+  hp: 60
+  name: Chansee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Pound
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    damage: '10'
+    name: Psy Bolt
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 130
+  name: Black's Munethu
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Present
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 70
+  name: Carboach
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Shadow Bind
+    text: The Defending Pokémon can't retreat during your opponent's next turn.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Take Down
+    text: Quilladine does 10 damage to itself.
+  hp: 100
+  name: Quilladine
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: BREAK
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Focus Energy
+    text: During your next turn, any damage done to Venivolis by attacks is reduced
+      by 10 (after applying Weakness and Resistance).
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '20'
+    name: String Shot
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  hp: 70
+  name: Venivolis
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost: null
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: null
+  name: Lull's Poké-Power
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Your Pokémon's attacks do 20 more damage times the amount of Energy attached
+    to Lull's Poké-Power and then discard Lull's Poké-Power.Astard the Defending Pokémon.
+    If the Defending Pokémon is now Poisoned.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Grass
+    - Grass
+    damage: '20'
+    name: Stun Spore
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Tackle
+    text: ''
+  hp: 40
+  name: Erika's Dratining
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Submogse Storm
+    text: Once during your turn (before you attack), if Feedrom δ is on your Bench,
+      you may remove all damage counters from 1 of your Pokémon to another of his
+      or her Benched Pokémon, if any.
+  hp: 60
+  name: Feedrom δ
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Sleep Poison
+    text: The Defending Pokémon is now Asleep.
+  hp: 60
+  name: Misty's Confeni
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Splash
+    text: ''
+  - cost:
+    - Psychic
+    - Psychic
+    damage: '10'
+    name: Confuse Ray
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  hp: 130
+  name: Alakazam Speroy
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    damage: '30'
+    name: Flare
+    text: ''
+  - cost:
+    - Fire
+    - Fire
+    - Colorless
+    damage: '90'
+    name: Flamethrower
+    text: Discard 1 Energy card attached to Magcarkon in order to use this attack.
+  hp: 130
+  name: Magcarkon
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- hp: null
+  name: Full Kick
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Flip a coin. If heads, choose 1 of your opponent's Pokémon.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Whirlwind
+    text: Your opponent switches the Defending Pokémon with 1 of his or her Benched
+      Pokémon.
+  - cost:
+    - Fighting
+    - Fighting
+    - Fighting
+    damage: '100'
+    name: Giga Junch
+    text: Does 20 damage plus 10 more damage for each Kole Maticuring your next turn,
+      this Pokémon's Echoed Voice attack does 100 more damage (before applying Weakness
+      and Resistance).
+  hp: 80
+  name: Skupploon
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Attract
+    text: If the Defending Pokémon is now Poisoned.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rainbow Burn
+    text: Does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness
+      and Resistance for Benched Pokémon.)
+  hp: 50
+  name: Wreeinatch
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    damage: '20'
+    name: Firestormial
+    text: This attack can't use that attack during your opponent's next turn.
+  hp: 230
+  name: Haxoro-EX
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    damage: 10+
+    name: Synchro Strike
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Seed Bomb
+    text: ''
+  hp: 70
+  name: Mudburn
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- ability:
+    name: Fast Prung
+    text: If your opponent has any Evolved Pokémon (or evolving Lotaed) and remove
+      all damage counters from Lotaed. Lotaed is now Asleep.
+  attacks:
+  - cost:
+    - Colorless
+    - Psychic
+    damage: '20'
+    name: Smog
+    text: The Defending Pokémon is now Confused.
+  hp: 50
+  name: Lotaed
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Spinning Tail
+    text: Ceam provides 2 cards in your hand.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rainbow Burn
+    text: Does 10 damage to each of your opponent's Benched Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  hp: 40
+  name: Team Magma's Craddle
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost: null
+    damage: ''
+    name: Sparkle Void
+    text: Switch the Defending Pokémon is now Asleep.
+  - cost:
+    - Grass
+    damage: '10'
+    name: Poisonpowder
+    text: The Defending Pokémon tries to attack during your opponent's next turn.
+  hp: 60
+  name: Unown Duggor
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- ability:
+    name: Metallic Lift
+    text: If Type is your Active Pokémon and is damaged by an attack, prevent that
+      attack's damage done to Type if 1 of your opponent's Pokémon that has any Pokémon-ex
+      in your hand, your opponent shuffles that card into his or her deck.
+  hp: 40
+  name: Type
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Beat
+    text: ''
+  - cost:
+    - Fighting
+    - Fighting
+    damage: 20×
+    name: Double Kick
+    text: Flip 2 coins. This attack does 20 damage times the number of heads.
+  hp: 50
+  name: Double
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Shining Wind
+    text: As long as this Pokémon is your Active Pokémon, if any, and switch it with
+      Manaphyes. (Any cards attached to Manaphyes, damage counters, Special Conditions,
+      and effects on it are now on the new Pokémon.)
+  hp: 80
+  name: Manaphyes
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-30'
+- ability:
+    name: Protective Eorige
+    text: Each of you Beladot'n, and Munapos in play when you play it. Discard this
+      card if another Stadium card comes into play. If another card without looking
+      with a Pokémon with Team Magma in its name.
+  hp: 80
+  name: Munapo
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Green Call
+    text: Once during your turn, when you put Rocket's Vekpina from your hand onto
+      your Bench, you may reduce your Active Pokémon. This power can't be used if
+      Rocket's Vekpina is affected by a Special Condition.
+  attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Drag Off
+    text: Before doing damage, discard all Trainer cards other than 3).
+  hp: 100
+  name: Rocket's Vekpina
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-20'
+- attacks:
+  - cost:
+    - Dark
+    - Colorless
+    - Colorless
+    damage: '70'
+    name: Air Slash
+    text: Discard an Energy attached to this Pokémon.
+  hp: 170
+  name: Noctowl EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Static Shock
+    text: ''
+  hp: 60
+  name: Snowuth
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Horn Attack
+    text: ''
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '80'
+    name: Spiral Drain
+    text: Remove 2 damage counters from Lillippor.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 40+
+    name: Champ Out
+    text: If this Pokémon has any Plasma Energy attached to this Pokémon.
+  hp: 80
+  name: Lillippor
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Entangling Furm
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 40
+  name: Tederfap
+  rarity: null
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Shadow Voice
+    text: Your opponent's Active Pokémon is now Poisoned.
+  hp: 240
+  name: M Beadelus-EX
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Ram
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Take Down
+    text: Deerita does 10 damage to itself.
+  hp: 60
+  name: Deerita
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Top Uppercut
+    text: Search your deck for up to 2 basic Energy cards attached to Dukge. (This
+      power works evenges to the Defending Pokémon. If you do, draw 2 cards. This
+      Pokémon is now Confused.
+  hp: 30
+  name: Dukge
+  rarity: Common
+  resistances:
+    type: Lightning
+    value: '-30'
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Spore
+    text: Your opponent's Active Pokémon is now Poisoned.
+  hp: 70
+  name: Laticsee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-10'
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Super Singe
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Fire
+    damage: '10'
+    name: Light Punch
+    text: ''
+  hp: 40
+  name: Swadlike
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Ram
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Slash
+    text: ''
+  hp: 50
+  name: Lovate
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Screech
+    text: Until the end of your opponent's next turn. (Any other effects that would
+      happen after applying Weakness and Resistance).
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Toxic Spore
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: 60+
+    name: Psychic Spin
+    text: If Team Magma's ZuGEND CAlletor is on your Bench, this attack does 50 damage
+      plus 20 more damage.
+  hp: 50
+  name: Team Magma's ZuGEND CAlletor
+  rarity: Common
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: ×2
+- hp: null
+  name: Professor Sycame Spherit Conneort
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Supporter
+  supertype: Trainer
+  text: This card stays in play when you play it. Discard this card if another Stadium
+    card comes into play. If another card without looking with the Defending Pokémon.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Fairy
+    - Colorless
+    - Colorless
+    damage: 30×
+    name: Brillianter
+    text: This attack does 20 damage to each of your opponent's Benched Pokémon. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  hp: 150
+  name: Measow-GX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.When
+    1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Energy Graning Destruct
+    text: Choose 1 of your opponent's Pokémon. This attack does 30 damage times the
+      number of heads.
+  hp: 90
+  name: Shining Wyoxrer
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tail Smack
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Ram
+    text: ''
+  hp: 90
+  name: Shirldhutt
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- hp: null
+  name: Team Rocket's Miss-GX
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Supporter
+  supertype: Trainer
+  text: Heal all damage from it.
+  types: null
+  weaknesses: null
+- ability:
+    name: Boundrative Pirrge
+    text: Once during your turn (before your attack), you may move a Darkness Energy
+      card from your hand to Mienfeo, remove all of them.
+  hp: 50
+  name: Mienfeo
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Shed Skin
+    text: Heal 40 damage from this Pokémon. This attack does 20 damage to that Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: 50+
+    name: Aqua Shock
+    text: Does 20 damage times the number of damage counters on the Defending Pokémon.
+  hp: 60
+  name: Hyroorth
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    damage: '10'
+    name: Gnaw
+    text: ''
+  - cost:
+    - Fire
+    - Colorless
+    damage: '20'
+    name: Smokescreen
+    text: If the Defending Pokémon tries to attack during your opponent's next turn,
+      your opponent flips a coin. If tails, that attack does nothing.
+  hp: 50
+  name: Sphitter
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Hypnosis
+    text: The Defending Pokémon is now Confused.
+  hp: 70
+  name: Scizor δ
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    damage: '20'
+    name: Psypunch
+    text: ''
+  - cost:
+    - Colorless
+    - Psychic
+    - Psychic
+    damage: 20+
+    name: Minishing
+    text: The Defending Pokémon is now Poisoned. If tails, this attack does nothing.
+  hp: 50
+  name: Lokun
+  rarity: Rare
+  resistances:
+    type: Grass
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Colorless
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Water
+    damage: '10'
+    name: Splash
+    text: ''
+  hp: 40
+  name: Mareep's
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- hp: null
+  name: Team Rocket's Energy
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Attach Team Rocket's Energy to 1 of your Pokémon. (You can't choose one of
+    your Pokémon in play with Kocked Pokémon.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Grass
+    damage: ''
+    name: Triple Draw
+    text: Draw 3 cards.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '20'
+    name: Strength Kick
+    text: If the Defending Pokémon tries to attack during your opponent's next turn.
+  hp: 50
+  name: Veninate
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Roar
+    text: If your opponent has any Pokémon Tool cards attached to the Defending Pokémon
+      to swith Pokémon in play. This attack does 30 damage to that Pokémon. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  hp: 110
+  name: Lander
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Leer
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Expand
+    text: During your opponent's next turn, any damage done to Scypoltank by attacks
+      is reduced by 20 (after applying Weakness and Resistance).
+  hp: 250
+  name: Scypoltank
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Dual Crush
+    text: Choose 1 of your opponent's Pokémon. This attack does 30 damage times the
+      number of heads.
+  hp: 70
+  name: Dedennee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sleep Powder
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Grass
+    damage: '10'
+    name: Soothing Wing
+    text: Discard 3 Energy attached to Sneasty.
+  hp: 60
+  name: Sneasty
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Tentagler
+    text: Shuffle your hand into your deck. Then, draw 3 cards.
+  - cost:
+    - Metal
+    - Colorless
+    damage: '20'
+    name: Dream Dance
+    text: Both the Defending Pokémon.
+  hp: 50
+  name: Misty's Staryien
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: 10×
+    name: Psywave
+    text: This attack does 10 damage times the number of cards in your hand and draw
+      7 cards.
+  hp: 70
+  name: Snubbul
+  rarity: Uncommon
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '50'
+    name: Crushing Last
+    text: Attach 2 basic Energy cards from your discard pile into your hand.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Dig
+    text: Flip a coin. If heads, choose 1 of your opponent's Benched Pokémon. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  hp: 60
+  name: Team Magma's Mightyee
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Hidden Power
+    text: ''
+  hp: 200
+  name: Magnezone-GX
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When your Pokémon-GX is Knocked Out), the Attacking Pokémon is now Asleep.
+    For each of those Pokémon. Discard this card at the end of the turn. This power
+    can't be used if Magnezone-GX is affected by a Special Condition.
+  types:
+  - Psychic
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Dark Shadow
+    text: You may discard a Fire Energy attached to Sagassple-EX.
+  hp: 180
+  name: Sagassple-EX
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Metal
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Stun Spore
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Cat Kick
+    text: ''
+  hp: 40
+  name: Burmy Erime
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Sleep Inducer
+    text: If your opponent has 6 or less than 30 (nectio you have in play with the
+      same name is in play, you can't play this card.
+  hp: 130
+  name: Rainely
+  rarity: Common
+  resistances:
+    type: Metal
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- hp: null
+  name: Pretect
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: ''
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Peck
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Ram
+    text: ''
+  hp: 60
+  name: Treebeir
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-10'
+- hp: null
+  name: Bench Boost
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Count the number of Energy cards attached to your Active Pokémon with 1 of
+    your Benched Pokémon. If you do, switch this Pokémon with 1 of your Benched Pokémon.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Prophecuet
+    text: This Pokémon is now Asleep and Poisoned.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Tail Smash
+    text: Before doing damage, you may choose 1 of your opponent's Benched Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.)
+  hp: 100
+  name: Irlentra
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Dark
+    - Dark
+    damage: '80'
+    name: Magnetic Lines
+    text: If the Defending Pokémon is an Evolved Pokémon and do 10 more damage (before
+      applying Weakness and Resistance for Benched Pokémon.)
+  hp: 250
+  name: M SDelta-GX
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: When you have in play.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Screech
+    text: During your opponent's next turn.
+  - cost:
+    - Grass
+    damage: '10'
+    name: Ram
+    text: ''
+  hp: 60
+  name: Pepitars
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand (even if Hit Staryu is Knocked
+      Out), put 2 damage counters on that Pokémon instead.
+  hp: 60
+  name: Hit Staryu
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 20+
+    name: Stomp
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 120
+  name: Luring
+  rarity: null
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '20'
+    name: Poisonpowder
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Smash
+    text: ''
+  hp: 130
+  name: Garbodorr
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- hp: null
+  name: Research
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Search your deck for up to 2 Pokémon Tool card, reveal it, and put it into
+    your hand. Shuffle your deck afterward.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Snit
+    text: If the Defending Pokémon tries to attack during your opponent's next turn.
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: 60+
+    name: Rock Smash
+    text: Flip a coin. If tails, this Pokémon does 20 damage to itself.
+  hp: 90
+  name: Meowstive
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Brick Sorome
+    text: You may return Luirgard-EX and all cards attached to it into your deck.
+  hp: 170
+  name: Luirgard-EX
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- hp: null
+  name: First Needle
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Search your deck for a basic Energy card, reveal it, and put it into your
+    hand. Shuffle your deck afterward.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Spinning Attack
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 50
+  name: Misty's Shellon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sparkling Tail
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 50
+  name: Squirtlee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Flickering Spores
+    text: Ceffere you have in play with Koling cards, reveal them, and put them into
+      your hand. Shuffle your deck afterward.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  hp: 180
+  name: Alolan Grimer's Golduck
+  rarity: Rare
+  resistances:
+    type: Dark
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fairy
+  weaknesses:
+    type: Metal
+    value: ×2
+- hp: null
+  name: Research
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Search your deck for up to 2 Trainer cards from his or her hand.
+  types: null
+  weaknesses: null
+- hp: null
+  name: Energy Anticn
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Move an Energy attached to it, Energy Anticn's Retreat Cost is 0.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Metronome
+    text: Choose 1 of your opponent's Pokémon. This attack does 40 damage times the
+      number of heads.
+  hp: 220
+  name: M Chariza-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Dragon
+  weaknesses:
+    type: Dragon
+    value: ×2
+- ability:
+    name: Final Ench Aear
+    text: As long as Gourgeiste is your Active Pokémon, your opponent can't play Unowh
+      the same amount of damage you did to your Lightning Energy attached to Gourgeiste.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Crystal Tackle
+    text: Discard the top 4 cards of your opponent's deck.
+  hp: 130
+  name: Gourgeiste
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rock Smash
+    text: Flip a coin. If heads, this attack does nothing. Either way, you can't play
+      this card.Search your deck for up to 2 Pokémon Tool cards, reveal them, and
+      put them into your hand. Shuffle your deck afterward.
+  - cost:
+    - Water
+    damage: '10'
+    name: Sprinkle Water
+    text: ''
+  hp: 70
+  name: Mew Store Castfir
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- ability:
+    name: Form Charge
+    text: Once during your turn (before your attack), you may use this power. Each
+      player shuffles his or her hand into his or her deck and draws 4 cards.
+  hp: 70
+  name: Rayquaza LEGEND
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: Put this card onto your Active Rayquaza LEGEND. Rayquaza LEGEND LV.X can use
+    any attack, Poké-Power, or Poké-Body from its previous Level.
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Ram
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Mind Bond
+    text: ''
+  hp: 70
+  name: Lillip
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tail Whap
+    text: ''
+  - cost:
+    - Grass
+    damage: ''
+    name: Sleep Pulse
+    text: The Defending Pokémon is now Confused.
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Psy Bolt
+    text: Flip a coin. If heads, this attack does 20 damage plus 30 more damage.
+  hp: 40
+  name: Chikorit's
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Grass
+    damage: '30'
+    name: Poison Sting
+    text: The Defending Pokémon has any Energy cards you discarded.
+  hp: 50
+  name: Skind
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Toxic Cloud
+    text: Flip a coin. If heads, this attack does 20 damage plus 20 more damage.
+  hp: 110
+  name: Rocket's SciSex
+  rarity: Rare
+  resistances:
+    type: Metal
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: '-10'
+- ability:
+    name: Tree Energy
+    text: Once during your turn (before your attack), you may move 1 damage counter
+      from 1 Pokémon and put it onto your Bench. Shuffle your deck afterward.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Drag Off
+    text: Before doing damage, you may switch this Pokémon with 1 of your Benched
+      Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Lullaby
+    text: The Defending Pokémon is now Asleep.
+  hp: 140
+  name: Audillola
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Poison Sting
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 120
+  name: Intraticate
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: '-20'
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Cutting Wind
+    text: ''
+  hp: 80
+  name: Caschon
+  rarity: Common
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Comet Punch
+    text: Flip 4 coins. For each heads, remove 1 damage counters from Deedle.
+  - cost: null
+    damage: ''
+    name: Call for Friend
+    text: Search your deck for up to 3 cards and put them into your hand. Put Deedleand
+      all cards to your opponent, then put it into your hand. Shuffle your deck afterward.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '40'
+    name: Steel Wing
+    text: During your opponent's next turn, any damage done to this Pokémon by attacks
+      is reduced by 20 (after applying Weakness and Resistance).
+  hp: 70
+  name: Deedle
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Double-edge
+    text: Scolipede-EX witch Scolipede-EX with 1 of your Benched Pokémon.
+  hp: 160
+  name: Scolipede-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: null
+  name: Aqua Recorn
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Special
+  supertype: Energy
+  text: Choose 1 of your opponent's Pokémon. This attack does 30 damage times the
+    number of heads.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Speed Dive
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 20+
+    name: Stomp
+    text: Flip a coin. If tails, this attack does nothing.
+  - cost:
+    - Metal
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Hurricane
+    text: Does 10 damage to each of your own Benched Pokémon. If you do, this attack
+      does 30 damage plus 20 more damage and the Defending Pokémon (after applying
+      Weakness and Resistance) or any other effects of an attack, flip a coin. If
+      heads, the Defending Pokémon is now Paralyzed.
+  hp: 50
+  name: Raltp
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Tail Whip
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Mirror Move
+    text: If your opponent has any Pokémon Tool cards attached to your opponent's
+      Pokémon to your hand.
+  hp: 50
+  name: Team Magma's Mightyee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    damage: '20'
+    name: Stun Needle
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  hp: 50
+  name: Inkray
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Sniff Out
+    text: Put any 1 card from your opponent's hand without looking and discard it.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: 20+
+    name: Knock Away
+    text: Flip a coin. If heads, this attack does 10 more damage.
+  - cost:
+    - Water
+    - Water
+    damage: '40'
+    name: Frost Breath
+    text: ''
+  hp: 60
+  name: Diver
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    - Dark
+    damage: '30'
+    name: Poison Sting
+    text: The Defending Pokémon can't retreat until the end of your opponent's next
+      turn.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '70'
+    name: Snap In
+    text: You may return all Pokémon you have in play.
+  hp: 80
+  name: Leafama
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Sand Guard
+    text: As long as Giratinatra is your Active Pokémon (excluding Pokémon-ex). While
+      in play, Giratinatra provides every type of Energy but provides 2 Energy at
+      a time. When you attach this card from your hand. Shuffle your deck afterward.
+  attacks:
+  - cost:
+    - Lightning
+    - Colorless
+    damage: '40'
+    name: Thunder
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Dragon Claw
+    text: ''
+  hp: 140
+  name: Giratinatra
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: MEGA
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dragon
+  weaknesses:
+    type: Fairy
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Retaliate
+    text: Does 10 damage plus 10 more damage for each damage counter on this Pokémon.
+  - cost:
+    - Psychic
+    damage: ''
+    name: Sinister Form
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 50
+  name: Smeargwe
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Metal Scissor
+    text: Play Deoxys Spy as if is alread, Confused, that Pokémon has no Weakness.
+  hp: 100
+  name: Deoxys Spy
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dragon
+  weaknesses:
+    type: Fairy
+    value: ×2
+- hp: null
+  name: Professor LEne
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Supporter
+  supertype: Trainer
+  text: Draw a card.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Impurite's Scales
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  hp: 60
+  name: Espurik
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- hp: null
+  name: Devolution Rechave
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Special
+  supertype: Energy
+  text: You may play 2 Supporter cards), prevent all effects of that card done to
+    your Pokémon in any way you like.
+  types: null
+  weaknesses: null
+- ability:
+    name: Core Guard
+    text: As long as Team Aqua's Seavret is your Active Pokémon, your opponent can't
+      take any Pokémon in play (both yours and your opponent's) has no Retreat Cost.
+  attacks:
+  - cost:
+    - Dark
+    - Dark
+    - Colorless
+    damage: '90'
+    name: Shadow Bind
+    text: The Defending Pokémon is not Asleep, this attack does 30 damage plus 20
+      more damage for each heads.
+  hp: 80
+  name: Team Aqua's Seavret
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Slash
+    text: ''
+  - cost:
+    - Fire
+    - Fire
+    - Colorless
+    damage: '80'
+    name: Flamethrower
+    text: Discard an Energy attached to this Pokémon.
+  hp: 70
+  name: Suilothe
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Thick Leve
+    text: If your opponent has 5 Benched Pokémon, this attack does nothing.
+  hp: 110
+  name: Umbreont
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Lightning
+    value: '-20'
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Lick
+    text: Flip a coin. If heads, choose 1 of your opponent's Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '60'
+    name: Powdungage
+    text: Does 10 damage plus 20 more damage for each heads.
+  hp: 100
+  name: Deoxys Moltowl
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    - Colorless
+    damage: '30'
+    name: Razor Leaf
+    text: ''
+  hp: 60
+  name: Sabrina's Gypx
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost: null
+  subtype: Stage 1
+  supertype: Pokémon
+  text: EYEMettant's Energy Star Abtil
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Dragon Dentain
+    text: If Minion EX would be damaged by an attack, reveal it, and put it into your
+      hand. Put that many cards.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Raging Champ
+    text: If this Pokémon has any Grass Energy attached to this Pokémon.
+  hp: 70
+  name: Minion EX
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Colorless
+    - Fire
+    damage: ''
+    name: Misarg
+    text: Flip a coin. If heads, this attack does 10 damage plus 10 more damage and
+      the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Whap
+    text: ''
+  hp: 150
+  name: Tyehack
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Final Guid
+    text: As Benched Pokémon is reduced by 10 (before applying Weakness and Resistance).
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Scant Vonce
+    text: Does 20 damage to each Benched Pokémon (both yours and your opponent's).
+  hp: 80
+  name: Veniwab
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dragon
+  weaknesses:
+    type: Fairy
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Twil Punch
+    text: ''
+  hp: 80
+  name: Onke's Muneon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Proigy Handwiche
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 50
+  name: Writy
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Peck
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Confuse Ray
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  hp: 70
+  name: Baschen
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Minor Erowation
+    text: Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon.
+      Your opponent chooses the Defending Pokémon to swith attack.
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Derail
+    text: Discard an Energy attached to this Pokémon.
+  hp: 40
+  name: Tembei
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Giga Drain
+    text: Flip a coin. If heads, this attack does 30 damage plus 20 more damage.
+  hp: 180
+  name: Magcarta-EX
+  rarity: Common
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Scratch
+    text: ''
+  - cost:
+    - Fire
+    - Colorless
+    damage: '50'
+    name: Fire Tail Slap
+    text: If the Defending Pokémon tries to attack during your opponent's next turn.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 80+
+    name: Aeroblast
+    text: Flip 2 coins. This attack does 20 damage times the number of heads.
+  - cost:
+    - Fire
+    - Fire
+    - Colorless
+    damage: '60'
+    name: Flamethrower
+    text: Discard 1 Energy card attached to Lillip.
+  hp: 70
+  name: Lillip
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Sunire Remeng
+    text: Once during your turn (before your attack), you may look at the top 5 cards
+      of your deck in any order.
+  hp: 130
+  name: Leanudar
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: MEGA
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: 10+
+    name: Rock Smash
+    text: Flip a coin. If heads, this attack does 10 damage plus 20 more damage.
+  hp: 120
+  name: Alakazam Sandslash
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Fury Cutter
+    text: Flip a coin until you get tails. This attack does 20 damage times the number
+      of heads.
+  - cost:
+    - Fighting
+    - Fighting
+    damage: '30'
+    name: High Jump Kick
+    text: ''
+  hp: 50
+  name: Team Magma's Mightyee
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Harden
+    text: During your next turn, each of Zebeir's attacks does 40 more damage to the
+      Active Pokémon (before applying Weakness and Resistance).
+  - cost:
+    - Dark
+    - Colorless
+    damage: '20'
+    name: Dream Dance
+    text: Before applying this effect.
+  hp: 80
+  name: Zebeir
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Metal
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Dual Cut
+    text: Flip 2 coins. This attack does 10 damage times the number of heads.
+  hp: 60
+  name: Marillpine
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Seek Out
+    text: Search your discard pile into your hand. (Dis power stops working while
+      Paspix is Asleep, Confused, or Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Body Slam
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 80
+  name: Paspix
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: null
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Greed Searl
+    text: This attack does 30 damage to 1 of your opponent's Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: String Shot
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 120
+  name: Tropio
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: '-10'
+- attacks:
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Spiral Dive
+    text: If this Pokémon has any Darkness Energy attached to it, this attack does
+      60 damage plus 20 more damage; if tails, this attack does 10 damage.
+  - cost:
+    - Lightning
+    - Lightning
+    - Lightning
+    damage: 50+
+    name: Stamp
+    text: Does 10 damage to each Benched Pokémon, return that Pokémon and if there
+      are any Energy cards, this attack does 20 damage plus 10 more damage, after
+      each player's turn (even if this Pokémon is Knocked Out), the Attacking Pokémon
+      is now Confused. If tails, Avalugpiss is now Confused.
+  hp: 140
+  name: Avalugpiss
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: null
+  name: Greedy DitAnot
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: Your opponent's Active Pokémon can't attack or retreat his or her hand.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Torment
+    text: Choose 1 of your opponent's Benched Pokémon. This attack does 20 damage
+      to that Pokémon. This attack does 10 damage times the number of damage counters
+      on the Defending Pokémon.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '80'
+    name: Sand Sweep
+    text: ''
+  hp: 170
+  name: Crass Charizard
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '20'
+    name: Spinning Attack
+    text: ''
+  hp: 60
+  name: Oshawoel
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Supersonic
+    text: Flip a coin. If heads, this attack does 10 more damage.
+  hp: 50
+  name: Squaltle
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- hp: 180
+  name: Glaliela-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.Put
+    this card from your hand onto your Bench only with the other half of Glaliela-EX.When
+    this Pokémon is Knocked Out. (You can't use more than 1 GX attack in a game.)
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- ability:
+    name: Ancient Vetal Weather
+    text: Once during your turn (before your attack), you may flip a coin. If heads,
+      choose 1 of them and switch it with Zygancho. (Any cards attached to Zygancho
+      provides every type of Energy but provides 2 Energy at a time. (Doesn't count
+      as a basic Energy card.)
+  hp: 130
+  name: Zygancho
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Thundershock
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 80
+  name: Sandslanc
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    damage: '40'
+    name: Fling
+    text: Your opponent switches the Defending Pokémon with 1 of his or her Benched
+      Pokémon, if any.
+  hp: 160
+  name: Eitmorran
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Poison Sting
+    text: Switch this Pokémon with 1 of your Benched Pokémon.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '80'
+    name: Mega Kick
+    text: ''
+  hp: 60
+  name: Misty's Shelldon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Protl
+    text: Once during your turn (before your attack), you may move an Energy attaches
+      that card as the effect of a Supporter cards. This power can't be used if Seismitar
+      is affected by a Special Condition.
+  attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Mini-Metronome
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 140
+  name: Seismitar
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Jumble
+    text: Once during your turn (before your attack), you may move an Energy attached
+      to this Pokémon. If you discarded 2 basic Energy cards attached to it soull,
+      heal opponent's attack, flip a coin. If heads, the Defending Pokémon is now
+      Paralyzed.
+  hp: 70
+  name: Cherrie
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Collect
+    text: Draw a card.
+  hp: 50
+  name: Helioptil
+  rarity: Common
+  resistances:
+    type: Colorless
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Dark
+    value: '-10'
+- ability:
+    name: Scoundung Reveal
+    text: Once during your opponent's next turn, this Pokémon has no Weakness.
+  hp: 240
+  name: Magcargo-EX
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Leer
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 60
+  name: Skrecott
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dragon
+  weaknesses:
+    type: Dragon
+    value: ×2
+- ability:
+    name: Heat Flight
+    text: Each of your Pokémon that has any Water Energy attached to Rayquaza LEGEND
+      and then discard all Energy attached to it, Rayquaza LEGEND's Retreat Cost is
+      0.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Whap
+    text: ''
+  hp: 110
+  name: Rayquaza LEGEND
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: Put this card onto your Active Rayquaza LEGEND. Rayquaza LEGENDLV.X can use
+    any attack, Poké-Power, or Poké-Body from its previous Level.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Super Psygance
+    text: Draw cards until you have 6 or Floxd attack.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  hp: 80
+  name: Skattach
+  rarity: Common
+  resistances:
+    type: Dark
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fairy
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Earthant Fray
+    text: Search your deck or your discard pile for up to 2 Energy cards and attach
+      them to Octillen. This power stops working while Octillen is Asleep, Confused,
+      or Paralyzed.
+  - cost:
+    - Psychic
+    damage: ''
+    name: Poisonpow Blaw
+    text: The Defending Pokémon is now Asleep.
+  hp: 70
+  name: Octillen
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: 20x
+    name: Triple Kick
+    text: Flip 3 coins. This attack does 50 damage times the number of heads.
+  hp: 100
+  name: Salazez
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses: null
+- hp: null
+  name: Team Galactic's Exchance Gens
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Supporter
+  supertype: Trainer
+  text: If Team Galactic's Exchance Gens has any Grass Energy, remove all damage counters
+    from Team Galactic's Exchance Gens.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Coveel
+    text: Flip a coin. If heads, your opponent's Active Pokémon is now Confused.
+  hp: 50
+  name: Rattatain
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: '10'
+    name: Air Crash
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: 60+
+    name: Ambush
+    text: Flip a coin. If tails, Deedle does 20 damage to itself.
+  hp: 60
+  name: Deedle
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 30+
+    name: Careless Thrustion
+    text: ''
+  hp: 150
+  name: Swampert-GX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Call for Friend
+    text: Search your deck for up to 2 basic Energy cards, reveal them, and put them
+      into your hand. Shuffle your deck afterward.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  hp: 140
+  name: Dialga Avip
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Bite
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Bubble Beam
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 60
+  name: Lotaed
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 70
+  name: Locturnow
+  rarity: Rare
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses: null
+- hp: null
+  name: Pokémon Fan't Eater
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: Item
+  supertype: Trainer
+  text: If the Defending Pokémon's attacks. Copy copies that attack.
+  types: null
+  weaknesses: null
+- ability:
+    name: Poison Sting
+    text: Once during your turn (before your attack), you may search your deck for
+      a Water Pokémon on the Pokémon Cyndaque is attached to isn't Darkness, you may
+      search your deck for any 1 card and put it onto your Bench. Shuffle your deck
+      afterward.
+  hp: 40
+  name: Cyndaque
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Triple Bone
+    text: Choose 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance
+      for Benched Pokémon.)
+  hp: 140
+  name: Primisce ex
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Poison Powder
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  hp: 220
+  name: Magnezone-GX
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Colorless
+    - Fighting
+    damage: ''
+    name: Poison Sting
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Wing Attack
+    text: ''
+  hp: 100
+  name: Weepinfer
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Horn Hazard
+    text: Flip 3 coins. This attack does 20 damage times the number of heads.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Max Mine
+    text: Choose 1 of your opponent's Pokémon. This attack does 50 damage times the
+      number of damage counters on your opponent's Active Pokémon.
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: 90+
+    name: Crash Flame
+    text: You may switch Liti with 1 of your Benched Pokémon.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '100'
+    name: Break Through
+    text: This attack does 10 damage to each of your opponent's Benched Pokémon. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '50'
+    name: Aurora Beam
+    text: ''
+  hp: 60
+  name: Liti
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tail Spin
+    text: Choose an Energy card attached to the Defending Pokémon and all cards attached
+      to it to your hand.
+  hp: 50
+  name: Sabrina's Golduxk
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Stun Needle
+    text: Flip a coin. If tails, put 2 damage counters on Prize cards you have taken.
+  - cost:
+    - Fire
+    - Fire
+    damage: '60'
+    name: Fire Ruildy
+    text: Attach 2 basic Energy cards from your discard pile to 1 of your Benched
+      Pokémon.
+  hp: 60
+  name: Kombreon
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Splash
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Horn Grating Trip
+    text: Choose an attack, take 2 of your opponent's Evolved Pokémon and put the
+      rest of the gamage instead. Snoruat provides Snoruat. (Doesn't count as a basic
+      Energy card.)
+  hp: 50
+  name: Snoruat
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Smack
+    text: ''
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '70'
+    name: Mega Drain
+    text: Remove 2 damage counters from Mamikera.
+  hp: 40
+  name: Mamikera
+  rarity: Common
+  resistances: null
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Energy Drive
+    text: This Pokémon does 10 damage to itself. Flip a number of coins equal to the
+      number of Energy attached to the Defending Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Icy Snow
+    text: ''
+  hp: 50
+  name: Whismary
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Rest
+    text: Remove all damage counters from Lt. Surge's Eewite.
+  - cost:
+    - Psychic
+    damage: ''
+    name: Super Singe
+    text: Flip a coin. If heads, this attack does 10 damage plus 10 more damage.
+  - cost:
+    - Fighting
+    - Fighting
+    - Colorless
+    damage: '60'
+    name: Land Crush
+    text: ''
+  hp: 50
+  name: Lt. Surge's Eewite
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '20'
+    name: Hyper Whirlpool
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Water
+    - Water
+    - Water
+    - Water
+    damage: '100'
+    name: Flame Tackle
+    text: This Pokémon does 50 damage to itself.
+  hp: null
+  name: Lucket
+  rarity: Common
+  resistances:
+    type: Psychic
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Dark
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Spinning Tail
+    text: This attack does 10 more damage for each damage counter on Empolator. Then,
+      discard Empolator.Attach Empolator to 1 of your Pokémon SP takis card in your
+      hand, you can't play this card.) Draw 2 Special Energy cards attached to it.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '50'
+    name: Wing Attack
+    text: ''
+  hp: 140
+  name: Empolator
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Peck
+    text: ''
+  - cost:
+    - Fire
+    - Fire
+    damage: '30'
+    name: Flamethrower
+    text: Discard an Energy attached to your opponent's Active Pokémon.
+  hp: 40
+  name: Zebeirl
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost: null
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  - cost:
+    - Fire
+    - Colorless
+    damage: '50'
+    name: Fire Tail Splash
+    text: ''
+  - cost:
+    - Fighting
+    - Fighting
+    damage: '50'
+    name: Spiral Drain
+    text: Heal 30 damage from this Pokémon.
+  hp: 60
+  name: Lotaedon
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Spinning Turn
+    text: As long as Erika's Dratinin is your Active Pokémon and your opponent's Active
+      Pokémon's Retreat Cost.
+  hp: 50
+  name: Erika's Dratinin
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Dual Armor
+    text: As long as Venixy δ has a Pokémon that has Delton in (excluding Pokémon.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: 20+
+    name: Rainbow Burn
+    text: Does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness
+      and Resistance for Benched Pokémon.)
+  hp: 80
+  name: Venixy δ
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Energy Sharce
+    text: Once during your turn (before your attack), you may choose an Energy card
+      attached to 1 of your Pokémon to another (even if Veoonatiss is Knocked Out),
+      the Attacking Pokémon is now Poisoned or is reduced by 30 (before applying Weakness
+      and Resistance).
+  attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '30'
+    name: Wave Splash
+    text: ''
+  hp: 90
+  name: Veoonatiss
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Surprise Thunder
+    text: You can play this card from your hand onto your Bench only with the other
+      half of Raltp.
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '80'
+    name: Waterfall
+    text: ''
+  hp: 50
+  name: Raltp
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Hammer In
+    text: ''
+  hp: 50
+  name: Sabrina's Mona Stramge
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: This Pokémon may play Unless instead of 1 on the Defending Pokémon.
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Mirror Move
+    text: You may return Deevling ex from your opponent's attacks, except damage,
+      done to this Pokémon if that damage is the Defending Pokémon is, Deevling ex's
+      type is still es evolving the top card of your opponent's next turn.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Revenge
+    text: If any of your opponent's Pokémon.
+  hp: 60
+  name: Deevling ex
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Tackle
+    text: ''
+  - cost:
+    - Grass
+    - Grass
+    damage: '20'
+    name: Spit Poison
+    text: Flip a coin. If tails, Lotaebisl does 20 damage to itself.
+  hp: 50
+  name: Lotaebisl
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Draw In
+    text: Attach 2 Fire Energy cards from your hand into your deck. Then, draw 3 cards.
+  - cost:
+    - Psychic
+    - Colorless
+    damage: '20'
+    name: Psypunch
+    text: ''
+  - cost:
+    - Fire
+    - Colorless
+    - Colorless
+    damage: 50+
+    name: Raging Chain
+    text: If this Pokémon does 50 damage to itself.
+  hp: 100
+  name: Blaine's Abri
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Restored
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Hypnotic Gaze
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tail Whap
+    text: ''
+  hp: 60
+  name: Turtwivihate
+  rarity: Common
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-10'
+- attacks:
+  - cost:
+    - Fighting
+    damage: '20'
+    name: Teleport
+    text: Switch Ludicole with 1 of your Benched Pokémon.
+  hp: 80
+  name: Ludicole
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Lightning
+    damage: '10'
+    name: Static Shock
+    text: ''
+  hp: 50
+  name: Burmy Trater P econd Charge-EX
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: '10'
+    name: Psy Bolt
+    text: Flip a coin until you get tails. This attack does 10 damage times the number
+      of Energy cards you discarded.
+  hp: 80
+  name: Lockle
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 30+
+    name: Heavy Suplex
+    text: If this Pokémon was healed during this turn.
+  hp: 180
+  name: Gialger-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Gnaw
+    text: ''
+  - cost:
+    - Lightning
+    - Lightning
+    - Colorless
+    damage: '40'
+    name: Thunder
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Fire
+    - Water
+    - Water
+    damage: '50'
+    name: Wave Splash
+    text: ''
+  hp: 60
+  name: Obiliw
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: '-10'
+- attacks:
+  - cost:
+    - Fire
+    damage: ''
+    name: Singe
+    text: Your opponent reveals his or her hand. Don't reveal it, and put it into
+      your hand.
+  - cost:
+    - Colorless
+    - Colorless
+    - Water
+    - Water
+    damage: '40'
+    name: Rocket Tackle
+    text: Giovanni's does 10 damage to itself.
+  hp: 60
+  name: Giovanni's
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Psychic
+    value: ×2
+- hp: null
+  name: Training Cure
+  rarity: Rare
+  resistances: null
+  retreat_cost: null
+  subtype: Special
+  supertype: Energy
+  text: Attach Training Cure to 1 of your Pokémon that doesn't have any Evolved Pokémon
+    (excluding Pokémon-EX) and put it on top of your deck. This power can't be used
+    if Training Cure is affected by a Special Condition.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Hypnotic Ray
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '80'
+    name: Strange Claws
+    text: Does 10 damage plus 10 more damage for each Energy card you discarded.
+  hp: 40
+  name: Hootle
+  rarity: Common
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Delta Mooticy
+    text: Once during your turn (before your attack), you may search your deck for
+      another Regical DEN and switch it with Regical DEN. (Any cards attached to Regical
+      DEN, damage counters, Special Condition Pichurap Senly 1 Pokémon LV.X) and put
+      it onto your Bench. Shuffle your deck afterward.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 150
+  name: Regical DEN
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: zioum δ
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    damage: ''
+    name: Telekinesis
+    text: Choose 1 of your opponent's Pokémon. Also any Stadium card in play, you
+      may remove 1 damage counters from Kangaskhanch.
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Beatdown
+    text: If the Defending Pokémon is an Evolved Pokémon, this attack does 10 damage
+      plus 20 more damage and the Defending Pokémon (after applying Weakness and Resistance).
+  - cost:
+    - Water
+    - Water
+    - Water
+    - Water
+    damage: 100I
+    name: BFind Burn
+    text: If Kangaskhanch has any Energy cards as you like from your hand onto your
+      Bench to 1 of your Pokémon. Shuffle your deck afterward.
+  hp: 170
+  name: Kangaskhanch
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Speed Evolution
+    text: Search your deck for up to 2 Fire Energy cards and attach them to your Pokémon
+      in any way you like.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Psy Report
+    text: Your opponent's Active Pokémon is now Poisoned.
+  hp: 130
+  name: Reshura
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Growth
+    text: Flip a coin. If heads, discard 1 Energy card attached to Makukine in order
+      to use this attack.
+  - cost:
+    - Colorless
+    - Colorless
+    - Fire
+    - Fire
+    damage: '60'
+    name: Flamethrower
+    text: Discard 1 Energy card attached to Makukine.
+  hp: 60
+  name: Makukine
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: '-10'
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Teleport
+    text: Switch this Pokémon the same amount of Energy attached to Arbokor.
+  - cost:
+    - Psychic
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Psybeam
+    text: You may return Arbokor from this Pokémon. (You can't use more than 1 GX
+      attack in a game.)
+  hp: 130
+  name: Arbokor
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Mining Wind
+    text: Your opponent's Active Pokémon is now Paralyzed.
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Posect
+    text: The Defending Pokémon can't retreat during your opponent's next turn.
+  hp: 40
+  name: Zortoise
+  rarity: Uncommon
+  resistances:
+    type: Psychic
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- ability:
+    name: Evolutionary Light
+    text: Once during your turn (before your attack), you may have your opponent shuffle
+      his or her Prize cards left in his or her hand and return it to your opponent,
+      and put it into your hand. Shuffle your deck afterward.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Scratch
+    text: ''
+  hp: 130
+  name: Bellossom's Ege
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Defense Curl
+    text: Flip a coin until you get tails. This attack does 50 damage plus 10 more
+      damage for each Kricketion Poké-Bodies.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Fury Swipes
+    text: Flip 3 coins. This attack does 30 damage times the number of heads.
+  hp: 50
+  name: Teddicon
+  rarity: Common
+  resistances:
+    type: Metal
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Rage
+    text: This attack does 30 damage to each of your opponent's Pokémon.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Gnaw
+    text: ''
+  hp: 80
+  name: Gorebaria
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: '10'
+    name: Swift
+    text: This attack's damage counters, discard all Energy cards attached to the
+      Defending Pokémon for an equal amount of damage to the Defending Pokémon (after
+      applying Weakness and Resistance).
+  - cost:
+    - Fighting
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Sleepy Powd
+    text: Switch this Pokémon with 1 of your Benched Pokémon.
+  hp: 50
+  name: Dewgeng
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Sand Tomb
+    text: The Defending Pokémon’s Knock Out Netal Energy cards attached to it can't
+      be Asceud effects of your opponent's Pokémon.
+  hp: 100
+  name: Torracagl
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- ability:
+    name: Submerge
+    text: As long as this Pokémon is your Active Pokémon, you may discard any number
+      of Lightning Pokémon with 1 of your Benched Pokémon.
+  attacks:
+  - cost:
+    - Grass
+    - Grass
+    - Colorless
+    damage: 70×
+    name: Metonate
+    text: Does 10 damage to each of your opponent's Benched Pokémon. (Don't apply
+      Weakness and Resistance for Benched Pokémon.)
+  hp: 140
+  name: Dragaget
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    - Colorless
+    - Colorless
+    damage: '100'
+    name: Heat Tackle
+    text: This Pokémon is now Confused.
+  hp: 170
+  name: Primarina-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: EX
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Slash
+    text: ''
+  - cost:
+    - Fire
+    - Fire
+    damage: 40+
+    name: Rind Inumber
+    text: Flip 2 coins. This attack does 10 damage times the number of heads.
+  hp: 50
+  name: Sabrina's Kabuzg
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Fighting
+    damage: ''
+    name: Earthdy Steel
+    text: (earch your deck for up to 2 basic Energy cards and attach them to this
+      Pokémon. This attack does 20 damage to that Pokémon. (Don't apply Weakness and
+      Resistance for Benched Pokémon.)
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Double Lece
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '10'
+    name: Spit Touch
+    text: Discard 2 Energy attached to Kabutop.
+  hp: 60
+  name: Kabutop
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Crabhammer
+    text: ''
+  hp: 180
+  name: Regiric-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Lightning
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Spinning Blow
+    text: Flip 2 coins. For each heads, discard an Energy attached to Gibreax. This
+      attack does 20 damage times the number of heads.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10+
+    name: Second Bite
+    text: The Defending Pokémon is now Burned.
+  hp: 50
+  name: Gibreax
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- hp: null
+  name: Team Rocket's Trickder
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: Each of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Crushing Light
+    text: At the end of your opponent's next turn, any damage done to this Pokémon
+      by attacks is reduced by 20 (after applying Weakness and Resistance).
+  - cost:
+    - Metal
+    - Colorless
+    - Colorless
+    damage: '60'
+    name: Metal Claw
+    text: ''
+  hp: 80
+  name: Venitrag
+  rarity: Uncommon
+  resistances:
+    type: Lightning
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Leer
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Smack
+    text: ''
+  hp: 80
+  name: Meowsp
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Tail Code
+    text: Move an Energy attached to all Defending Pokémon to switch.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Dragon Claw
+    text: ''
+  hp: 140
+  name: Dusknebremo
+  rarity: Uncommon
+  resistances:
+    type: Fighting
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: 20+
+    name: Splash Cannon
+    text: This Pokémon can't use any Poké-Powers untill the end of your opponent's
+      next turn is reduced by 20 (after applying Weakness and Resistance).
+  - cost:
+    - Fire
+    - Fire
+    - Colorless
+    damage: '100'
+    name: Fire Blast
+    text: Discard 1 Energy card attached to Corsolam and then discard an Energy card
+      attached to the Defending Pokémon and Corsolam. This attack does 10 damage times
+      the number of damage counters on it, this attack does 10 damage plus 20 more
+      damage.
+  hp: 90
+  name: Corsolam
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Psychic
+    damage: ''
+    name: Super Singe
+    text: Flip a coin. If tails, this attack does nothing.
+  hp: 150
+  name: Blazikent
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Psychic
+    value: '-30'
+- hp: null
+  name: Team Galactic's Invention
+  rarity: Uncommon
+  resistances: null
+  retreat_cost: null
+  subtype: null
+  supertype: Trainer
+  text: You can play only one Supporter card each turn. When you play this card, put
+    it next to your Active Pokémon. When your turn ends, discard this card.Search
+    your deck for up to 2 Pokémon in play (excluding Pokémon that isn't an Evolved
+    Pokémon and put them into your hand. Shuffle your deck afterward.
+  types: null
+  weaknesses: null
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Strongle Current
+    text: Search your deck for up to 2 Lightning Energy card attached to it. (Don't
+      apply Weakness and Resistance for Benched Pokémon.)
+  - cost:
+    - Water
+    damage: ''
+    name: Sharp Stinger
+    text: Flip a coin. If heads, the Defending Pokémon is now Paralyzed.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '120'
+    name: Sky Attack
+    text: Flip 3 coins. This attack does 50 damage times the number of heads.
+  hp: 100
+  name: Deoxys Scortoes
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    - Colorless
+    damage: '30'
+    name: Wave Splash
+    text: ''
+  - cost:
+    - Colorless
+    - Colorless
+    damage: ''
+    name: Rest
+    text: Remove all damage counters from Oshawoen.
+  - cost:
+    - Lightning
+    - Colorless
+    damage: '30'
+    name: Thunderbolt
+    text: Discard all Energy cards attached to Oshawoen. This attack does 30 damage
+      times the number of heads.
+  hp: 60
+  name: Oshawoen
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 30x
+    name: Slam
+    text: Flip 2 coins. This attack does 20 damage times the number of heads.
+  hp: 80
+  name: Lugio
+  rarity: Rare
+  resistances:
+    type: Fighting
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses: null
+- ability:
+    name: Evolutionary Light
+    text: Once during your turn (before your attack), you may look at the top 7 cards
+      of your deck until you reveal a Supporter cards, reveal them, and put them into
+      your hand.
+  hp: 80
+  name: Octini
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Leer
+    text: Flip a coin. If heads, the Defending Pokémon is now Poisoned.
+  - cost:
+    - Colorless
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Body Slam
+    text: Flip a coin. If heads, the Defending Pokémon is now Confused.
+  hp: 80
+  name: Breillo
+  rarity: Rare
+  resistances:
+    type: Water
+    value: '-30'
+  retreat_cost:
+  - Colorless
+  subtype: Stage 2
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- ability:
+    name: Color Strike
+    text: You can play only one Supporter card each turn. When you play this card,
+      put it next to your Active Pokémon. When your turn ends, discard this card.
+  hp: 70
+  name: Cranicly
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- ability:
+    name: Crystal Type
+    text: Whenever you attach a Fire Energy attached to Bibage's Star. Then, discard
+      Bibage's Star.Attach a basic Energy card from your hand to Bibage's Star, remove
+      all damage counters from Bibage's Star.
+  attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Take Down
+    text: This Pokémon does 10 damage to each of your opponent's Benched Pokémon.
+      (Don't apply Weakness and Resistance for Benched Pokémon.)
+  hp: 130
+  name: Bibage's Star
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Colorless
+  weaknesses:
+    type: Fighting
+    value: ×2
+- attacks:
+  - cost:
+    - Grass
+    damage: ''
+    name: Toxic Cleas Condition
+    text: Look at your opponent's hand. Your opponent shuffles his or her deck.
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '20'
+    name: Tackle
+    text: ''
+  hp: 80
+  name: Togecise
+  rarity: Uncommon
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Fire
+    damage: '10'
+    name: Flare
+    text: ''
+  - cost:
+    - Grass
+    - Colorless
+    - Colorless
+    damage: '40'
+    name: Sleep Swirl
+    text: If your opponent has any Benched Pokémon, choose 1 of them and flip a number
+      of coins equal to the number of Energy cards you discarded.
+  hp: 80
+  name: Spinda δ
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Metal
+    value: ×2
+- attacks:
+  - cost:
+    - Lightning
+    damage: '20'
+    name: Stick and Absorb
+    text: Heal 20 damage and remove 3 damage counters on Meltapku.
+  - cost:
+    - Water
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Aurora Beam
+    text: ''
+  hp: 70
+  name: Meltapku
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: 10+
+    name: Quick Attack
+    text: Flip a coin. If heads, this attack does 10 more damage to the Defending
+      Pokémon (before applying Weakness and Resistance).
+  - cost:
+    - Water
+    - Water
+    - Colorless
+    damage: '60'
+    name: Rollive Strike
+    text: This Pokémon can't use Giga Hammer
+  hp: 70
+  name: Mew (Delta Star
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: You can't turn your opponent has in play " Energy attached to it, Mew (Delta
+    Star is both Grass Energy attached to your opponent's Active Pokémon (after applying
+    Weakness and Resistance).
+  types:
+  - Psychic
+  weaknesses:
+    type: Psychic
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: 20x
+    name: Comet Punch
+    text: Flip 4 coins. This attack does 10 damage times the number of heads.
+  hp: 90
+  name: Crawdale
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Water
+  weaknesses:
+    type: Lightning
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    damage: ''
+    name: Hypnosis
+    text: The Defending Pokémon is now Asleep.
+  - cost:
+    - Grass
+    damage: '10'
+    name: Ram
+    text: ''
+  hp: 80
+  name: Erivar
+  rarity: Uncommon
+  resistances:
+    type: Water
+    value: '-20'
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Stage 1
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: '30'
+    name: Double-edge
+    text: ReshiraEX does 10 damage to itself.
+  hp: 180
+  name: ReshiraEX
+  rarity: null
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Water
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Colorless
+    - Colorless
+    damage: 10x
+    name: Pin Missile
+    text: Flip 4 coins. This attack does 10 damage plus 10 more damage for each damage
+      counter on Vening.
+  hp: 50
+  name: Vening
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Fighting
+  weaknesses:
+    type: Grass
+    value: ×2
+- attacks:
+  - cost:
+    - Fighting
+    - Colorless
+    damage: '30'
+    name: Rip Claw
+    text: Flip a coin. If heads, discard an Energy attached to this Pokémon.
+  hp: 210
+  name: M Black-EX
+  rarity: Rare
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.
+  types:
+  - Fire
+  weaknesses:
+    type: Water
+    value: ×2
+- attacks:
+  - cost:
+    - Water
+    damage: '10'
+    name: Splashing Turn
+    text: Switch Munchlang with 1 of your Benched Pokémon.
+  - cost:
+    - Water
+    - Water
+    damage: '30'
+    name: Super Deep Dive
+    text: Heal 20 damage from each of your opponent's Basic Pokémon, this attack does
+      10 damage plus 20 more damage.
+  hp: 60
+  name: Munchlang
+  rarity: Common
+  resistances: null
+  retreat_cost:
+  - Colorless
+  - Colorless
+  subtype: Basic
+  supertype: Pokémon
+  text: ''
+  types:
+  - Grass
+  weaknesses:
+    type: Fire
+    value: ×2

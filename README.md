@@ -29,7 +29,7 @@
   3. Repeat several times (several layers), though final output array must have same length as desired output array.     - Intermediate outputs are called activation layers. Nonlinear functions like relu (which is max(0,x)) are applied to intermediate outputs, and the nonlinear function output is fed to next layer (next matrix multiplication). With this one can approximate any function.
   4. Loss function is function that is higher the farther the function is from the target function (one that maps the input to the desired output). One loss function is avg of square errors.
   5. Optimize loss function by finding its derivative with respect to each of the weights. The sign of the derivative tells you whether to increase or decrease the weight to decrease the loss function. How much to increase or decrease the weight is the learning rate. `new_weight = sign( derivative of loss with respect to weight ) * learning rate`. One update of all weights = one iteration.
-    - You can find the derivative for weights in earlier layers with chain rule. Say the loss function is `l(x, y)`, the neural network's first layer is `f(x, a)`, its second layer if `g(f, b)`, and its third layer is `h(g, c)`. The complete neural net is then `h(g(f(x, a), b), c)` where `a`, `b`, and `c` are weights. The derivative of the loss with respect to weight a is then `dl/da = dl/dh * dh/dg * dg/df * df/da`.
+    - You can find the derivative for weights in earlier layers with chain rule. Say the loss function is `l(x, y)`, the neural network's first layer is `f(x, a)`, its second layer if `g(f, b)`, and its third layer is `h(g, c)`. The complete neural net is then `y = h(g(f(x, a), b), c)` where `a`, `b`, and `c` are weights. The derivative of the loss with respect to weight a is then `dl/da = dl/dh * dh/dg * dg/df * df/da`.
   6. Repeat many times, and you can find the minimum of the loss function. This optimization method is gradient descent.
     - For neural networks, there are so many parameters that best minimum is almost never found, so one optimizes until satisfied instead.
     - Stochastic gradient descent (SGD) is where loss function is evaluated using random subset (mini-batch) of data rather than entire set, and optimized to minimize that (technically stochastic is mini-batch of size 1, but general usage is stochastic = mini-batch). This is then repeated for all mini-batches in training data, for one epoch (# of mini-batches x # of epochs = # of times optimization is run = iterations). This makes it computationally feasible for neural networks to work and turns out not to matter vs regular gradient descent.
@@ -207,7 +207,7 @@
     3. After generating new words from previous words, you can merge the generated words in as well. If you keep doing this as you generate more and more words, you have an RNN.
         - First, layer operation A is applied to input word 1 to get intermediate output X. Then, operation A is applied to input word 2 and operation B is applied to X, and X is updated to be the merged outputs of these operations. The process then repeats a certain number of times, before operation C is applied to the final X to generate the actual output. 
 
-# Lesson 6
+## Lesson 6
 1. Pseudo-labelling allows for semi-supervised learning.
     - Use MixIterator in utils to combine real training data with test (or validation) set data pseudo-labelled by the model. pseudo-labelled batch size should be maybe 1/3 of real data batch size to get 25% / 75% mix.
     - train model on training set, then predict on portion of test set (and validation set), then train on training set + test predictions, then repeat with more data from test set.
@@ -236,3 +236,86 @@
         - Stateful models also cannot be parallelized as the entire input data set needs to be fed into the network in order (fixed lengths rnns can train on every sequence of a certain length within the input data in parallel) 
     - RNNs can be stacked so that the output sequence from one RNN becomes the input sequence of another RNN
         - this way, the model has more than one hidden layer - the model output is influenced by two successive hidden -> hidden layer functions
+
+## Lesson 7
+1. Tour of architectures (that use only CNNs)
+    - Theoretically a bunch of dense layers can model any function, but more advanced architectures can be easier and faster to train.
+    1. Resnet won Imagenet 2015
+        - `include_top=False` is used in Keras built-in and Jeremey's models, means only convolutional layers are included so you can add your own 
+        - Precomputing features (running all data through non-trainable layers once, and using that output as the input for the trainable layers) speeds up experimentation considerably; all of the following architecture are implemented on top of precomputed VGG filters
+        - Uses skip connections, so output from lower layer is merged with output from higher layer. skipped layers forms resblocks, which are stacked. output from a resblock is `y = f(g(h(x))) + x` or `y-x = f(g(h(x)))`, so the layers in the block are learning to improve the errors (residuals) of the input.
+        - Average pooling takes the average of each `n x n` square is passed to the next layer, rather than the maximum of each square. Resnet uses average pooling over the entirety of convolutional layers (global avg. pooling), with more convolutions and almost no dense layers. This reduces the number of parameters, reducing the need for regularization and memory consumption, etc.
+    2. Multiple-input models can incorporate metadata
+        - Fisheries competition has largely similar images, with the fish to be identified only a small part of the image.
+        1. Precomputing features allows simple Dense layers to run very quickly
+        2. Data leakage can be a problem.
+            - means some information about the target is encoded in the training data, but that information is not available or unhelpful in practice.
+            - In fisheries, the network could use the resolution of each photo to determine which ship took the image. This makes accurate predictions but is not useful in practice, as the network would ideally be used on any ship in the future. If the competition test set uses different boats than the training set data leakage also needs to be avoided there.
+        3. Take advantage of image resolution data leakage with multi-input model - merge output of image classification vgg-like model and a dense model learning from metadata, before a final shared dense layer that identifies fish.
+            - Often turns out this doesn't help much as metadata may be encoded in image anyways (which ship can be determined from image, not only resolution)
+    3. Multi-output models
+        1. Someone Kaggle competitor made a bounding box annotated data set, with a box around each fish in each image.
+            - Important to look at data - make a show bounding box function to check that data is correct and interpreted correctly.
+            - Test set cannot be annotated, however, so we need a model that gets the bounding box from the image.
+                - Add a last dense layer with no activation function (linear output), and calculate the mean square error between that and the bounding box coordinates.
+                - Use the actual bounding boxes as target for that bounding box output and fish classes as target for classification output.
+                - Optimize for both the bounding box loss and the classification loss, weighting the bounding box loss much lower.
+        2. Using the annotated to train an extra output, even without any extra input data, give the model a hint of what to look for, and allows for more gradient updates, giving higher accuracy.
+            - You could then make a second model that takes crops fish based on first model's bounding box, and classifies on cropped data again. This can give very good results: top 3 in a whale id competition used this approach.
+    - Seriously competing in an active kaggle competition is a great way to learn
+    4. Fully convolutional networks
+        1. Only layer whose parameters depends on size of input (image resolution) is a dense layer
+            - If we only take convolutional layers of pretrained model, image resolution can be changed and those layers will not be affected
+        2. Fully convolutional networks have no dense layers at all
+            - Stack convolutional layers until shape is relatively small (5 x 5)
+            - Last convolutional layer has same number of filters as number of categories in output
+            - Use global average pooling to convert into proper output shape.
+        3. Great results for kaggle fisheries - because all layers are convolutions, no layers are really applied globally. This works well when fish is only small part of image.
+        4. Last convolutional layer's output (before global pooling) can actually be visualized, to check that its pattern actually matches where we think the most important parts of the image should be.
+            - Taking out all max poolings before the last convolutional layer allows for higher res heatmaps, though it might not actually function as well at classification.
+            - Heatmap high = area is important for classifying as that class, heatmap negative = area is important for determining that something is not that class
+        5. You can crop according to what the heatmap says is most important, rather than hand-labelling bounding boxes.
+            - Can be combined with manual boxes, as manual set can have inaccuracies.
+    5. Inception (with resnet) won Imagenet 2016
+        1. Uses multiple different filter sizes in parallel within an inception block, and concatenates them.
+        2. Run a 1x1 branch, a 2-layer 3x3 branch, a 2-layer 5x5 branch, and an average pooling branch on the input for each inception block, then concatenates them together for the output of the block.
+        3. Looks for multiple sizes of spatial features in parallel
+2. Implementing an RNN in Numpy
+    - CNNs are more practically useful (for now) but RNNs can be used to approach some complex problems like time series prediction and language translation (Google Translate)
+    1. Tracing gradients is never done by hand in practice, but can help with intuition of gradient calculations        
+        - Every nonlinear function used must also have a derivative, including cross-entropy, softmax, etc. Be careful to always avoid infinities by clipping log input, etc.
+        - `scan` calls a function on a sequence, where the function takes the its own result from the preceding element as an argument. This is similar to a for loop but can be parrallelized more on the GPU, if using Theano.
+    2. Input is a list of 1-hot encoded 8-character-long sequences, and Target is the same sequences shifted by one character
+    3. For each sequence, use scan to evaluate recurrent network forward pass (calculate loss) for every character in one 8-character sequence
+    4. Backward pass relies on chain rule - multiply the derivatives of each layer with respect to the layer before it together
+        - Derivative of a matrix multiply is a matrix multiply with the transposed matrix
+        1. In an RNN, let `x_t` be input character at timestep `t`, `W_xh` be the input->hidden weight matrix, `W_hh` be the hidden->hidden weights matrix, and `W_hy` be the hidden->output weight matrix.
+            1. The hidden layer output at step `t` is `h_t = relu(z_t)`, where `z_t = W_xh * x_t  + W_hh * h_(t-1)`
+            2. The prediction at step `t` is `p_t = softmax(y_t)` where `y_t = W_hy * h_t`
+            3. The loss at step `t` is `l_t = crossentropy(p_t, target_t)`
+            4. Total loss is sum of losses for every step
+        2. Use chain rule to find derivatives of loss with respect to each weight matrix. 
+            1. `d(l_t)/d(W_hy) = d(l_t)/d(p_t) * d(p_t)/d(y_t) * d(y_t)/d(W_hy)`; derivative of loss with respect to hidden->output weights is derivative of crossentropy loss, times derivative of softmax activation, times derivative of 'weights * hidden layer output' with respect to weights.
+            2. `d(l_t)/d(W_hh) = d(l_t)/d(h_t) * d(h_t)/d(z_t) * d(z_t)/d(W_hh)`
+                - `d(l_t)/d(h_t)` can be found like `d(l_t)/d(W_hy)`, just with `d(y_t)/d(W_hy)` replaced with `d(y_t)/d(h_t)`
+                - `d(z_t)/d(W_hh)` is recursively defined because `z_t` is recursively defined: `d(z_t)/d(W_hh) = h_(t-1) + W_hh * d(h_(t-1))/d(W_hh)`
+                - Expanding `d(z_t)/d(W_hh)` (assuming `z_0 = 0`), `d(l_t)/d(W_hh)` becomes the summation of `d(l_t)/d(h_t) * d(h_t)/d(h_k) * d(h_k)/d(z_k) * d(z_k)/d(W_hh)` for `1 <= k <= t`. 
+            3. `d(l_t)/d(W_xh)` similarly equals the summation of `d(l_t)/d(h_t) * d(h_t)/d(h_k) * d(h_k)/d(z_k) * d(z_k)/d(W_xh)`
+            4. Sum gradients at every `t` for total gradient
+            5. See [willwolf.io article](http://willwolf.io/2016/10/18/recurrent-neural-network-gradients-and-lessons-learned-therein/) for more details.
+    5. Initialize i2h and h2o weight matrices with glorot/xavier initialization: normally distributed with std. dev. `sqrt(2 / input_size)`. h2h matrix begins as an identity matrix.
+    6. On each epoch, for every sequence:
+        1. Zero hidden weights if not stateful across sequences (set h2h matrix to identity again)
+        2. Evaluate loss by summing loss for predicting every character in sequence, in forward pass.
+        3. Modify weights according to gradients as found via a backwards pass. SGD uses `weights += lr * -gradient` (Lesson 4 discusses others)
+        4. Every few sequences, print the loss.
+3. Implementing a GRU (Gated Recurrent Units)
+    - LSTM and GRU make gradients less likely to explode in an RNN, but GRU is simpler and often works better.
+    - In Keras, can simply replace SimpleRNN layer with LSTM or GRU
+    - GRUs rely on gates - small neural networks (literally 1 layer) that model a simple function, which we apply to the input to the gate.
+    - Both are basically alternative methods of calculating the next hidden state using the previous hidden state and the next input.
+    1. A reset gate determines how much of the previous hidden state `h_(t-1)` is combined with the input to create a new hidden matrix `h_t2`
+    2. An update gate determines how much `h_(t-1)` and `h_t2` influence `h_t` (0 means more `h_t2`, 1 means more `h_(t-1)`)
+    3. If reset gate is all ones, `h_t2 = relu(1 * W_hh * h_(t-1) + W_xh * x)`, and if update gate is all zeroes `h_t = 0 * h_(t-1) + (1-0) * h_t2`, so GRU becomes a simple RNN
+5. Keep trying different things and visualizing as much as you can, and try to think about how your network is actually processing the information, to develop an intuition of how to create an effective architecture for your deep learning problem.
+    - Make sure to make use of fast.ai wiki and forums as well.

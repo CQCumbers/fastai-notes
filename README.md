@@ -6,41 +6,43 @@
 3. Run `aws-get-p2` and `aws-ip` to store instance id and ip.
 4. Connect to instance via ssh with `aws-ssh`, and start jupyter notebook with `jupyter notebook`
 5. Point web browser to notebook ip with `aws-nb`. To return to local terminal session, use `C-a d` in remote tmux session and `exit` ssh.
-6. Terminate spot session (to save money) with `aws ec2 terminate-instances --instance-ids $instance-id` (substitude $instance-id according to step 2)
+6. Use `aws-stop` to stop p2 instance when not in use.
+7. Some of my notebooks use python 3 - install with `conda create -n py36 python=3.6 anaconda` then run `conda install theano pygpu` and `pip install keras`.
 
 ## Lesson 1
 1. Kaggle is machine learning competitions and data sets
-  - Top 50%: okay-ish model, Top 20%: good model, Top 10%: expert for this kind of problem, Top 10: Best in the world
+    - Top 50%: okay-ish model, Top 20%: good model, Top 10%: expert for this kind of problem, Top 10: Best in the world
 2. Data organization is very important.
-  - Split into training set and test set - do not view test set until finished.
-  - Split training set to training and validation sets.
-  - Copy tiny (~100 file) sample of training and validation sets to sample training and validation set, in order to prototype and test script working quickly.
-  - Split training and validation set into different directories for each category to classify - e.g. `dogs` and `cats`.
+    - Split into training set and test set - do not view test set until finished.
+    - Split training set to training and validation sets.
+    - Copy tiny (~100 file) sample of training and validation sets to sample training and validation set, in order to prototype and test script working quickly.
+    - Split training and validation set into different directories for each category to classify - e.g. `dogs` and `cats`.
 3. Pre-trained model is VGG, which was created to classify ImageNet images into each of the thousands of categories.
-  - Can run vgg on input by getting batches of training and validation sets, then using vgg fit() and finetune() to make the vgg model classify cats vs dogs. After doing this one can `save_weights()` to skip this step in future.
-  - To submit to Kaggle, use Keras `predict_generator` to get all predictions and `batch.filenames` to get filenames. Use numpy savetxt() to save array of filenames and labels to csv (put this into convenience function). IPython FileLink allows one to easily download generated csv to local machine.
+    - Can run vgg on input by getting batches of training and validation sets, then using vgg fit() and finetune() to make the vgg model classify cats vs dogs. After doing this one can `save_weights()` to skip this step in future.
+    - To submit to Kaggle, use Keras `predict_generator` to get all predictions and `batch.filenames` to get filenames. Use numpy savetxt() to save array of filenames and labels to csv (put this into convenience function). IPython FileLink allows one to easily download generated csv to local machine.
 
 ## Lesson 2
 1. What is a neural network?
-  1. Start with an input array (e.g. pixel array) and a target output array (e.g. 1-hot encoded category array)
-    - 1-hot is where 1 = in category and 0 = not in category. Only one category has a 1 and everything else is 0
-  2. Multiply input array by an array of random weights. Number of columns of weight array is up to programmer's discretion and part of designing the model architecture - more columns = more complex network.
-    - Random weights often start with avg. 0 and variance 1/(n1 + n2), where n1 is length of input array and n2 is length of output array for this layer (this is Xavier initialization). Good initialization should have random weights creating output within an order of magnitude of target - this helps model find actual weights much faster.
-  3. Repeat several times (several layers), though final output array must have same length as desired output array.     - Intermediate outputs are called activation layers. Nonlinear functions like relu (which is max(0,x)) are applied to intermediate outputs, and the nonlinear function output is fed to next layer (next matrix multiplication). With this one can approximate any function.
-  4. Loss function is function that is higher the farther the function is from the target function (one that maps the input to the desired output). One loss function is avg of square errors.
-  5. Optimize loss function by finding its derivative with respect to each of the weights. The sign of the derivative tells you whether to increase or decrease the weight to decrease the loss function. How much to increase or decrease the weight is the learning rate. `new_weight = sign( derivative of loss with respect to weight ) * learning rate`. One update of all weights = one iteration.
-    - You can find the derivative for weights in earlier layers with chain rule. Say the loss function is `l(x, y)`, the neural network's first layer is `f(x, a)`, its second layer if `g(f, b)`, and its third layer is `h(g, c)`. The complete neural net is then `y = h(g(f(x, a), b), c)` where `a`, `b`, and `c` are weights. The derivative of the loss with respect to weight a is then `dl/da = dl/dh * dh/dg * dg/df * df/da`.
-  6. Repeat many times, and you can find the minimum of the loss function. This optimization method is gradient descent.
-    - For neural networks, there are so many parameters that best minimum is almost never found, so one optimizes until satisfied instead.
+    1. Start with an input array (e.g. pixel array) and a target output array (e.g. 1-hot encoded category array)
+        - 1-hot is where 1 = in category and 0 = not in category. Only one category has a 1 and everything else is 0
+    2. Multiply input array by an array of random weights. Number of columns of weight array is up to programmer's discretion and part of designing the model architecture - more columns = more complex network.
+        - Random weights often start with avg. 0 and variance `1/(n1 + n2)`, where n1 is length of input array and n2 is length of output array for this layer (this is Xavier initialization). Good initialization should have random weights creating output within an order of magnitude of target - this helps model find actual weights much faster.
+    3. Repeat several times (several layers), though final output array must have same length as desired output array.
+        - Intermediate outputs are called activation layers. Nonlinear functions like relu (which is max(0,x)) are applied to intermediate outputs, and the nonlinear function output is fed to next layer (next matrix multiplication). With this one can approximate any function.
+    4. Loss function is function that is higher the farther the function is from the target function (one that maps the input to the desired output). One loss function is avg of square errors.
+    5. Optimize loss function by finding its derivative with respect to each of the weights. The sign of the derivative tells you whether to increase or decrease the weight to decrease the loss function. How much to increase or decrease the weight is the learning rate. `new_weight = sign( derivative of loss with respect to weight ) * learning rate`. One update of all weights = one iteration.
+        - You can find the derivative for weights in earlier layers with chain rule. Say the loss function is `l(x, y)`, the neural network's first layer is `f(x, a)`, its second layer if `g(f, b)`, and its third layer is `h(g, c)`. The complete neural net is then `y = h(g(f(x, a), b), c)` where `a`, `b`, and `c` are weights. The derivative of the loss with respect to weight a is then `dl/da = dl/dh * dh/dg * dg/df * df/da`.
+    6. Repeat many times, and you can find the minimum of the loss function. This optimization method is gradient descent.
+         - For neural networks, there are so many parameters that best minimum is almost never found, so one optimizes until satisfied instead.
     - Stochastic gradient descent (SGD) is where loss function is evaluated using random subset (mini-batch) of data rather than entire set, and optimized to minimize that (technically stochastic is mini-batch of size 1, but general usage is stochastic = mini-batch). This is then repeated for all mini-batches in training data, for one epoch (# of mini-batches x # of epochs = # of times optimization is run = iterations). This makes it computationally feasible for neural networks to work and turns out not to matter vs regular gradient descent.
 2. In Keras, you can create a linear model with a few lines of code.
-  1. Create a linear model (which models the function `ax + b`) with `Dense()`
-    - `activation='relu'` means after `ax + b` is done `max(0, x)` is applied to output.
-  2. A one layer network (function is applied once to input) is `Sequential()`, with a single `Dense()` argument
-  3. Compile with loss= loss function, like mean square error and optimizer = optimization method, like stochastic gradient descent with learning rate 0.01.
+    1. Create a linear model (which models the function `ax + b`) with `Dense()`
+         - `activation='relu'` means after `ax + b` is done `max(0, x)` is applied to output.
+    2. A one layer network (function is applied once to input) is `Sequential()`, with a single `Dense()` argument
+    3. Compile with loss= loss function, like mean square error and optimizer = optimization method, like stochastic gradient descent with learning rate 0.01.
 3. Common approach is to use a pretrained model's outputs as inputs for a linear model.
-  - Pretrained model has already learned many useful low-level filters like circles, lines, curves, from a large data set. These filters will be useful for many tasks, especially those without as much data, so we reuse lower layers and finetune higher layers according to specific task.
-  - To finetune, instead of using last layer output as input to linear model we can use second to last layer, so neural network uses learned features to calculate cats vs dogs rather than learn cats vs dogs from imagenet categories (which limits information).
+    - Pretrained model has already learned many useful low-level filters like circles, lines, curves, from a large data set. These filters will be useful for many tasks, especially those without as much data, so we reuse lower layers and finetune higher layers according to specific task.
+    - To finetune, instead of using last layer output as input to linear model we can use second to last layer, so neural network uses learned features to calculate cats vs dogs rather than learn cats vs dogs from imagenet categories (which limits information).
 
 ## Lesson 3
 1. Use [Deep Visualization Toolbox](https://github.com/yosinski/deep-visualization-toolbox) to see live updates of the convolutional filters developed by a CNN

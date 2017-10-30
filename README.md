@@ -11,12 +11,12 @@
 
 ## Lesson 1
 1. Kaggle is machine learning competitions and data sets
-  - Top 50%: okay-ish model, Top 20%: good model, Top 10%: expert for this kind of problem, Top 10: Best in the world
+    - Top 50%: okay-ish model, Top 20%: good model, Top 10%: expert for this kind of problem, Top 10: Best in the world
 2. Data organization is very important.
-  - Split into training set and test set - do not view test set until finished.
-  - Split training set to training and validation sets.
-  - Copy tiny (~100 file) sample of training and validation sets to sample training and validation set, in order to prototype and test script working quickly.
-  - Split training and validation set into different directories for each category to classify - e.g. `dogs` and `cats`.
+    - Split into training set and test set - do not view test set until finished.
+    - Split training set to training and validation sets.
+    - Copy tiny (~100 file) sample of training and validation sets to sample training and validation set, in order to prototype and test script working quickly.
+    - Split training and validation set into different directories for each category to classify - e.g. `dogs` and `cats`.
 3. Pre-trained model is VGG, which was created to classify ImageNet images into each of the thousands of categories.
   - Can run vgg on input by getting batches of training and validation sets, then using vgg fit() and finetune() to make the vgg model classify cats vs dogs. After doing this one can `save_weights()` to skip this step in future.
   - To submit to Kaggle, use Keras `predict_generator` to get all predictions and `batch.filenames` to get filenames. Use numpy `savetxt()` to save array of filenames and labels to csv (put this into convenience function). IPython FileLink allows one to easily download generated csv to local machine.
@@ -35,10 +35,10 @@
     - For neural networks, there are so many parameters that best minimum is almost never found, so one optimizes until satisfied instead.
     - Stochastic gradient descent (SGD) is where loss function is evaluated using random subset (mini-batch) of data rather than entire set, and optimized to minimize that (technically stochastic is mini-batch of size 1, but general usage is stochastic = mini-batch). This is then repeated for all mini-batches in training data, for one epoch (# of mini-batches x # of epochs = # of times optimization is run = iterations). This makes it computationally feasible for neural networks to work and turns out not to matter vs regular gradient descent.
 2. In Keras, you can create a linear model with a few lines of code.
-  1. Create a linear model (which models the function `ax + b`) with `Dense()`
-    - `activation='relu'` means after `ax + b` is done `max(0, x)` is applied to output.
-  2. A one layer network (function is applied once to input) is `Sequential()`, with a single `Dense()` argument
-  3. Compile with loss= loss function, like mean square error and optimizer = optimization method, like stochastic gradient descent with learning rate 0.01.
+    1. Create a linear model (which models the function `ax + b`) with `Dense()`
+         - `activation='relu'` means after `ax + b` is done `max(0, x)` is applied to output.
+    2. A one layer network (function is applied once to input) is `Sequential()`, with a single `Dense()` argument
+    3. Compile with loss= loss function, like mean square error and optimizer = optimization method, like stochastic gradient descent with learning rate 0.01.
 3. Common approach is to use a pretrained model's outputs as inputs for a linear model.
   - Pretrained model has already learned many useful low-level filters like circles, lines, curves, from a large data set. These filters will be useful for many tasks, especially those without as much data, so we reuse lower layers and finetune higher layers according to specific task.
   - To finetune, instead of using last layer output as input to linear model we can use second to last layer, so neural network uses learned features to calculate cats vs dogs rather than learn cats vs dogs from Imagenet categories (which limits information).

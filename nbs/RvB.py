@@ -13,27 +13,27 @@
 # 
 #  - Create empty scripts.txt file in appropriate directory beforehand
 
-# In[1]:
-
+# In[ ]:
 
 from lxml import html
 import requests, os
 
 path = '/home/ubuntu/fastai-data/rvb/scripts.txt'
 
-with open(path, 'w') as f:
-    for i in range(347):
-        page = requests.get('http://roostertooths.com/transcripts.php?eid={}'.format(i+1))
-        tree = html.fromstring(page.content)
-        lines = []
-        f.write('\n\n'+tree.xpath('//p[@class="breadcrumbs"]/a//text()')[1]
-              +'\n'+tree.xpath('//h1//text()')[0]+'\n\n')
-        for row in tree.xpath('//table[@class="script"]/tr'):
-            f.write(''.join(row.xpath('.//td//text()'))+'\n')
+
+#  with open(path, 'w') as f:
+#     for i in range(347):
+#         page = requests.get('http://roostertooths.com/transcripts.php?eid={}'.format(i+1))
+#         tree = html.fromstring(page.content)
+#         lines = []
+#         f.write('\n\n'+tree.xpath('//p[@class="breadcrumbs"]/a//text()')[1]
+#               +'\n'+tree.xpath('//h1//text()')[0]+'\n\n')
+#         for row in tree.xpath('//table[@class="script"]/tr'):
+#             f.write(''.join(row.xpath('.//td//text()'))+'\n')
+
 # ## Prepare Text
 
-# In[2]:
-
+# In[ ]:
 
 # imports
 from keras.models import Sequential
@@ -43,11 +43,10 @@ import numpy as np
 from IPython.display import FileLink
 
 
-# In[3]:
-
+# In[ ]:
 
 # load text
-text = open(path).read().lower()[:]
+text = open(path).read()[:]
 print('corpus length:', len(text))
 
 chars = sorted(list(set(text)))
@@ -61,8 +60,7 @@ indices_char = dict((i, c) for i, c in enumerate(chars))
 idx = [char_indices[c] for c in text]
 
 
-# In[4]:
-
+# In[ ]:
 
 maxlen = 64
 sentences = []
@@ -72,35 +70,31 @@ for i in range(len(idx)-maxlen+1):
     next_chars.append(idx[i+1: i+maxlen+1])
 
 
-# In[5]:
-
+# In[ ]:
 
 print('nb sequences:', len(sentences))
 print('nb chars:', len(next_chars))
 
 
-# In[6]:
-
+# In[ ]:
 
 sentences = np.concatenate([[np.array(o)] for o in sentences[:-2]])
 next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 
-# In[8]:
-
+# In[ ]:
 
 n_fac = 30
 
 
 # ## Train model
 
-# In[29]:
-
+# In[ ]:
 
 from keras.models import Sequential
 from keras.layers import *
 
-# 2 layer network with 256 channels each
+# 2 layer GRU network with 256 and 512 channels
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
     GRU(256, input_shape=(n_fac,),return_sequences=True, dropout=0.01, recurrent_dropout=0.01),
@@ -111,12 +105,11 @@ model = Sequential([
     Activation('softmax')
 ])
 
-model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(lr=0.0001), metrics=['acc'])
 model.summary()
 
 
-# In[22]:
-
+# In[ ]:
 
 # save as JSON
 json_string = model.to_json()
@@ -125,15 +118,14 @@ with open('grifbot_model.json', 'w+') as f:
 FileLink('grifbot_model.json')
 
 
-# In[23]:
-
+# In[ ]:
 
 from numpy.random import choice
 import random
 
 def print_example(length=800, temp=0.8):
     seed_len=64
-    text = open(path).read().lower()[:]
+    text = open(path).read()[:]
     ind = random.randint(0,len(text)-seed_len-1)
     seed_string = text[ind:ind+seed_len]
     for i in range(length):
@@ -148,8 +140,7 @@ def print_example(length=800, temp=0.8):
     #print(seed_string[seed_len:])
 
 
-# In[24]:
-
+# In[ ]:
 
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, LambdaCallback
 import h5py
@@ -158,11 +149,11 @@ def print_callback(logs, epoch):
     print_example()
 
 weight_dir = '/home/ubuntu/fastai-data/rvb/weights'
-weight_path = "weights2-{epoch:02d}.hdf5"
+weight_path = "weights-{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
                              monitor='acc', verbose=1, save_best_only=True, mode='max')
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
-                              patience=3, min_lr=0.000001)
+                              patience=2, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
 
 callbacks_list = [printer, checkpoint, reduce_lr]
@@ -170,9 +161,8 @@ callbacks_list = [printer, checkpoint, reduce_lr]
 
 # In[ ]:
 
-
-num_epochs = 30
-model.load_weights(os.path.join(weight_dir, 'weights2-01.hdf5'))
+num_epochs = 23
+model.load_weights(os.path.join(weight_dir, 'weights-07.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),
@@ -184,7 +174,6 @@ history.append(model.fit(sentences,
 # - I like how it learns Spanish exclusively from Lopez's dialogue
 
 # In[ ]:
-
 
 print_example(length=20000)
 

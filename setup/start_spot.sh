@@ -69,6 +69,7 @@ pip install awscli
 cd /home/ubuntu
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 git clone --recursive https://github.com/CQCumbers/dotfiles
+git clone --recursive https://github.com/CQCumbers/fastai-notes.git
 echo cloned repos
 
 rm ~/.zshrc

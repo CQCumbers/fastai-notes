@@ -65,8 +65,8 @@ with open(os.path.join(data_dir,'cards.json')) as f:
 
 # augment data
 cards = random.sample(cards, len(cards))
-#for i in range(2):
-#    cards.extend(random.sample(cards, len(cards)))
+for i in range(2):
+    cards.extend(random.sample(cards, len(cards)))
 
 
 # In[9]:
@@ -221,7 +221,7 @@ model=Sequential([
         TimeDistributed(Dense(vocab_size)),
         Activation('softmax')
     ])
-model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(lr=0.01), metrics=['acc'])
 model.summary()
 
 
@@ -234,7 +234,7 @@ import random
 
 # print example text, 
 def print_example(length=800, temperature=0.7, mult=2):
-    seed_len=40
+    seed_len=maxlen
     path = os.path.join(data_dir,'cards.txt')
     text = open(path).read()[:]
     ind = random.randint(0,len(text)-seed_len-1)
@@ -281,7 +281,7 @@ callbacks_list = [printer, checkpoint, reduce_lr]
 
 # In[ ]:
 
-num_epochs = 30
+num_epochs = 5
 history = model.fit(sentences,
                     np.expand_dims(next_chars,-1),
                     batch_size=256,
@@ -291,7 +291,7 @@ history = model.fit(sentences,
 
 # In[ ]:
 
-get_ipython().run_cell_magic(u'capture', u'generated_cards', u'print_example(length=300000, temperature=0.7, mult=2)')
+get_ipython().run_cell_magic('capture', 'generated_cards', 'print_example(length=300000, temperature=0.7, mult=2)')
 
 
 # In[ ]:
@@ -299,6 +299,7 @@ get_ipython().run_cell_magic(u'capture', u'generated_cards', u'print_example(len
 with open(os.path.join(data_dir,'cards_generated.txt'), 'w+') as f:
     f.write(generated_cards.stdout)
 
+quit()
 
 # ## Process Output
 # 

@@ -98,9 +98,9 @@ from keras.layers import *
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
     GRU(256, input_shape=(n_fac,),return_sequences=True, dropout=0.01, recurrent_dropout=0.01),
-    Dropout(0.2),
+    Dropout(0.02),
     GRU(512, return_sequences=True, dropout=0.01, recurrent_dropout=0.01),
-    Dropout(0.2),
+    Dropout(0.02),
     TimeDistributed(Dense(vocab_size)),
     Activation('softmax')
 ])
@@ -161,7 +161,7 @@ callbacks_list = [printer, checkpoint, reduce_lr]
 
 # In[ ]:
 
-num_epochs = 23
+num_epochs = 10
 model.load_weights(os.path.join(weight_dir, 'weights-07.hdf5'))
 history = []
 history.append(model.fit(sentences,

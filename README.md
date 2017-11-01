@@ -2,11 +2,12 @@
 
 ## AWS Guide
 1. Use  `setup-p2.sh` from setup folder to create a new p2 instance. Beforehand, ensure AWS limit allows at least one p2 instance, following setup video. Follow setup video for AMI and needed software installations as well. Only do this step once.
+    - I'm now using spot instances, so after setting up on demand instance, terminate it and update `setup/start_spot.sh` with the keys, security groups, etc. created for the on -demand instance. This is cheaper but does not persist data - remember to download or git push files that need to be saved.
 2. Run `source aws-alias.sh`, then `aws-start` to start up p2 instance
 3. Run `aws-get-p2` and `aws-ip` to store instance id and ip.
 4. Connect to instance via ssh with `aws-ssh`, and start jupyter notebook with `jupyter notebook`
 5. Point web browser to notebook ip with `aws-nb`. To return to local terminal session, use `C-b d` in remote tmux session and `exit` ssh.
-6. Use `aws-stop` to stop p2 instance when not in use.                                    
+6. Use `aws-stop` to terminate p2 instance when not in use.                                    
 7. Some of my notebooks use python 3. Install with `conda create -n py36 python=3.6 anaconda`, then run `conda install theano pygpu` and `pip install keras`.
 
 ## Lesson 1

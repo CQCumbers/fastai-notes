@@ -67,17 +67,17 @@ apt-get install -y stow
 pip install awscli
 
 cd /home/ubuntu
+rm ~/.zshrc
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 git clone --recursive https://github.com/CQCumbers/dotfiles
 git clone --recursive https://github.com/CQCumbers/fastai-notes.git
 echo cloned repos
 
-rm ~/.zshrc
 cd dotfiles
-stow zsh
-usermod -s /bin/zsh ubuntu
-stow vim
-vim -E -c PlugClean -c PlugUpdate -c q
+sudo -H -u ubuntu bash -c 'stow zsh'
+sudo -H -u ubuntu bash -c 'chsh -s /bin/zsh'
+sudo -H -u ubuntu bash -c 'stow vim'
+sudo -H -u ubuntu bash -c 'vim -E -c PlugClean -c PlugUpdate -c q'
 echo loaded dotfiles
 EOF
 

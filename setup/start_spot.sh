@@ -4,7 +4,7 @@ volume_size=128
 # The name of the key file we'll use to log into the instance. create_vpc.sh sets it to aws-key-fast-ai
 name=fast-ai
 key_name=aws-key-$name
-ami=ami-31ecfb26
+ami=ami-37bb714d
 subnetId=subnet-390ce364
 securityGroupId=sg-287d205a
 # Type of instance to launch
@@ -58,20 +58,17 @@ cat >user-data.tmp <<EOF
 echo AWSAccessKeyId=$AWS_ACCESS_KEY > /root/.aws.creds
 echo AWSSecretKey=$AWS_SECRET_KEY >> /root/.aws.creds
 
-apt-get update
-apt-get install -y jq
-apt-get install -y python-pip python-setuptools
-apt-get install -y git
 apt-get install -y zsh
 apt-get install -y stow
 pip install awscli
 
 cd /home/ubuntu
-rm .zshrc
-git clone --recursive https://github.com/sorin-ionescu/prezto.git .zprezto
-git clone --recursive https://github.com/CQCumbers/dotfiles
-git clone --recursive https://github.com/CQCumbers/fastai-notes.git
-echo cloned repos
+rm ./.zshrc
+rm ./src
+git clone --recursive https://github.com/sorin-ionescu/prezto.git ./.zprezto
+git clone https://github.com/CQCumbers/dotfiles.git
+git clone https://github.com/CQCumbers/fastai-notes.git
+echo 'cloned repos'
 
 chsh ubuntu -s /bin/zsh
 cd dotfiles
@@ -79,11 +76,18 @@ sudo -H -u ubuntu zsh -c 'stow zsh'
 sudo -H -u ubuntu zsh -c 'stow vim'
 cd /home/ubuntu
 sudo -H -u ubuntu zsh -c 'vim -E -c PlugClean -c PlugUpdate -c q'
+echo 'loaded dotfiles'
+
+wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+bash Anaconda3-4.2.0-Linux-x86_64.sh -b -p ./anaconda
+rm Anaconda3-4.2.0-Linux-x86_64.sh
+echo 'export PATH="~/anaconda/bin:$PATH"' >> ./.zshrc 
+sudo -H -u ubuntu zsh -c 'source ./.zshrc'
+sudo -H -u ubuntu zsh -c 'conda update conda'
 sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 anaconda'
 sudo -H -u ubuntu zsh -c 'source activate py36'
 sudo -H -u ubuntu zsh -c 'conda install theano pygpu'
 sudo -H -u ubuntu zsh -c 'pip install keras'
-echo loaded dotfiles
 EOF
 
 userData=$(base64 user-data.tmp | tr -d '\n');

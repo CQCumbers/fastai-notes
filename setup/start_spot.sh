@@ -55,6 +55,7 @@ done
 # Create a startup script to run on instance boot
 cat >user-data.tmp <<EOF
 #!/bin/sh
+chsh ubuntu -s /bin/nologin
 echo AWSAccessKeyId=$AWS_ACCESS_KEY > /root/.aws.creds
 echo AWSSecretKey=$AWS_SECRET_KEY >> /root/.aws.creds
 
@@ -70,7 +71,6 @@ git clone https://github.com/CQCumbers/dotfiles.git
 git clone https://github.com/CQCumbers/fastai-notes.git
 echo 'cloned repos'
 
-chsh ubuntu -s /bin/zsh
 cd dotfiles
 sudo -H -u ubuntu zsh -c 'stow zsh'
 sudo -H -u ubuntu zsh -c 'stow vim'
@@ -88,6 +88,8 @@ sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 anaconda'
 sudo -H -u ubuntu zsh -c 'source activate py36'
 sudo -H -u ubuntu zsh -c 'conda install theano pygpu'
 sudo -H -u ubuntu zsh -c 'pip install keras'
+chsh ubuntu -s /bin/zsh
+echo 'installed deep learning libraries'
 EOF
 
 userData=$(base64 user-data.tmp | tr -d '\n');

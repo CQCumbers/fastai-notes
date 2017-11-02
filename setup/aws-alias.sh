@@ -11,17 +11,17 @@ alias aws-state='aws ec2 describe-instances --instance-ids $instanceId --query "
 if [[ `uname` == *"CYGWIN"* ]]
 then
     # This is cygwin.  Use cygstart to open the notebook
-    alias aws-nb='cygstart http://$instanceIp:8888'
+    alias aws-nb='cygstart http://localhost:8000; ssh -i ~/.ssh/aws-key-fast-ai.pem -N -L 8000:localhost:8888 ubuntu@$instanceIp'
 fi
 
 if [[ `uname` == *"Linux"* ]]
 then
     # This is linux.  Use xdg-open to open the notebook
-    alias aws-nb='xdg-open http://$instanceIp:8888'
+    alias aws-nb='xdg-open http://localhost:8000; ssh -i ~/.ssh/aws-key-fast-ai.pem -N -L 8000:localhost:8888 ubuntu@$instanceIp'
 fi
 
 if [[ `uname` == *"Darwin"* ]]
 then
     # This is Mac.  Use open to open the notebook
-    alias aws-nb='open http://$instanceIp:8888'
+    alias aws-nb='open http://localhost:8000; ssh -i ~/.ssh/aws-key-fast-ai.pem -N -L 8000:localhost:8888 ubuntu@$instanceIp'
 fi

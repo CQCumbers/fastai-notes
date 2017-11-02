@@ -63,8 +63,7 @@ apt-get install -y stow
 pip install awscli
 
 cd /home/ubuntu
-rm ./.zshrc
-rm ./src
+mv ./.zshrc ./.zshrc_old
 sudo -H -u ubuntu zsh -c 'git clone --recursive https://github.com/sorin-ionescu/prezto.git ./.zprezto'
 sudo -H -u ubuntu zsh -c 'git clone https://github.com/CQCumbers/dotfiles.git'
 sudo -H -u ubuntu zsh -c 'git clone https://github.com/CQCumbers/fastai-notes.git'

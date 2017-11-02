@@ -88,6 +88,7 @@ sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 anaconda'
 sudo -H -u ubuntu zsh -c 'source activate py36'
 sudo -H -u ubuntu zsh -c 'conda install theano pygpu'
 sudo -H -u ubuntu zsh -c 'pip install keras'
+chown -v -R ubuntu:ubuntu /home/ubuntu/
 chsh ubuntu -s /bin/zsh
 echo 'installed deep learning libraries'
 EOF

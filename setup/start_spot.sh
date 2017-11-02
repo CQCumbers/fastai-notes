@@ -65,9 +65,9 @@ pip install awscli
 cd /home/ubuntu
 rm ./.zshrc
 rm ./src
-git clone --recursive https://github.com/sorin-ionescu/prezto.git ./.zprezto
-git clone https://github.com/CQCumbers/dotfiles.git
-git clone https://github.com/CQCumbers/fastai-notes.git
+sudo -H -u ubuntu zsh -c 'git clone --recursive https://github.com/sorin-ionescu/prezto.git ./.zprezto'
+sudo -H -u ubuntu zsh -c 'git clone https://github.com/CQCumbers/dotfiles.git'
+sudo -H -u ubuntu zsh -c 'git clone https://github.com/CQCumbers/fastai-notes.git'
 echo 'cloned repos'
 
 cd dotfiles
@@ -82,12 +82,11 @@ bash Anaconda3-4.2.0-Linux-x86_64.sh -b -p ./anaconda
 rm Anaconda3-4.2.0-Linux-x86_64.sh
 echo 'export PATH="/home/ubuntu/anaconda/bin:$PATH"' >> ./.zshrc 
 sudo -H -u ubuntu zsh -c 'source ./.zshrc'
-sudo -H -u ubuntu zsh -c 'conda update conda'
-sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 anaconda'
+sudo -H -u ubuntu zsh -c 'conda update -y conda'
+sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 -y anaconda'
 sudo -H -u ubuntu zsh -c 'source activate py36'
-sudo -H -u ubuntu zsh -c 'conda install theano pygpu'
+sudo -H -u ubuntu zsh -c 'conda install -y theano pygpu'
 sudo -H -u ubuntu zsh -c 'pip install keras'
-chown -v -R ubuntu:ubuntu /home/ubuntu/
 chsh ubuntu -s /bin/zsh
 echo 'installed deep learning libraries'
 EOF

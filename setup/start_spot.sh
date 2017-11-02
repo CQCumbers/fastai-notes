@@ -55,7 +55,6 @@ done
 # Create a startup script to run on instance boot
 cat >user-data.tmp <<EOF
 #!/bin/sh
-chsh ubuntu -s /bin/nologin
 echo AWSAccessKeyId=$AWS_ACCESS_KEY > /root/.aws.creds
 echo AWSSecretKey=$AWS_SECRET_KEY >> /root/.aws.creds
 

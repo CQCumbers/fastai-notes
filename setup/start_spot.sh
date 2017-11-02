@@ -81,7 +81,7 @@ echo 'loaded dotfiles'
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 bash Anaconda3-4.2.0-Linux-x86_64.sh -b -p ./anaconda
 rm Anaconda3-4.2.0-Linux-x86_64.sh
-echo 'export PATH="~/anaconda/bin:$PATH"' >> ./.zshrc 
+echo 'export PATH="/home/ubuntu/anaconda/bin:$PATH"' >> ./.zshrc 
 sudo -H -u ubuntu zsh -c 'source ./.zshrc'
 sudo -H -u ubuntu zsh -c 'conda update conda'
 sudo -H -u ubuntu zsh -c 'conda create -n py36 python=3.6 anaconda'

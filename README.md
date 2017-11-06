@@ -2,7 +2,7 @@
 
 ## AWS Guide
 1. Use  `setup-p2.sh` from setup folder to create a new p2 instance. Beforehand, ensure AWS limit allows at least one p2 instance, following setup video. Follow setup video for AMI and needed software installations as well. Only do this step once.
-    - I'm now using spot instances, so after setting up on demand instance, terminate it and modify `setup/start_spot.sh` with the keys, security groups, etc. created for the on -demand instance. This is cheaper but does not persist data - remember to download or git push files that need to be saved.
+    - I'm now using spot instances, so after setting up on demand instance, terminate it and modify `setup/start_spot.sh` with the keys, security groups, etc. created for the on -demand instance. You can also set your own passphrase to jupyter here. This is cheaper but does not persist data - remember to download or git push files that need to be saved.
 2. Run `source aws-alias.sh`, then `aws-start` to start up p2 instance
     - If using spot instances give 5 minutes for the startup script to finish
 3. Run `aws-get-p2` and `aws-ip` to store instance id and ip.

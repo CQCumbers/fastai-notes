@@ -11,7 +11,8 @@
 # 
 # ## Load card data
 
-# In[1]:
+# In[ ]:
+
 
 # imports
 import yaml, json, os, random, requests
@@ -20,13 +21,14 @@ from pprint import pprint
 data_dir = '/home/ubuntu/fastai-data/pokemon'
 
 
-# In[3]:
+# In[ ]:
+
 
 # query pokemontcg api for every card
 cards_full = []
 for i in range(10):
     response = requests.get('https://api.pokemontcg.io/v1/cards?page={}&pageSize=1000'.format(i+1))
-    current_cards = json.loads(response.content)['cards']
+    current_cards = json.loads(response.content.decode('utf-8'))['cards']
     cards_full.extend(current_cards)
     if len(current_cards) < 1000:
         print('-- Cards Loaded ---')
@@ -34,7 +36,8 @@ for i in range(10):
 pprint(cards_full[-1])
 
 
-# In[4]:
+# In[ ]:
+
 
 # get card data from pokemontcg.io
 keys = ['name', 'subtype', 'supertype', 'ability', 'ancient_trait', 'hp', 'evolvesFrom',
@@ -42,47 +45,56 @@ keys = ['name', 'subtype', 'supertype', 'ability', 'ancient_trait', 'hp', 'evolv
 cards = [{key: card[key] if key in card else None for key in keys} for card in cards_full]
 
 
-# In[6]:
+# In[ ]:
+
 
 # save data
-with open(os.path.join(data_dir,'cards.json'), 'w+') as f:
-     json.dump(cards, f)
+class ExplicitDumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):
+        return True
+    
+with open(os.path.join(data_dir, 'cards.yml'), 'w+') as f:
+     yaml.dump(cards, f, allow_unicode=True, Dumper=ExplicitDumper, default_flow_style=False)
 
 
 # ## Preprocessing
 # 
 #  - Convert json data to a text representation easy for a character-embedding based model to parse
 
-# In[7]:
+# In[ ]:
+
 
 # load data
-with open(os.path.join(data_dir,'cards.json')) as f:
-     cards = json.load(f)
-#pprint(cards[-1])
+with open(os.path.join(data_dir, 'cards.yml')) as f:
+     card_data = yaml.load(f)
+pprint(cards[-1])
 
 
-# In[8]:
+# In[ ]:
+
 
 # augment data
 cards = random.sample(cards, len(cards))
-for i in range(2):
-    cards.extend(random.sample(cards, len(cards)))
+#for i in range(2):
+#    cards.extend(random.sample(cards, len(cards)))
 
 
-# In[9]:
+# In[ ]:
+
 
 # encode card categories as greek letters
 alphabet = 'θωερτψυιοπασφγηςκλζχξωβνμ'
 # encode type as a unicode character, following https://redd.it/4xvh2q
 type_char = '✴☽☽⛩❤✊♨☘☘⚡⛓⚛☔'
 
-types = json.loads(requests.get('https://api.pokemontcg.io/v1/types').content)['types']
+types = json.loads(requests.get('https://api.pokemontcg.io/v1/types').content.decode('utf-8'))['types']
 types.insert(2, 'Dark')
 types.insert(7, 'Green')
-subtypes = json.loads(requests.get('https://api.pokemontcg.io/v1/subtypes').content)['subtypes']
+subtypes = json.loads(requests.get('https://api.pokemontcg.io/v1/subtypes').content.decode('utf-8'))['subtypes']
 
 
-# In[10]:
+# In[ ]:
+
 
 # encode type as unicode character
 def type_to_char(t_list):
@@ -142,7 +154,8 @@ with open(os.path.join(data_dir,'cards.txt'), 'w+') as f:
 #  - Turn text into embedded sequences that keras can use
 #  - Setup model architecture
 
-# In[11]:
+# In[ ]:
+
 
 # imports
 from keras.models import Sequential
@@ -151,7 +164,8 @@ from keras.optimizers import Adam
 import numpy as np
 
 
-# In[12]:
+# In[ ]:
+
 
 # load text
 path = os.path.join(data_dir,'cards.txt')
@@ -161,7 +175,8 @@ print('corpus length:', len(text))
 print(text[:128])
 
 
-# In[13]:
+# In[ ]:
+
 
 # get characters used in text
 chars = sorted(list(set(text)))
@@ -171,7 +186,8 @@ print('total chars:', vocab_size)
 print(''.join(chars))
 
 
-# In[14]:
+# In[ ]:
+
 
 # create character indices
 char_indices = dict((c, i) for i, c in enumerate(chars))
@@ -179,7 +195,8 @@ char_indices = dict((c, i) for i, c in enumerate(chars))
 idx = [char_indices[c] for c in text]
 
 
-# In[15]:
+# In[ ]:
+
 
 maxlen = 128
 sentences = []
@@ -191,6 +208,7 @@ for i in range(len(idx)-maxlen+1):
 
 # In[ ]:
 
+
 print('# of sequences:', len(sentences))
 
 sentences = np.concatenate([[np.array(o)] for o in sentences[:-2]])
@@ -199,25 +217,21 @@ next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 # In[ ]:
 
-np.save(os.path.join(data_dir,'sentences.npy'), sentences)
-np.save(os.path.join(data_dir,'next_chars.npy'), sentences)
-
-
-# In[ ]:
 
 # size of embedding
-n_fac = 42
+n_fac = 50
 
 
 # In[ ]:
+
 
 # model architecture
 model=Sequential([
         Embedding(vocab_size, n_fac, input_length=maxlen),
-        GRU(256, input_shape=(n_fac,),return_sequences=True, dropout=0.01, recurrent_dropout=0.01),
-        Dropout(0.2),
-        GRU(512, return_sequences=True, dropout=0.01, recurrent_dropout=0.01),
-        Dropout(0.2),
+        GRU(256, input_shape=(n_fac,),return_sequences=True, dropout=0.1, recurrent_dropout=0.1),
+        Dropout(0.1),
+        GRU(512, return_sequences=True, dropout=0.1, recurrent_dropout=0.1),
+        Dropout(0.1),
         TimeDistributed(Dense(vocab_size)),
         Activation('softmax')
     ])
@@ -228,6 +242,7 @@ model.summary()
 # ## Train Model
 
 # In[ ]:
+
 
 from numpy.random import choice
 import random
@@ -262,6 +277,7 @@ def print_example(length=800, temperature=0.7, mult=2):
 
 # In[ ]:
 
+
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, LambdaCallback
 import h5py
 
@@ -269,10 +285,10 @@ def print_callback(logs, epoch):
     print_example()
 
 result_dir = os.path.join(data_dir, 'results')
-weight_path = "weights-{epoch:02d}-{acc:.2f}.hdf5"
+weight_path = "weights-{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(os.path.join(result_dir, weight_path),
                              monitor='acc', verbose=1, save_best_only=True, mode='max')
-reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.2,
+reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=2, min_lr=0.00000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
 
@@ -281,7 +297,8 @@ callbacks_list = [printer, checkpoint, reduce_lr]
 
 # In[ ]:
 
-num_epochs = 5
+
+num_epochs = 12
 history = model.fit(sentences,
                     np.expand_dims(next_chars,-1),
                     batch_size=256,
@@ -291,15 +308,13 @@ history = model.fit(sentences,
 
 # In[ ]:
 
-get_ipython().run_cell_magic('capture', 'generated_cards', 'print_example(length=300000, temperature=0.7, mult=2)')
 
-
-# In[ ]:
+from contextlib import redirect_stdout
 
 with open(os.path.join(data_dir,'cards_generated.txt'), 'w+') as f:
-    f.write(generated_cards.stdout)
+    with redirect_stdout(f):
+        print_example(length=500000, temperature=0.9, mult=2)
 
-quit()
 
 # ## Process Output
 # 
@@ -321,19 +336,24 @@ quit()
 
 # In[ ]:
 
+
 # encode card categories as greek letters
 alphabet = 'θωερτψυιοπασφγηςκλζχξωβνμ'
 # encode type as a unicode character, following https://redd.it/4xvh2q
 type_char = '✴☽⛩❤✊♨☘⚡⛓⚛☔'
 
-types = json.loads(requests.get('https://api.pokemontcg.io/v1/types').content)['types']
-subtypes = json.loads(requests.get('https://api.pokemontcg.io/v1/subtypes').content)['subtypes']
-supertypes = json.loads(requests.get('https://api.pokemontcg.io/v1/supertypes').content)['supertypes']
-with open(os.path.join(data_dir,'cards.json')) as f:
-     old_names = [card['name'] for card in json.load(f)]
+# get types, subtypes, supertypes
+types = json.loads(requests.get('https://api.pokemontcg.io/v1/types').content.decode('utf-8'))['types']
+subtypes = json.loads(requests.get('https://api.pokemontcg.io/v1/subtypes').content.decode('utf-8'))['subtypes']
+supertypes = json.loads(requests.get('https://api.pokemontcg.io/v1/supertypes').content.decode('utf-8'))['supertypes']
+
+# get existing card names to ensure all generated cards use new names
+with open(os.path.join(data_dir,'cards.yml')) as f:
+     old_names = [card['name'] for card in yaml.load(f)]
 
 
 # In[ ]:
+
 
 # decode type from unicode character
 def char_to_type(chars):
@@ -394,6 +414,7 @@ with open(os.path.join(data_dir,'cards_generated.txt')) as f:
 
 # In[ ]:
 
+
 class ExplicitDumper(yaml.SafeDumper):
     def ignore_aliases(self, data):
         return True
@@ -402,11 +423,8 @@ with open('cards_generated.yml', 'w+') as f:
      yaml.dump(cards, f, allow_unicode=True, Dumper=ExplicitDumper, default_flow_style=False)
 
 
-# In[ ]:
-
-from IPython.display import FileLink
-FileLink('cards_generated.yml')
-
+# from IPython.display import FileLink
+# FileLink('cards_generated.yml')
 
 # ## Create Card Mockups
 # 
@@ -420,27 +438,28 @@ FileLink('cards_generated.yml')
 
 # In[ ]:
 
+
 from PIL import Image, ImageDraw, ImageFont
 import os, textwrap
 
 data_dir = '/home/ubuntu/fastai-data/pokemon'
 template_path = os.path.join(data_dir, 'templates')
-font_path = os.path.join(template_dir, 'fonts')
+font_path = os.path.join(template_path, 'fonts')
 save_path = os.path.join(data_dir, 'card_results')
 
 
 # In[ ]:
 
+
 import yaml, pprint, re, unidecode
 
-card_data = []
 with open('cards_generated.yml') as f:
-     card_data = yaml.load(f)
+     cards = yaml.load(f)
 
 
 # In[ ]:
 
-# only supports basic pokemon for now
+
 def get_energy_img(energy, category):
     energies = ['Grass', 'Fire', 'Water', 'Electric', 'Psychic', 'Fighting',
                 'Dark', 'Metal', 'Fairy', 'Dragon', 'Colorless']
@@ -454,7 +473,7 @@ def get_energy_img(energy, category):
 def gen_card_img(card):
     if card['supertype'] == 'Pokémon':
         img = Image.open(os.path.join(template_path,
-                         card['supertype'], card['subtype'].replace(' ', '_'),
+                         'Pokémon', card['subtype'].replace(' ', '_'),
                          card['types'][0]+'.png'))
         
         d = ImageDraw.Draw(img)
@@ -550,6 +569,7 @@ def gen_card_img(card):
 
 # In[ ]:
 
+
 # turns string into filename
 def slugify(value):
     value = unidecode.unidecode(value)
@@ -560,7 +580,8 @@ def slugify(value):
 
 # In[ ]:
 
-for card in card_data:
+
+for card in cards:
     try:
         print(card['name'])
         img = gen_card_img(card)
@@ -568,3 +589,10 @@ for card in card_data:
     except:
         print('skipped a card')
 
+
+# from matplotlib.pyplot import imshow
+# import numpy as np
+# 
+# %matplotlib inline
+# for card in card_data[:5]:
+#     imshow(np.asarray(gen_card_img(card)))

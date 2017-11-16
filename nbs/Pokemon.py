@@ -139,8 +139,7 @@ with open(os.path.join(data_dir,'cards.txt'), 'w+') as f:
                               str(attack['damage']), singlify(attack['name']),
                               singlify(attack['text'], name=card['name'])]))
         if 'マ' not in ''.join(lines): # no japanese cards
-            for line in lines:
-                f.write(line+'\n')
+            f.write('\t'.join(lines)+'\n')
 
 
 # ## Create Model

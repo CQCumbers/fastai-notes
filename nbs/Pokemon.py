@@ -70,7 +70,7 @@ cards = load_cards()
 
 # augment data
 cards = random.sample(cards, len(cards))
-for i in range(2):
+for i in range(1):
     cards.extend(random.sample(cards, len(cards)))
 
 
@@ -214,7 +214,7 @@ next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 
 # size of embedding
-n_fac = 200
+n_fac = 50
 
 
 # In[ ]:
@@ -223,7 +223,7 @@ n_fac = 200
 # model architecture
 model=Sequential([
         Embedding(vocab_size, n_fac, input_length=maxlen),
-        CuDNNGRU(1024, input_shape=(n_fac,), return_sequences=True),
+        CuDNNGRU(512, input_shape=(n_fac,), return_sequences=True),
         Dropout(0.5),
         CuDNNGRU(512, return_sequences=True),
         Dropout(0.5),
@@ -295,7 +295,7 @@ num_epochs = 5
 #model.load_weights(os.path.join(result_dir, 'weights-02.hdf5'))
 history = model.fit(sentences,
                     np.expand_dims(next_chars,-1),
-                    batch_size=64,
+                    batch_size=128,
                     validation_split=0.1,
                     epochs=num_epochs,
                     callbacks=callbacks_list)

@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# <img src="https://s3.amazonaws.com/pokemontcg/xy7/54.png" alt="Bulbasaur Pic" style="width: 256px;"/>
-# 
 # # Pokemon TCG card generator
 # 
 # - Downloads and saves card data from pokemontcg.io with python sdk, reformats it as YAML
@@ -11,7 +9,7 @@
 # 
 # ## Load card data
 
-# In[ ]:
+# In[1]:
 
 
 # imports
@@ -21,40 +19,46 @@ from pprint import pprint
 data_dir = '/home/ubuntu/fastai-data/pokemon'
 
 
-# In[ ]:
+# In[2]:
 
 
-# query pokemontcg api for every card
-cards_full = []
-for i in range(10):
-    response = requests.get('https://api.pokemontcg.io/v1/cards?page={}&pageSize=1000'.format(i+1))
-    current_cards = json.loads(response.content.decode('utf-8'))['cards']
-    cards_full.extend(current_cards)
-    if len(current_cards) < 1000:
-        print('-- Cards Loaded ---')
-        break
-pprint(cards_full[-1])
-
-
-# In[ ]:
-
-
-# get card data from pokemontcg.io
-keys = ['name', 'subtype', 'supertype', 'ability', 'ancient_trait', 'hp', 'evolvesFrom',
-        'retreat_cost', 'types', 'attacks', 'weaknesses', 'resistances', 'text']
-cards = [{key: card[key] if key in card else None for key in keys} for card in cards_full]
-
-
-# In[ ]:
-
-
-# save data
 class ExplicitDumper(yaml.SafeDumper):
     def ignore_aliases(self, data):
         return True
+
+def scrape_cards():
+    # query pokemontcg api for every card
+    cards_full = []
+    for i in range(10):
+        response = requests.get('https://api.pokemontcg.io/v1/cards?page={}&pageSize=1000'.format(i+1))
+        current_cards = json.loads(response.content.decode('utf-8'))['cards']
+        cards_full.extend(current_cards)
+        if len(current_cards) < 1000:
+            print('-- Cards Loaded ---')
+            break
+    pprint(cards_full[-1])
     
-with open(os.path.join(data_dir, 'cards.yml'), 'w+') as f:
-     yaml.dump(cards, f, allow_unicode=True, Dumper=ExplicitDumper, default_flow_style=False)
+    # get card data from pokemontcg.io
+    keys = ['name', 'subtype', 'supertype', 'ability', 'ancientTrait', 'hp', 'evolvesFrom',
+            'retreatCost', 'types', 'attacks', 'weaknesses', 'resistances', 'text']
+    cards = [{key: card[key] if key in card else None for key in keys} for card in cards_full]
+    
+    # save data
+    with open(os.path.join(data_dir, 'cards.yml'), 'w+') as f:
+        yaml.dump(cards, f, allow_unicode=True, Dumper=ExplicitDumper, default_flow_style=False)
+        
+    return cards
+    
+def load_cards():
+    # load data
+    with open(os.path.join(data_dir, 'cards.yml')) as f:
+         cards = yaml.load(f)
+    pprint(cards[-1])
+    
+    return cards
+
+#cards = scrape_cards()
+cards = load_cards()
 
 
 # ## Preprocessing
@@ -64,19 +68,10 @@ with open(os.path.join(data_dir, 'cards.yml'), 'w+') as f:
 # In[ ]:
 
 
-# load data
-with open(os.path.join(data_dir, 'cards.yml')) as f:
-     card_data = yaml.load(f)
-pprint(cards[-1])
-
-
-# In[ ]:
-
-
 # augment data
 cards = random.sample(cards, len(cards))
-#for i in range(2):
-#    cards.extend(random.sample(cards, len(cards)))
+for i in range(2):
+    cards.extend(random.sample(cards, len(cards)))
 
 
 # In[ ]:
@@ -127,16 +122,16 @@ with open(os.path.join(data_dir,'cards.txt'), 'w+') as f:
                     + ('^'*int(card['resistances'][0]['value'][1]) if '0' in card['resistances'][0]['value'] else 'x')\
                     if card['resistances'] else '',     
                 '^'*(int(card['hp'])//10) if card['hp'] and card['hp'].isdigit() else '',
-                type_to_char(card['retreat_cost']),
+                type_to_char(card['retreatCost']),
                 singlify(card['name']), singlify(card['evolvesFrom']), singlify(card['text'],name=card['name'])]))
         if card['ability']:
             lines.append(
                 '|'.join(['x', card['ability']['name'],
                           singlify(card['ability']['text'], name=card['name'])]))
-        if card['ancient_trait']:
+        if card['ancientTrait']:
             lines.append(
-                '|'.join(['y', card['ancient_trait']['name'],
-                          singlify(card['ancient_trait']['text'], name=card['name'])]))
+                '|'.join(['y', card['ancientTrait']['name'],
+                          singlify(card['ancientTrait']['text'], name=card['name'])]))
         if card['attacks'] and card['attacks']:
             for attack in card['attacks']:
                 lines.append(
@@ -146,7 +141,6 @@ with open(os.path.join(data_dir,'cards.txt'), 'w+') as f:
         if 'マ' not in ''.join(lines): # no japanese cards
             for line in lines:
                 f.write(line+'\n')
-            
 
 
 # ## Create Model
@@ -160,8 +154,10 @@ with open(os.path.join(data_dir,'cards.txt'), 'w+') as f:
 # imports
 from keras.models import Sequential
 from keras.layers import *
-from keras.optimizers import Adam
+from keras.optimizers import Nadam
 import numpy as np
+
+maxlen = 128
 
 
 # In[ ]:
@@ -172,7 +168,7 @@ path = os.path.join(data_dir,'cards.txt')
 text = open(path).read()[:]
 
 print('corpus length:', len(text))
-print(text[:128])
+print(text[:maxlen])
 
 
 # In[ ]:
@@ -198,7 +194,6 @@ idx = [char_indices[c] for c in text]
 # In[ ]:
 
 
-maxlen = 128
 sentences = []
 next_chars = []
 for i in range(len(idx)-maxlen+1):
@@ -219,7 +214,7 @@ next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 
 # size of embedding
-n_fac = 50
+n_fac = 200
 
 
 # In[ ]:
@@ -228,14 +223,14 @@ n_fac = 50
 # model architecture
 model=Sequential([
         Embedding(vocab_size, n_fac, input_length=maxlen),
-        GRU(256, input_shape=(n_fac,),return_sequences=True, dropout=0.1, recurrent_dropout=0.1),
-        Dropout(0.1),
-        GRU(512, return_sequences=True, dropout=0.1, recurrent_dropout=0.1),
-        Dropout(0.1),
+        CuDNNGRU(1024, input_shape=(n_fac,), return_sequences=True),
+        Dropout(0.5),
+        CuDNNGRU(512, return_sequences=True),
+        Dropout(0.5),
         TimeDistributed(Dense(vocab_size)),
         Activation('softmax')
     ])
-model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(lr=0.01), metrics=['acc'])
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Nadam(lr=0.001), metrics=['acc'])
 model.summary()
 
 
@@ -248,7 +243,7 @@ from numpy.random import choice
 import random
 
 # print example text, 
-def print_example(length=800, temperature=0.7, mult=2):
+def print_example(length=1000, temperature=0.8, mult=2):
     seed_len=maxlen
     path = os.path.join(data_dir,'cards.txt')
     text = open(path).read()[:]
@@ -256,14 +251,14 @@ def print_example(length=800, temperature=0.7, mult=2):
     seed_string = text[ind:ind+seed_len]
     
     for i in range(length):
-        if (seed_string.split('\n')[-1].count('|') == 7 or
+        if (seed_string.split('\n')[-1].count('|') in (7, 8) or
         seed_string.startswith(('x','y')) and seed_string.split('\n')[-1].count('|') == 1 or
         seed_string.startswith('z') and seed_string.split('\n')[-1].count('|') == 3):
             temp = temperature * mult # make names more creative
         else:
             temp = temperature
         
-        x=np.array([char_indices[c] for c in seed_string[-40:]])[np.newaxis,:]
+        x=np.array([char_indices[c] for c in seed_string[-seed_len:]])[np.newaxis,:]
         preds = model.predict(x, verbose=0)[0][-1]
         preds = np.log(preds) / temp
         exp_preds = np.exp(preds)
@@ -271,8 +266,6 @@ def print_example(length=800, temperature=0.7, mult=2):
         next_char = choice(chars, p=preds)
         print(next_char, end="")
         seed_string = seed_string + next_char
-    
-    #print(seed_string[seed_len:])
 
 
 # In[ ]:
@@ -287,9 +280,9 @@ def print_callback(logs, epoch):
 result_dir = os.path.join(data_dir, 'results')
 weight_path = "weights-{epoch:02d}.hdf5"
 checkpoint = ModelCheckpoint(os.path.join(result_dir, weight_path),
-                             monitor='acc', verbose=1, save_best_only=True, mode='max')
+                             monitor='val_acc', verbose=1, save_best_only=True, mode='max')
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
-                              patience=2, min_lr=0.00000001)
+                              patience=2, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
 
 callbacks_list = [printer, checkpoint, reduce_lr]
@@ -298,10 +291,12 @@ callbacks_list = [printer, checkpoint, reduce_lr]
 # In[ ]:
 
 
-num_epochs = 12
+num_epochs = 5
+#model.load_weights(os.path.join(result_dir, 'weights-02.hdf5'))
 history = model.fit(sentences,
                     np.expand_dims(next_chars,-1),
-                    batch_size=256,
+                    batch_size=64,
+                    validation_split=0.1,
                     epochs=num_epochs,
                     callbacks=callbacks_list)
 
@@ -313,7 +308,7 @@ from contextlib import redirect_stdout
 
 with open(os.path.join(data_dir,'cards_generated.txt'), 'w+') as f:
     with redirect_stdout(f):
-        print_example(length=500000, temperature=0.9, mult=2)
+        print_example(length=1000000)
 
 
 # ## Process Output
@@ -376,12 +371,12 @@ with open(os.path.join(data_dir,'cards_generated.txt')) as f:
                         'types': char_to_type(line[2]),
                         'weaknesses':
                         {'type': types[type_char.index(line[3][0])],
-                         'value': '×2' if line[4][1] == 'x' else '-'+str(len(line[4])-1)+'0'} if line[4] else None,
+                         'value': '×2' if line[3][1] == 'x' else '-'+str(len(line[3])-1)+'0'} if line[3] else None,
                         'resistances':
                         {'type': types[type_char.index(line[4][0])],
-                         'value': '×2' if line[5][1] == 'x' else '-'+str(len(line[5])-1)+'0'} if line[5] else None,
-                        'hp': len(line[5])*10 if line[6] else None,
-                        'retreat_cost': char_to_type(line[6]),
+                         'value': '×2' if line[4][1] == 'x' else '-'+str(len(line[4])-1)+'0'} if line[4] else None,
+                        'hp': len(line[5])*10 if line[5] else None,
+                        'retreatCost': char_to_type(line[6]),
                         'name': line[7].rstrip(),
                         'evolvesFrom': line[8].rstrip(),
                         'text': line[9].replace('@',line[8]).rstrip() if len(line) > 9 else None}
@@ -396,7 +391,7 @@ with open(os.path.join(data_dir,'cards_generated.txt')) as f:
                 print('Skipped ability')
         elif line[0] == 'y' and card and card['supertype'] == 'Pokémon':
             try:
-                card['ancient_trait'] = {'name':line[1].rstrip(),
+                card['ancientTrait'] = {'name':line[1].rstrip(),
                                          'text':line[2].replace('@',card['name']).rstrip() if len(line) > 2 else None}
             except:
                 print('Skipped trait')
@@ -419,13 +414,15 @@ class ExplicitDumper(yaml.SafeDumper):
     def ignore_aliases(self, data):
         return True
     
-with open('cards_generated.yml', 'w+') as f:
+with open('results/cards_generated.yml', 'w+') as f:
      yaml.dump(cards, f, allow_unicode=True, Dumper=ExplicitDumper, default_flow_style=False)
 
 
 # from IPython.display import FileLink
-# FileLink('cards_generated.yml')
+# FileLink('results/cards_generated.yml')
 
+# <img src="https://s3.amazonaws.com/pokemontcg/xy7/54.png" alt="Gardevoir Pic" style="width: 256px;"/>
+# 
 # ## Create Card Mockups
 # 
 # 1. Put [Basic](https://paulsnoops.deviantart.com/art/BWXY-Basic-Pokemon-blanks-734x1024-601940663) and [Trainer & Energy](https://paulsnoops.deviantart.com/art/BWXY-Trainer-and-Energy-blanks-734x1024-601953321) templates in template_path, in appropriate hierarchy.
@@ -439,8 +436,10 @@ with open('cards_generated.yml', 'w+') as f:
 # In[ ]:
 
 
+# imports
 from PIL import Image, ImageDraw, ImageFont
 import os, textwrap
+import yaml, pprint, re, unidecode
 
 data_dir = '/home/ubuntu/fastai-data/pokemon'
 template_path = os.path.join(data_dir, 'templates')
@@ -451,8 +450,7 @@ save_path = os.path.join(data_dir, 'card_results')
 # In[ ]:
 
 
-import yaml, pprint, re, unidecode
-
+# load generated cards
 with open('cards_generated.yml') as f:
      cards = yaml.load(f)
 
@@ -460,9 +458,10 @@ with open('cards_generated.yml') as f:
 # In[ ]:
 
 
+# get appropriate energy icon
 def get_energy_img(energy, category):
     energies = ['Grass', 'Fire', 'Water', 'Electric', 'Psychic', 'Fighting',
-                'Dark', 'Metal', 'Fairy', 'Dragon', 'Colorless']
+                'Darkness', 'Metal', 'Fairy', 'Dragon', 'Colorless']
     full_img = Image.open(os.path.join(template_path,'symbols.png'))
     if category is 'attack':
         img = full_img.crop((46+energies.index(energy)*57, 85, 85+energies.index(energy)*57, 135))
@@ -470,6 +469,7 @@ def get_energy_img(energy, category):
         img = full_img.crop((50+energies.index(energy)*57, 210, 80+energies.index(energy)*57, 250))
     return img
 
+# generate card image from data
 def gen_card_img(card):
     if card['supertype'] == 'Pokémon':
         img = Image.open(os.path.join(template_path,
@@ -498,7 +498,7 @@ def gen_card_img(card):
             d.text((230, 890), card['resistances']['value'], font=f, fill='black')
         
         full_img = Image.open('symbols.png')
-        retreat_img = full_img.crop((517, 433, 517+32*len(card['retreat_cost']),463))
+        retreat_img = full_img.crop((517, 433, 517+32*len(card['retreatCost']),463))
         img.paste(retreat_img, (150, 938), retreat_img)
 
         start_height = 560
@@ -562,8 +562,9 @@ def gen_card_img(card):
     img.thumbnail((590,590))
     background = Image.open(os.path.join(template_path,'holosheet.jpg'))
     background.paste(img, (0, 0), img)
+    
     img = background
-
+    img.thumbnail((480,480))
     return img
 
 
@@ -581,6 +582,19 @@ def slugify(value):
 # In[ ]:
 
 
+# preview a few cards
+from matplotlib.pyplot import imshow
+import numpy as np
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+for card in card_data[:5]:
+    imshow(np.asarray(gen_card_img(card)))
+
+
+# In[ ]:
+
+
+# 
 for card in cards:
     try:
         print(card['name'])
@@ -589,10 +603,3 @@ for card in cards:
     except:
         print('skipped a card')
 
-
-# from matplotlib.pyplot import imshow
-# import numpy as np
-# 
-# %matplotlib inline
-# for card in card_data[:5]:
-#     imshow(np.asarray(gen_card_img(card)))

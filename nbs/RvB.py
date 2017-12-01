@@ -13,20 +13,23 @@
 # 
 #  - Create empty scripts.txt file in appropriate directory beforehand
 
-# In[5]:
+# In[8]:
 
 
 from lxml import html
 import requests, os
 
 path = '/home/ubuntu/fastai-data/rvb/scripts.txt'
+path1 = '/home/ubuntu/fastai-data/rvb/scripts1.txt'
+path2 = '/home/ubuntu/fastai-data/rvb/scripts2.txt'
 
 
-# In[6]:
+# In[2]:
 
 
+# scrape rooster tooths for RvB scripts
 def scrape():
-    with open(path, 'w') as f:
+    with open(path1, 'w') as f:
         for i in [x for x in range(347)]:
             page = requests.get('http://roostertooths.com/transcripts.php?eid={}'.format(i+1))
             tree = html.fromstring(page.content)
@@ -36,12 +39,33 @@ def scrape():
             for row in tree.xpath('//table[@class="script"]/tr'):
                 f.write(''.join(row.xpath('.//td//text()'))+'\n')
 
-# scrape()
+scrape()
+
+
+# In[66]:
+
+
+# scrate seinology for seinfeld scripts, to augment data
+def scrape2():
+    with open(path2, 'w') as f:
+        for i in [x for x in range(100)]:
+            page = requests.get('http://www.seinology.com/scripts/script-{}.shtml'.format(70+i))
+            if page.status_code == 200:
+                tree = html.fromstring(page.content)
+                lines = []
+                f.write('\n\n'+tree.xpath('//p//text()')[27]+'\n')
+                f.write('\n'.join([l.strip().replace(': ', ':') for l in ''.join(tree.xpath('//p//text()')).split(
+                    '============')[-1].split('\n')
+                    if (len(l.strip()) > 0 and not l.strip()[0] in ['(','[','='])]))
+            else:
+                print('script '+str(70+i)+' not found')
+
+scrape2()
 
 
 # ## Prepare Text
 
-# In[31]:
+# In[43]:
 
 
 # imports
@@ -52,31 +76,46 @@ import numpy as np
 from IPython.display import FileLink
 
 
-# In[36]:
+# In[80]:
 
 
 # load text
-text = open(path).read().lower()[:]
-print('corpus length:', len(text))            
-
-
-# In[37]:
-
+text1 = open(path1).read()[:]
+text2 = open(path2).read()[:]
+text = text1 + '\n' + text2
+print('corpus 1 length:', len(text1))
+print('corpus 2 length:', len(text2))
+print('corpus length:', len(text))
+print('')
 
 lines = []
 for line in text.split('\n'):
+    # only get spoken lines from RvB
     if line.startswith(' '):
         line = line[1:]
         # remove last line if captioned
         if line.startswith('caption'):
-            line = lines[-1].split(':',1)[0] + ':' + line.split(':',1)[1]
+            line = lines[-1].split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
             lines = lines[:-1]
-        line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1]
+        else:
+            line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
         lines.append(line)
+    # only get spoken lines from seinfeld
+    elif len(line.split(':',1)) == 2 and line.split(':',1)[0].isupper():
+        line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
+        lines.append(line)
+        
+replacemap = {"\x91": '"', "\x93": '"', "\x92": "'", "\x94": "'",
+              '[': '(', ']': ')', '\x85': '\n', '\xa0': ' ', '\x96': ''}
 text = '\n'.join(lines)
+for k, v in replacemap.items():
+    text = text.replace(k, v)
+
+with open(path, 'w') as f:
+    f.write(text)
 
 
-# In[38]:
+# In[81]:
 
 
 chars = sorted(list(set(text)))
@@ -91,7 +130,7 @@ indices_char = dict((i, c) for i, c in enumerate(chars))
 idx = [char_indices[c] for c in text]
 
 
-# In[40]:
+# In[82]:
 
 
 maxlen = 64
@@ -102,21 +141,21 @@ for i in range(len(idx)-maxlen+1):
     next_chars.append(idx[i+1: i+maxlen+1])
 
 
-# In[41]:
+# In[83]:
 
 
 print('nb sequences:', len(sentences))
 print('nb chars:', len(next_chars))
 
 
-# In[42]:
+# In[ ]:
 
 
 sentences = np.concatenate([[np.array(o)] for o in sentences[:-2]])
 next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 
-# In[43]:
+# In[ ]:
 
 
 n_fac = 128
@@ -124,7 +163,7 @@ n_fac = 128
 
 # ## Train model
 
-# In[44]:
+# In[ ]:
 
 
 from keras.models import Sequential
@@ -133,29 +172,29 @@ from keras.layers import *
 # 2 layer GRU network with 256 and 512 channels
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
-    CuDNNLSTM(640, input_shape=(n_fac,), return_sequences=True),
-    Dropout(0.4),
-    CuDNNLSTM(256, return_sequences=True),
-    Dropout(0.4),
+    CuDNNGRU(512, input_shape=(n_fac,), return_sequences=True),
+    Dropout(0.5),
+    CuDNNGRU(256, return_sequences=True),
+    Dropout(0.5),
     TimeDistributed(Dense(vocab_size)),
     Activation('softmax')
 ])
 
-model.compile(loss='sparse_categorical_crossentropy', optimizer=Nadam(lr=0.002), metrics=['acc'])
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Nadam(lr=1e-4), metrics=['acc'])
 model.summary()
 
 
-# In[45]:
+# In[ ]:
 
 
 # save as JSON
 json_string = model.to_json()
-with open('grifbot_model.json', 'w+') as f:
+with open('results/rvb-model.json', 'w+') as f:
     f.write(json_string)
-FileLink('grifbot_model.json')
+FileLink('results/rvb-model.json')
 
 
-# In[46]:
+# In[ ]:
 
 
 from numpy.random import choice
@@ -313,7 +352,7 @@ class CyclicLR(Callback):
             self.history.setdefault(k, []).append(v)
 
 
-# In[47]:
+# In[ ]:
 
 
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, LambdaCallback
@@ -329,21 +368,21 @@ checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=1, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
-clr = CyclicLR(base_lr=0.0001, max_lr=0.002, step_size=2000., mode='triangular')
+clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=2000., mode='triangular')
 
 callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
 
-# In[48]:
+# In[ ]:
 
 
-num_epochs = 32
-#model.load_weights(os.path.join(weight_dir, 'weights-02.hdf5'))
+num_epochs = 10
+model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),
                     shuffle=True,
-                    batch_size=128,
+                    batch_size=64,
                     epochs=num_epochs,
                     validation_split=0.15,
                     callbacks=callbacks_list))

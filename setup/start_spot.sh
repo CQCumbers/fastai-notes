@@ -58,7 +58,7 @@ cat >user-data.tmp <<EOF
 
 add-apt-repository ppa:graphics-drivers/ppa -y
 apt-get update
-apt-get install -y nvidia-375 nvidia-settings nvidia-modprobe
+apt-get install -y --allow-unauthenticated nvidia-375 nvidia-settings nvidia-modprobe
 apt-get install -y zsh
 apt-get install -y stow
 apt-get install -y python3-pip
@@ -93,11 +93,11 @@ dpkg --configure -a
 wget "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb"
 dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 apt-get update
-apt-get install -y cuda-8-0
+apt-get install -y --allow-unauthenticated cuda-8-0
 sudo -H -u ubuntu zsh -c 'nvidia-smi'
 wget "http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn6_6.0.21-1+cuda8.0_amd64.deb"
 dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb
-apt-get install -f -y
+apt-get install -f -y --allow-unauthenticated
 modprobe nvidia
 echo 'installed cuda'
 

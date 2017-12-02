@@ -24,45 +24,6 @@ path1 = '/home/ubuntu/fastai-data/rvb/scripts1.txt'
 path2 = '/home/ubuntu/fastai-data/rvb/scripts2.txt'
 
 
-# In[2]:
-
-
-# scrape rooster tooths for RvB scripts
-def scrape():
-    with open(path1, 'w') as f:
-        for i in [x for x in range(347)]:
-            page = requests.get('http://roostertooths.com/transcripts.php?eid={}'.format(i+1))
-            tree = html.fromstring(page.content)
-            lines = []
-            f.write('\n\n'+tree.xpath('//p[@class="breadcrumbs"]/a//text()')[1]
-                  +'\n'+tree.xpath('//h1//text()')[0]+'\n\n')
-            for row in tree.xpath('//table[@class="script"]/tr'):
-                f.write(''.join(row.xpath('.//td//text()'))+'\n')
-
-scrape()
-
-
-# In[66]:
-
-
-# scrate seinology for seinfeld scripts, to augment data
-def scrape2():
-    with open(path2, 'w') as f:
-        for i in [x for x in range(100)]:
-            page = requests.get('http://www.seinology.com/scripts/script-{}.shtml'.format(70+i))
-            if page.status_code == 200:
-                tree = html.fromstring(page.content)
-                lines = []
-                f.write('\n\n'+tree.xpath('//p//text()')[27]+'\n')
-                f.write('\n'.join([l.strip().replace(': ', ':') for l in ''.join(tree.xpath('//p//text()')).split(
-                    '============')[-1].split('\n')
-                    if (len(l.strip()) > 0 and not l.strip()[0] in ['(','[','='])]))
-            else:
-                print('script '+str(70+i)+' not found')
-
-scrape2()
-
-
 # ## Prepare Text
 
 # In[43]:
@@ -82,7 +43,7 @@ from IPython.display import FileLink
 # load text
 text1 = open(path1).read()[:]
 text2 = open(path2).read()[:]
-text = text1 + '\n' + text2
+text = text1 + '\n' + text2 + '\n' + text1
 print('corpus 1 length:', len(text1))
 print('corpus 2 length:', len(text2))
 print('corpus length:', len(text))
@@ -133,7 +94,7 @@ idx = [char_indices[c] for c in text]
 # In[82]:
 
 
-maxlen = 64
+maxlen = 128
 sentences = []
 next_chars = []
 for i in range(len(idx)-maxlen+1):
@@ -173,7 +134,7 @@ from keras.layers import *
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
     CuDNNGRU(512, input_shape=(n_fac,), return_sequences=True),
-    Dropout(0.5),
+    Dropout(0.0),
     CuDNNGRU(256, return_sequences=True),
     Dropout(0.5),
     TimeDistributed(Dense(vocab_size)),
@@ -368,7 +329,7 @@ checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=1, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
-clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=2000., mode='triangular')
+clr = CyclicLR(base_lr=1e-4, max_lr=1e-3, step_size=2000., mode='triangular')
 
 callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
@@ -376,13 +337,13 @@ callbacks_list = [printer, checkpoint, reduce_lr, clr]
 # In[ ]:
 
 
-num_epochs = 10
+num_epochs = 7
 model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),
                     shuffle=True,
-                    batch_size=64,
+                    batch_size=256,
                     epochs=num_epochs,
                     validation_split=0.15,
                     callbacks=callbacks_list))

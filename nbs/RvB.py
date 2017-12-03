@@ -24,6 +24,45 @@ path1 = '/home/ubuntu/fastai-data/rvb/scripts1.txt'
 path2 = '/home/ubuntu/fastai-data/rvb/scripts2.txt'
 
 
+# In[2]:
+
+
+# scrape rooster tooths for RvB scripts
+def scrape():
+    with open(path1, 'w') as f:
+        for i in [x for x in range(347)]:
+            page = requests.get('http://roostertooths.com/transcripts.php?eid={}'.format(i+1))
+            tree = html.fromstring(page.content)
+            lines = []
+            f.write('\n\n'+tree.xpath('//p[@class="breadcrumbs"]/a//text()')[1]
+                  +'\n'+tree.xpath('//h1//text()')[0]+'\n\n')
+            for row in tree.xpath('//table[@class="script"]/tr'):
+                f.write(''.join(row.xpath('.//td//text()'))+'\n')
+
+scrape()
+
+
+# In[66]:
+
+
+# scrate seinology for seinfeld scripts, to augment data
+def scrape2():
+    with open(path2, 'w') as f:
+        for i in [x for x in range(80)]:
+            page = requests.get('http://www.seinology.com/scripts/script-{}.shtml'.format(70+i))
+            if page.status_code == 200:
+                tree = html.fromstring(page.content)
+                lines = []
+                f.write('\n\n'+tree.xpath('//p//text()')[27]+'\n')
+                f.write('\n'.join([l.strip().replace(': ', ':') for l in ''.join(tree.xpath('//p//text()')).split(
+                    '============')[-1].split('\n')
+                    if (len(l.strip()) > 0 and not l.strip()[0] in ['(','[','='])]))
+            else:
+                print('script '+str(70+i)+' not found')
+
+scrape2()
+
+
 # ## Prepare Text
 
 # In[43]:
@@ -80,7 +119,7 @@ with open(path, 'w') as f:
 
 
 chars = sorted(list(set(text)))
-print(chars)
+print(''.join(chars).encode('string_escape'))
 vocab_size = len(chars)
 print('total chars:', vocab_size)
 
@@ -134,9 +173,9 @@ from keras.layers import *
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
     CuDNNGRU(512, input_shape=(n_fac,), return_sequences=True),
-    Dropout(0.0),
+    Dropout(0.1),
     CuDNNGRU(256, return_sequences=True),
-    Dropout(0.5),
+    Dropout(0.4),
     TimeDistributed(Dense(vocab_size)),
     Activation('softmax')
 ])
@@ -317,19 +356,25 @@ class CyclicLR(Callback):
 
 
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, LambdaCallback
-import h5py
+import h5py, glob, os, shutil
+
+weight_dir = '/home/ubuntu/fastai-data/rvb/weights'
+weight_path = "weights-{epoch:02d}.hdf5"
 
 def print_callback(logs, epoch):
     print_example()
 
-weight_dir = '/home/ubuntu/fastai-data/rvb/weights'
-weight_path = "weights-{epoch:02d}.hdf5"
+def copy_callback(logs, epoch):
+    files = glob.glob(weight_dir)
+    latest_file = max(list_of_files, key=os.path.getctime)
+    shutil.copy(latest_file, 'results/rvb-weights.hdf5')
+
 checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
                              monitor='acc', verbose=1, save_best_only=True, mode='max')
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=1, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
-clr = CyclicLR(base_lr=1e-4, max_lr=1e-3, step_size=2000., mode='triangular')
+clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=2000., mode='triangular')
 
 callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
@@ -337,13 +382,13 @@ callbacks_list = [printer, checkpoint, reduce_lr, clr]
 # In[ ]:
 
 
-num_epochs = 7
-model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
+num_epochs = 10
+#model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),
                     shuffle=True,
-                    batch_size=256,
+                    batch_size=128,
                     epochs=num_epochs,
                     validation_split=0.15,
                     callbacks=callbacks_list))

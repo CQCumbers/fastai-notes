@@ -13,7 +13,7 @@
 # 
 #  - Create empty scripts.txt file in appropriate directory beforehand
 
-# In[8]:
+# In[2]:
 
 
 from lxml import html
@@ -24,7 +24,7 @@ path1 = '/home/ubuntu/fastai-data/rvb/scripts1.txt'
 path2 = '/home/ubuntu/fastai-data/rvb/scripts2.txt'
 
 
-# In[2]:
+# In[ ]:
 
 
 # scrape rooster tooths for RvB scripts
@@ -39,10 +39,10 @@ def scrape():
             for row in tree.xpath('//table[@class="script"]/tr'):
                 f.write(''.join(row.xpath('.//td//text()'))+'\n')
 
-scrape()
+#scrape()
 
 
-# In[66]:
+# In[ ]:
 
 
 # scrate seinology for seinfeld scripts, to augment data
@@ -60,12 +60,12 @@ def scrape2():
             else:
                 print('script '+str(70+i)+' not found')
 
-scrape2()
+#scrape2()
 
 
 # ## Prepare Text
 
-# In[43]:
+# In[3]:
 
 
 # imports
@@ -76,50 +76,53 @@ import numpy as np
 from IPython.display import FileLink
 
 
-# In[80]:
+# In[ ]:
 
 
 # load text
 text1 = open(path1).read()[:]
 text2 = open(path2).read()[:]
-text = text1 + '\n' + text2 + '\n' + text1
-print('corpus 1 length:', len(text1))
-print('corpus 2 length:', len(text2))
-print('corpus length:', len(text))
-print('')
+try:
+    text = open(path).read()[:]
+except:
+    text = text1 + '\n' + text2 + '\n' + text1
+    print('corpus 1 length:', len(text1))
+    print('corpus 2 length:', len(text2))
+    print('corpus length:', len(text))
+    print('')
 
-lines = []
-for line in text.split('\n'):
-    # only get spoken lines from RvB
-    if line.startswith(' '):
-        line = line[1:]
-        # remove last line if captioned
-        if line.startswith('caption'):
-            line = lines[-1].split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
-            lines = lines[:-1]
-        else:
+    lines = []
+    for line in text.split('\n'):
+        # only get spoken lines from RvB
+        if line.startswith(' '):
+            line = line[1:]
+            # remove last line if captioned
+            if line.startswith('caption'):
+                line = lines[-1].split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
+                lines = lines[:-1]
+            else:
+                line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
+            lines.append(line)
+        # only get spoken lines from seinfeld
+        elif len(line.split(':',1)) == 2 and line.split(':',1)[0].isupper():
             line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
-        lines.append(line)
-    # only get spoken lines from seinfeld
-    elif len(line.split(':',1)) == 2 and line.split(':',1)[0].isupper():
-        line = line.split(':',1)[0].upper() + ':' + line.split(':',1)[1].lower()
-        lines.append(line)
-        
-replacemap = {"\x91": '"', "\x93": '"', "\x92": "'", "\x94": "'",
-              '[': '(', ']': ')', '\x85': '\n', '\xa0': ' ', '\x96': ''}
-text = '\n'.join(lines)
-for k, v in replacemap.items():
-    text = text.replace(k, v)
+            lines.append(line)
 
-with open(path, 'w') as f:
-    f.write(text)
+    replacemap = {"\x91": '"', "\x93": '"', "\x92": "'", "\x94": "'",
+                  '[': '(', ']': ')', '\x85': '\n', '\xa0': ' ', '\x96': ''}
+    text = '\n'.join(lines)
+    for k, v in replacemap.items():
+        text = text.replace(k, v)
+
+    with open(path, 'w') as f:
+        f.write(text)
 
 
-# In[81]:
+# In[5]:
 
 
 chars = sorted(list(set(text)))
-print(''.join(chars).encode('string_escape'))
+print(repr(''.join(chars)))
 vocab_size = len(chars)
 print('total chars:', vocab_size)
 
@@ -130,7 +133,7 @@ indices_char = dict((i, c) for i, c in enumerate(chars))
 idx = [char_indices[c] for c in text]
 
 
-# In[82]:
+# In[6]:
 
 
 maxlen = 128
@@ -141,21 +144,21 @@ for i in range(len(idx)-maxlen+1):
     next_chars.append(idx[i+1: i+maxlen+1])
 
 
-# In[83]:
+# In[7]:
 
 
 print('nb sequences:', len(sentences))
 print('nb chars:', len(next_chars))
 
 
-# In[ ]:
+# In[8]:
 
 
 sentences = np.concatenate([[np.array(o)] for o in sentences[:-2]])
 next_chars = np.concatenate([[np.array(o)] for o in next_chars[:-2]])
 
 
-# In[ ]:
+# In[9]:
 
 
 n_fac = 128
@@ -163,19 +166,19 @@ n_fac = 128
 
 # ## Train model
 
-# In[ ]:
+# In[13]:
 
 
 from keras.models import Sequential
 from keras.layers import *
 
-# 2 layer GRU network with 256 and 512 channels
+# 2 layer LSTM network with 512 and 128 channels
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
-    CuDNNGRU(512, input_shape=(n_fac,), return_sequences=True),
-    Dropout(0.1),
-    CuDNNGRU(256, return_sequences=True),
-    Dropout(0.4),
+    CuDNNLSTM(512, input_shape=(n_fac,), return_sequences=True),
+    Dropout(0.05),
+    CuDNNLSTM(128, return_sequences=True),
+    Dropout(0.3),
     TimeDistributed(Dense(vocab_size)),
     Activation('softmax')
 ])
@@ -184,7 +187,7 @@ model.compile(loss='sparse_categorical_crossentropy', optimizer=Nadam(lr=1e-4), 
 model.summary()
 
 
-# In[ ]:
+# In[14]:
 
 
 # save as JSON
@@ -193,16 +196,15 @@ with open('results/rvb-model.json', 'w+') as f:
     f.write(json_string)
 FileLink('results/rvb-model.json')
 
-
 # In[ ]:
 
 
 from numpy.random import choice
 import random
 
-def print_example(length=800, temp=0.8):
+def print_example(length=1000, temp=0.8):
     seed_len=maxlen
-    text = open(path).read().lower()[:]
+    text = open(path).read().lower()[:152041] # only RvB section
     ind = random.randint(0,len(text)-seed_len-1)
     seed_string = text[ind:ind+seed_len]
     for i in range(length):
@@ -222,65 +224,8 @@ def print_example(length=800, temp=0.8):
 
 from keras.callbacks import *
 
+# see https://github.com/bckenstler/CLR
 class CyclicLR(Callback):
-    """This callback implements a cyclical learning rate policy (CLR).
-    The method cycles the learning rate between two boundaries with
-    some constant frequency, as detailed in this paper (https://arxiv.org/abs/1506.01186).
-    The amplitude of the cycle can be scaled on a per-iteration or 
-    per-cycle basis.
-    This class has three built-in policies, as put forth in the paper.
-    "triangular":
-        A basic triangular cycle w/ no amplitude scaling.
-    "triangular2":
-        A basic triangular cycle that scales initial amplitude by half each cycle.
-    "exp_range":
-        A cycle that scales initial amplitude by gamma**(cycle iterations) at each 
-        cycle iteration.
-    For more detail, please see paper.
-    
-    # Example
-        ```python
-            clr = CyclicLR(base_lr=0.001, max_lr=0.006,
-                                step_size=2000., mode='triangular')
-            model.fit(X_train, Y_train, callbacks=[clr])
-        ```
-    
-    Class also supports custom scaling functions:
-        ```python
-            clr_fn = lambda x: 0.5*(1+np.sin(x*np.pi/2.))
-            clr = CyclicLR(base_lr=0.001, max_lr=0.006,
-                                step_size=2000., scale_fn=clr_fn,
-                                scale_mode='cycle')
-            model.fit(X_train, Y_train, callbacks=[clr])
-        ```    
-    # Arguments
-        base_lr: initial learning rate which is the
-            lower boundary in the cycle.
-        max_lr: upper boundary in the cycle. Functionally,
-            it defines the cycle amplitude (max_lr - base_lr).
-            The lr at any cycle is the sum of base_lr
-            and some scaling of the amplitude; therefore 
-            max_lr may not actually be reached depending on
-            scaling function.
-        step_size: number of training iterations per
-            half cycle. Authors suggest setting step_size
-            2-8 x training iterations in epoch.
-        mode: one of {triangular, triangular2, exp_range}.
-            Default 'triangular'.
-            Values correspond to policies detailed above.
-            If scale_fn is not None, this argument is ignored.
-        gamma: constant in 'exp_range' scaling function:
-            gamma**(cycle iterations)
-        scale_fn: Custom scaling policy defined by a single
-            argument lambda function, where 
-            0 <= scale_fn(x) <= 1 for all x >= 0.
-            mode paramater is ignored 
-        scale_mode: {'cycle', 'iterations'}.
-            Defines whether scale_fn is evaluated on 
-            cycle number or cycle iterations (training
-            iterations since start of cycle). Default is 'cycle'.
-    """
-
     def __init__(self, base_lr=0.001, max_lr=0.006, step_size=2000., mode='triangular',
                  gamma=1., scale_fn=None, scale_mode='cycle'):
         super(CyclicLR, self).__init__()
@@ -311,9 +256,6 @@ class CyclicLR(Callback):
 
     def _reset(self, new_base_lr=None, new_max_lr=None,
                new_step_size=None):
-        """Resets cycle iterations.
-        Optional boundary/step size adjustment.
-        """
         if new_base_lr != None:
             self.base_lr = new_base_lr
         if new_max_lr != None:
@@ -339,7 +281,6 @@ class CyclicLR(Callback):
             K.set_value(self.model.optimizer.lr, self.clr())        
             
     def on_batch_end(self, epoch, logs=None):
-        
         logs = logs or {}
         self.trn_iterations += 1
         self.clr_iterations += 1
@@ -374,7 +315,7 @@ checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=1, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
-clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=2000., mode='triangular')
+clr = CyclicLR(base_lr=0.001, max_lr=0.006, step_size=2000., mode='triangular')
 
 callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
@@ -382,8 +323,8 @@ callbacks_list = [printer, checkpoint, reduce_lr, clr]
 # In[ ]:
 
 
-num_epochs = 10
-#model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
+num_epochs = 12
+model.load_weights(os.path.join(weight_dir, 'weights-02.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),

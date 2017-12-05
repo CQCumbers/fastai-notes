@@ -85,7 +85,7 @@ text2 = open(path2).read()[:]
 try:
     text = open(path).read()[:]
 except:
-    text = text1 + '\n' + text2 + '\n' + text1
+    text = text1 + '\n' + text2[:50000]# + '\n' + text1
     print('corpus 1 length:', len(text1))
     print('corpus 2 length:', len(text2))
     print('corpus length:', len(text))
@@ -120,8 +120,7 @@ except:
 
 # In[5]:
 
-
-chars = sorted(list(set(text)))
+chars = list('\n !"#$%&\'()*+,-./0123456789:;<>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_`abcdefghijklmnopqrstuvwxyz{}~¡¿àáèéíñóÿ')
 print(repr(''.join(chars)))
 vocab_size = len(chars)
 print('total chars:', vocab_size)
@@ -175,10 +174,10 @@ from keras.layers import *
 # 2 layer LSTM network with 512 and 128 channels
 model = Sequential([
     Embedding(vocab_size, n_fac, input_length=maxlen),
-    CuDNNLSTM(512, input_shape=(n_fac,), return_sequences=True),
-    Dropout(0.05),
-    CuDNNLSTM(128, return_sequences=True),
-    Dropout(0.3),
+    GRU(512, input_shape=(n_fac,), return_sequences=True),
+    Dropout(0.2),
+    GRU(256, return_sequences=True),
+    Dropout(0.5),
     TimeDistributed(Dense(vocab_size)),
     Activation('softmax')
 ])
@@ -204,7 +203,7 @@ import random
 
 def print_example(length=1000, temp=0.8):
     seed_len=maxlen
-    text = open(path).read().lower()[:152041] # only RvB section
+    text = open(path).read().lower()[:] # only RvB section
     ind = random.randint(0,len(text)-seed_len-1)
     seed_string = text[ind:ind+seed_len]
     for i in range(length):
@@ -315,7 +314,7 @@ checkpoint = ModelCheckpoint(os.path.join(weight_dir, weight_path),
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.1,
                               patience=1, min_lr=0.000001)
 printer = LambdaCallback(on_epoch_end=print_callback)
-clr = CyclicLR(base_lr=0.001, max_lr=0.006, step_size=2000., mode='triangular')
+clr = CyclicLR(base_lr=0.001, max_lr=0.0001, step_size=2000., mode='triangular')
 
 callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
@@ -324,7 +323,7 @@ callbacks_list = [printer, checkpoint, reduce_lr, clr]
 
 
 num_epochs = 12
-model.load_weights(os.path.join(weight_dir, 'weights-02.hdf5'))
+model.load_weights(os.path.join(weight_dir, 'weights-01.hdf5'))
 history = []
 history.append(model.fit(sentences,
                     np.expand_dims(next_chars,-1),
